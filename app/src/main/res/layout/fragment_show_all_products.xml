@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="9dp"
+    android:paddingLeft="9dp"
+    tools:context=".fragment.ShowAllProductsFragment">
+
+    <SearchView
+        android:id="@+id/searchviews"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="1dp"
+        android:showDividers="middle"
+        android:layout_margin="8dp"
+        app:circularflow_radiusInDP="13dp"
+        android:layout_alignParentTop="true"
+        android:layoutDirection="rtl"
+        android:layout_marginRight="1dp"
+        android:paddingTop="2.1dp"
+        android:paddingBottom="2.1dp"
+        android:iconifiedByDefault="false"
+        android:clickable="true"
+        android:goIcon="@mipmap/ic_search"
+        android:background="#C3FFFFFF"
+        android:queryHint="@string/search_hint"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchviews"
+        android:layout_marginBottom="63dp"
+        android:id="@+id/recycler_views_show_all_prodcts_recycler_views"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler_views_show_all_prodcts_recycler_views"
+        android:textAlignment="center"
+        android:textColor="#E91E2F"
+        android:id="@+id/txt_no_data_exist"
+        android:textStyle="italic|bold"
+        android:textSize="27sp"
+        />
+</RelativeLayout>

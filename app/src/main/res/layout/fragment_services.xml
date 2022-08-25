@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ServicesFragment">
+
+    <SearchView
+        android:id="@+id/searchviews"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_margin="8dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:background="#DAFFFFFF"
+        android:clickable="true"
+        android:goIcon="@mipmap/ic_search"
+        android:iconifiedByDefault="false"
+        android:layoutDirection="rtl"
+        android:paddingTop="2.1dp"
+        android:paddingBottom="2.1dp"
+        android:queryHint="@string/search_hint"
+        android:showDividers="middle"
+        app:circularflow_radiusInDP="13dp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/recycler_view_outer_lays"
+        app:layout_constraintTop_toBottomOf="@id/searchviews"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        >
+
+        <!--    <ImageView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="30dp"-->
+        <!--        android:id="@+id/myImages"-->
+        <!--        android:src="@drawable/imgf_8"-->
+        <!--        android:layout_marginRight="20dp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="1"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"-->
+        <!--        app:layout_constraintVertical_bias="0"-->
+        <!--        />-->
+        <!--<ImageView-->
+        <!--    android:layout_width="wrap_content"-->
+        <!--    android:layout_height="wrap_content"-->
+        <!--    android:src="@drawable/cart_icc"-->
+        <!--    android:id="@+id/imgView2"-->
+        <!--    app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--    app:layout_constraintEnd_toStartOf="@id/myImages"-->
+        <!--    app:layout_constraintStart_toStartOf="parent"-->
+        <!--    app:layout_constraintTop_toTopOf="@id/myImages"-->
+        <!--    />-->
+
+        <!--    <TextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="Hello"-->
+        <!--        android:textColor="@color/black"-->
+        <!--        android:textSize="36sp"-->
+        <!--        android:layout_marginLeft="30dp"-->
+        <!--        android:layout_marginTop="10dp"-->
+        <!--        app:layout_constraintVertical_bias="0"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"app:layout_constraintTop_toBottomOf="@id/imgView2"-->
+        <!--        />-->
+
+        <!--     <TextView-->
+        <!--         android:layout_width="wrap_content"-->
+        <!--         android:layout_height="wrap_content"-->
+        <!--         android:text=""-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myservices_recyclerViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#97A9AC"
+        android:padding="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_outer_lays">
+
+        <TextView
+            android:id="@+id/servicesDescp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Services Desc "
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

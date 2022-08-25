@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.AboutFragment"
+    android:background="#97A9AC"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+         android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="90dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="29dp"
+            android:maxLines="2"
+            android:text="About Ravi Worldwide Medicines Store"
+            android:textStyle="bold|normal"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:paddingBottom="20dp"
+            android:fitsSystemWindows="true"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ravi Worldwide Medicines Private Limited is a wholesale specialty medicine pharmaceutical distributor and trader for life-saving drugs and rare medicines by condition. We import and export medicines all over the world and our esteemed clientele include as super specialty and high-end government and private hospitals. "
+            android:textSize="19dp"
+            android:layout_marginBottom="9dp"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusableInTouchMode="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/imgf_5"
+            android:fitsSystemWindows="true"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="19dp"
+            android:text="Ravi Worldwide Medicines Private Limited is a wholesale specialty medicine pharmaceutical distributor and trader for life-saving drugs and rare medicines by condition. We import and export medicines all over the world and our esteemed clientele include as super specialty and high-end government and private hospitals. "
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="19dp"
+            android:text="Our super specialty and life-saving drugs are manufactured and/or marketed by Abbott, Adley Formulations, Alkem Laboratories Ltd, Allergan India Pvt Ltd, Alniche Life Sciences Pvt Ltd, Anthem Biopharma, Astrazeneca Pharma India Ltd, Baxter India Pvt Ltd, Bayer Pharmaceuticals Pvt Ltd, Bayer Zydus Pharma Pvt Ltd, Bdr Pharmaceuticals Internationals Pvt Ltd, Bharat Biotech International Ltd, Bharat Serums and Vaccines Ltd, Biocon Ltd, Biogen Idec Biotech India Pvt Ltd, Boehringer Ingelheim India Pvt Ltd, Bristol Myers Squibb, Cadila Pharmaceuticals Ltd, Cipla Ltd, Dr Reddy’s Laboratories Ltd, Eisai Pharmaceuticals India Pvt Ltd, Eli Lilly And Company India Pvt Ltd, Emcure Pharmaceuticals Ltd, Eris Lifesciences Ltd , Fresenius Kabi India Pvt Ltd, Getwell Oncology Pvt Ltd, Gland Pharma Ltd, Glaxo Smithkline Pharmaceuticals Ltd, Glenmark Pharmaceuticals Ltd, Gls Pharma Ltd, Gufic Bioscience Ltd, Hetero Healthcare Ltd, Intas Pharmaceuticals Ltd, Johnson and Johnson Pvt Ltd, Khandelwal Laboratories Pvt Ltd, La Renon Healthcare Pvt Ltd, Merck Ltd, Micro Labs Ltd, Msd Pharmaceuticals Pvt Ltd, Mylan Pharmaceuticals Pvt Ltd, Natco Pharma Ltd, Novartis India Ltd, Novo Nordisk India Pvt Ltd, Panacea Biotec Ltd, Pfizer Ltd, Roche Products India Pvt Ltd, Rpg Life Sciences Ltd, Salf Spa Laboratorio Farmacologico, Sanofi Aventis, Sanzyme Pvt Ltd, Serum Institute Of India, Smith and Nephew Medical Ltd, Steadfast Medishield Pvt Ltd, Sun Pharmaceutical Industries Ltd, Takeda Pharmaceuticals India Pvt Ltd, Toray Industries, Torrent Pharmaceuticals Ltd, Wockhardt Ltd, Zydus Cadila and other national and international pharmaceutical companies."
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

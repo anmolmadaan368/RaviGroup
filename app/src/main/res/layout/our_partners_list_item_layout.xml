@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="329dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginTop="19dp"
+    app:cardCornerRadius="19dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/our_partner_outer_lays"
+            android:layout_width="match_parent"
+            android:layout_height="295dp"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="0.7">
+
+            <ImageView
+                android:id="@+id/our_partner_img"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgf_5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/our_pertners_parnter_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="parnter_name"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold|normal" />
+
+                <TextView
+                    android:id="@+id/our_parnter_partner_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text=" Our Partner Designation "
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/our_partners_partner_desc"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_margin="7dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textLongMessage"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            android:text=" About my Persons description .  "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/our_partner_outer_lays"
+            app:layout_constraintVertical_weight="0.3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

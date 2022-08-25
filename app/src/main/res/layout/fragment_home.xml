@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment">
+
+    <SearchView
+        android:id="@+id/searchviews"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:showDividers="middle"
+        app:circularflow_radiusInDP="13dp"
+        android:layoutDirection="rtl"
+        android:layout_marginTop="3dp"
+        android:paddingTop="2.1dp"
+        android:paddingBottom="2.1dp"
+        android:layout_alignParentTop="true"
+        android:iconifiedByDefault="false"
+        android:clickable="true"
+        android:goIcon="@mipmap/ic_search"
+        android:background="#DAFFFFFF"
+        android:queryHint="@string/search_hint"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/searchviews"
+        android:layout_below="@id/searchviews"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_views"
+                android:layout_width="match_parent"
+                android:layout_height="149dp" />
+
+            <RelativeLayout
+                android:id="@+id/sliders_outer_lays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_views">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_auto_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/img_slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:fitsSystemWindows="true"
+                             app:iss_auto_cycle="true"
+                            app:iss_corner_radius="10"
+                            app:iss_delay="1000"
+                            app:iss_period="2987"
+                            app:iss_title_background="@drawable/gradient"
+
+                            >
+
+                        </com.denzcoskun.imageslider.ImageSlider>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagerIds"
+                    android:layout_width="match_parent"
+                    android:layout_height="198dp"
+                    android:layout_below="@id/img_auto_slider"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="2dp"
+                    android:fitsSystemWindows="true" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/sliders_outer_lays"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:textSize="13sp"
+                    android:layout_alignParentTop="true"
+                    android:text="Recently viewed "
+                    android:id="@+id/btn_recently_viewed"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:paddingTop="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="7dp"
+                    android:textColor="#000"
+                    android:background="@color/white"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recently_viewed_recycler_view"
+                    android:layout_below="@id/btn_recently_viewed"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:layout_marginBottom="3dp"
+                    />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

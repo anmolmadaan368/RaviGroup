@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_home"
+            android:icon="@drawable/home_icon"
+            android:title="HOME" />
+        <item
+            android:id="@+id/nav_drawer_services"
+            android:icon="@drawable/services"
+            android:title="SERVICES" />
+        <item
+            android:id="@+id/nav_drawer_blog"
+            android:icon="@drawable/blog"
+            android:title="BLOG" />
+        <item
+            android:id="@+id/nav_drawer_ourproduct"
+            android:icon="@drawable/ouproduct"
+            android:title="OUR PRODUCT" />
+    </group>
+    <item
+        android:title="ABOUT">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/nav_drawer_about"
+                    android:icon="@drawable/about_us"
+                    android:title=" About Us"></item>
+                <item
+                    android:id="@+id/nav_drawer_our_partners"
+                    android:icon="@drawable/our_partner"
+                    android:title="Our Partners" />
+                <item
+                    android:id="@+id/nav_drawer_license"
+                    android:title="License "
+                    android:icon="@drawable/license"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+                <item
+                    android:id="@+id/nav_drawer_contact"
+                    android:icon="@drawable/contact"
+                    android:title=" CONTACT " />
+                <item
+                    android:id="@+id/nav_drawer_wishlist"
+                    android:icon="@drawable/wishlist"
+                    android:title="WISHLIST" />
+                <item
+                    android:id="@+id/nav_drawer_loginreg"
+                    android:icon="@drawable/login"
+                    android:title="LOGIN / REGISTER" />
+
+        </menu>
+    </item>
+</menu>

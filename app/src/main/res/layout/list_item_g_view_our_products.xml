@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="169dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="9dp"
+    android:layout_marginLeft="9dp"
+    android:layout_marginRight="4.5dp"
+    android:elevation="9dp"
+    app:cardElevation="9dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gv_images"
+            android:scaleType="fitXY"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/bg_search_view"
+            android:src="@drawable/raviwwmwdicinesogo"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTViewI_Desc"
+            android:layout_marginBottom="23dp"
+            android:textStyle="bold|normal"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="13sp"
+            android:text="Item description "
+            android:textAlignment="center"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

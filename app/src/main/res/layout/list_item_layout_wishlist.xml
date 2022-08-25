@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_marginBottom="3.5dp"
+    android:focusable="true"
+    android:layout_marginTop="3.5dp"
+    android:layout_height="318dp"
+    app:cardCornerRadius="19dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            app:layout_constraintBottom_toTopOf="@id/btns_outer_lays"
+            android:layout_marginBottom="29dp"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/product_img"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/remove" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="1dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="1dp"
+                >
+
+                <TextView
+                    android:id="@+id/cart_product_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:text="Product Title"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="Salt Composition : "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_salt_compostion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="salt Details " />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Manufacturer : "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/texview_manufacturer_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="manufacturer's details " />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtview_chemical_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Chemical Details"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="23dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/btns_outer_lays"
+            android:layout_height="37dp">
+            <Button
+                android:id="@+id/btn_remove"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="19dp"
+                android:layout_marginLeft="20dp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_color_round_cut_blue"
+                android:text="Remove"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_color_round_cut_blue"
+                android:layout_marginRight="23dp"
+                android:textAllCaps="false"
+                android:text="Buy"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

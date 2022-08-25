@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView android:layout_height="250dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:cardCornerRadius="9dp"
+    app:layout_goneMarginTop="13dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/list_item_outer_lays"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/remove"
+                android:layout_weight="0.4"
+                android:scaleType="fitXY"
+                android:id="@+id/blog_img"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginLeft="19dp"
+                android:orientation="vertical"
+                android:layout_weight="0.6"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="23sp"
+                    android:textAlignment="center"
+                    android:id="@+id/blog_heading"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_posting_date"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="30dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:ellipsize="end"
+                android:id="@+id/blog_desc"
+                android:maxLines="1"
+                android:text="sllkdxcxcxcxc,xcxlcxlcx;lcx;cxlc;xcl;x;lcx;lx;lx;lxc;lxl;xc;lxcl;xcl;xl;cxl;xcl;sldlkdlkk"
+                android:textSize="17sp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

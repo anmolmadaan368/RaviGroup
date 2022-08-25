@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.BlogItemFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="52dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:background="@drawable/backgnd_while_rounded"
+            android:queryHint="Search Blog items here"
+            android:layout_marginTop="20dp"
+            android:id="@+id/item_blog_img"
+            android:src="@drawable/imgf_7"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blog_item_desc"
+            android:layout_below="@id/item_blog_img"
+            android:text="sdjkfkhsdfsdljkjdsfljslfhjfbjksdfhskj"
+            android:layout_marginTop="13dp"
+            android:textSize="19sp"
+            />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
