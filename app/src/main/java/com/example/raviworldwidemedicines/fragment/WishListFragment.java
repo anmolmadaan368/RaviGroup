@@ -52,7 +52,7 @@ public class WishListFragment extends Fragment {
              mydataLists.add(new CartMultipleDataBinder(item_lists[i],"product ; "+i ,"Salt No. :"+i,"Manufacturer :"+i,"Chemical Amount is : "+(i+1)));
         }
 
-        dataAdapter=new CartDataAdapter(mydataLists, "", R.layout.list_item_layout_wishlist, new ClickListener() {
+        dataAdapter=new CartDataAdapter(mydataLists, "WishList", R.layout.list_item_layout_wishlist, getParentFragmentManager(), new ClickListener() {
             @Override
             public void onPositionClicked(int Position) {
 

@@ -71,7 +71,7 @@ public class CartFragment extends Fragment {
             mydatalists.add(cartMultipleDataBinder);
         }
 
-        cartDataAdapter = new CartDataAdapter(mydatalists, "Cart", R.layout.cat_list_item_layout, new ClickListener() {
+        cartDataAdapter = new CartDataAdapter(mydatalists, "Cart", R.layout.cat_list_item_layout, getParentFragmentManager(), new ClickListener() {
 
             @Override
             public void onPositionClicked(int Position) {
