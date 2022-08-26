@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.raviworldwidemedicines.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.ClickListener;
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.fragment.BuyFragment;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
 import com.example.raviworldwidemedicines.fragment.HomeFragment;
 
@@ -89,7 +90,7 @@ public class RecentlyViewAdapter extends RecyclerView.Adapter<RecentlyViewAdapte
         public void onClick(View view) {
             if (view.getId() == R.id.btn_buy) {
                 Toast.makeText(buy_btn.getContext(), " Buy Button is clicked", Toast.LENGTH_SHORT).show();
-                parents_Fragments.beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
+                parents_Fragments.beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
             } else if (view.getId() == R.id.btn_saveforlater) {
                 Toast.makeText(save_later_btn.getContext(), " Save for Later is clicked ", Toast.LENGTH_SHORT).show();
                 parents_Fragments.beginTransaction().replace(R.id.main_lays, new CartFragment()).commit();
