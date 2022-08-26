@@ -33,6 +33,7 @@ public class AccountFragment extends Fragment {
     private CardView cardViewFAQ;
     private CardView cardViewWishlist;
     private CardView cardViewTerms;
+    private CardView cardViewOrder;
     public AccountFragment() {
         // Required empty public constructor
     }
@@ -52,6 +53,7 @@ public class AccountFragment extends Fragment {
         cardViewFAQ = view.findViewById(R.id.card_view_5);
         cardViewWishlist = view.findViewById(R.id.card_view_2);
         cardViewTerms = view.findViewById(R.id.card_view_4);
+        cardViewOrder = view.findViewById(R.id.card_view_1);
 
 //
 //
@@ -93,6 +95,13 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new TermsAndConditions()).commit();
+            }
+        });
+
+        cardViewOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
             }
         });
 
