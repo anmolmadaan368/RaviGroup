@@ -9,11 +9,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.raviworldwidemedicines.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.ClickListener;
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.fragment.BuyFragment;
+import com.example.raviworldwidemedicines.fragment.CartFragment;
+import com.example.raviworldwidemedicines.fragment.HomeFragment;
+import com.example.raviworldwidemedicines.fragment.OurProductFragment;
+import com.example.raviworldwidemedicines.fragment.WishListFragment;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -23,11 +29,13 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
     ArrayList<CartMultipleDataBinder> cartlist;
     public int single_item_Layout_Id;
     private ClickListener clickListener;
+    private FragmentManager fragmentManager;
     private String currentfragmentNamethatareusingthis;
 
-    public CartDataAdapter(ArrayList<CartMultipleDataBinder> cartDataList, String currentfragmentname, int one_Item_Lays_Id, ClickListener clickListener) {
+    public CartDataAdapter(ArrayList<CartMultipleDataBinder> cartDataList, String currentfragmentname, int one_Item_Lays_Id, FragmentManager fragmentManager, ClickListener clickListener) {
         this.cartlist = cartDataList;
         this.clickListener = clickListener;
+        this.fragmentManager = fragmentManager;
         this.currentfragmentNamethatareusingthis = currentfragmentname;
         this.single_item_Layout_Id = one_Item_Lays_Id;
     }
@@ -39,8 +47,8 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
         return new CartDataViewHolder(view);
     }
 
-     public void setFilteredListToRecyclerViews(ArrayList<CartMultipleDataBinder> filtereddatalist){
-        this.cartlist= filtereddatalist;
+    public void setFilteredListToRecyclerViews(ArrayList<CartMultipleDataBinder> filtereddatalist) {
+        this.cartlist = filtereddatalist;
         notifyDataSetChanged();
     }
 
@@ -80,45 +88,60 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
             manuacturer_name = (TextView) itemView.findViewById(R.id.texview_manufacturer_details);
             salt_compostion = (TextView) itemView.findViewById(R.id.txt_salt_compostion);
             chemical_amount = (TextView) itemView.findViewById(R.id.txtview_chemical_amount);
-            buy_btn = (Button) itemView.findViewById(R.id.btn_buy);
 
 
             itemView.setOnClickListener(this);
-            if(currentfragmentNamethatareusingthis=="ShowallProducts"){
-                save_btn = (Button) itemView.findViewById(R.id.btn_saveforlater);
+            if (currentfragmentNamethatareusingthis == "ShowallProducts") {
+                save_btn = (Button) itemView.findViewById(R.id.btn_saveforlater_product_details);
+                buy_btn = (Button) itemView.findViewById(R.id.btn_buy_product_details);
                 save_btn.setOnClickListener(this);
-            }
-            else if(currentfragmentNamethatareusingthis=="WishList"){
+            } else if (currentfragmentNamethatareusingthis == "WishList") {
+                remove_btn = (Button) itemView.findViewById(R.id.btn_remove_wishlist);
+                buy_btn=(Button) itemView.findViewById(R.id.btn_buy_wishlist);
+                remove_btn.setOnClickListener(this);
+            } else if (currentfragmentNamethatareusingthis == "Cart") {
+                save_btn = (Button) itemView.findViewById(R.id.btn_saveforlater);
                 remove_btn = (Button) itemView.findViewById(R.id.btn_remove);
+                buy_btn=(Button) itemView.findViewById(R.id.btn_buy);
+                save_btn.setOnClickListener(this);
                 remove_btn.setOnClickListener(this);
             }
-            else if(currentfragmentNamethatareusingthis=="Cart"){
-                save_btn = (Button) itemView.findViewById(R.id.btn_saveforlater);
-                remove_btn = (Button) itemView.findViewById(R.id.btn_remove);
-                save_btn.setOnClickListener(this);
-                remove_btn.setOnClickListener(this);
-            }
-
             weakReference = new WeakReference<>(clickListener);
             buy_btn.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            if (view.getId() == R.id.btn_buy) {
-                Toast.makeText(view.getContext(), " " + " button is pressed . " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
-            } else {
-                if (currentfragmentNamethatareusingthis != "ShowallProducts") {
-                    if (view.getId() == R.id.btn_remove) {
+            if(currentfragmentNamethatareusingthis=="Cart"){
+
+                if (view.getId() == R.id.btn_buy) {
+                    Toast.makeText(view.getContext(), " " + " button is pressed . " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
+                    fragmentManager.beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
+                }
+                else if( view.getId()== R.id.btn_saveforlater){
+                    fragmentManager.beginTransaction().replace(R.id.main_lays, new CartFragment()).commit();
+                }
+                else if( view.getId()== R.id.btn_remove){
+                    fragmentManager.beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
+                }
+            } else if (currentfragmentNamethatareusingthis == "ShowallProducts") {
+                    if (view.getId() == R.id.btn_buy_product_details) {
                         Toast.makeText(view.getContext(), "Button Pressed is : " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
+                        fragmentManager.beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
 
                     }
-                } else if (currentfragmentNamethatareusingthis != "WishList") {
-                    if (view.getId() == R.id.btn_saveforlater) {
+                    else if(view.getId()== R.id.btn_saveforlater_product_details){
+                        fragmentManager.beginTransaction().replace(R.id.main_lays, new CartFragment()).commit();
+                    }
+                } else if (currentfragmentNamethatareusingthis == "WishList") {
+                    if (view.getId() == R.id.btn_remove_wishlist) {
                         Toast.makeText(view.getContext(), "Button is Pressed  :" + String.valueOf(getAdapterPosition()) + " . ", Toast.LENGTH_SHORT).show();
+                        fragmentManager.beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
+                    }
+                    else if( view.getId()== R.id.btn_buy_wishlist){
+                        fragmentManager.beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
                     }
                 }
-            }
             weakReference.get().onPositionClicked(getAdapterPosition());
         }
 

@@ -55,7 +55,7 @@ public class ShowAllProductsFragment extends Fragment {
             my_all_product_lists.add(cartMultipleDataBinder);
         }
 
-        mydatas_adapters_list= new CartDataAdapter(my_all_product_lists, "ShowallProducts", R.layout.all_productsdetails_layouts, new ClickListener() {
+        mydatas_adapters_list= new CartDataAdapter(my_all_product_lists, "ShowallProducts", R.layout.all_productsdetails_layouts, getParentFragmentManager(), new ClickListener() {
             @Override
             public void onPositionClicked(int Position) {
 

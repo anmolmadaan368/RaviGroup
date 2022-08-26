@@ -115,7 +115,7 @@
             android:id="@+id/btns_outer_lays"
             android:layout_height="37dp">
             <Button
-                android:id="@+id/btn_remove"
+                android:id="@+id/btn_remove_wishlist"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -129,7 +129,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/btn_buy"
+                android:id="@+id/btn_buy_wishlist"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
