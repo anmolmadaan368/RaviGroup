@@ -25,7 +25,6 @@ import com.example.raviworldwidemedicines.fragment.ContactFragment;
 import com.example.raviworldwidemedicines.fragment.HomeFragment;
 import com.example.raviworldwidemedicines.fragment.LicenseFragment;
 import com.example.raviworldwidemedicines.fragment.LoginRegisterFragment;
-import com.example.raviworldwidemedicines.fragment.MenuFragment;
 import com.example.raviworldwidemedicines.fragment.OurPartnersFragment;
 import com.example.raviworldwidemedicines.fragment.OurProductFragment;
 import com.example.raviworldwidemedicines.fragment.ServicesFragment;
