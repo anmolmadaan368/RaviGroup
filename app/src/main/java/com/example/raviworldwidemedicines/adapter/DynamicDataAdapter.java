@@ -63,7 +63,6 @@ public class DynamicDataAdapter extends RecyclerView.Adapter<DynamicDataAdapter.
             itemViews= (ImageView) itemView.findViewById(R.id.item_view);
             itemDesc= (TextView) itemView.findViewById(R.id.item_desc);
             relativeLayout= (RelativeLayout) itemView.findViewById(R.id.relativeItemLays);
-
             relativeLayout.setOnClickListener(this);
 
         }

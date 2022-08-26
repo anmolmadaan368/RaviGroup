@@ -13,6 +13,7 @@
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="frequently_asked_questions">Frequently Asked Questions</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search_hint" formatted="true">Search here</string>
     <string name="cart">Cart</string>
@@ -21,4 +22,20 @@
     <string name="query_hint">"Write Your query here "</string>
     <string name="fab_desc"> "Share with  Whatsapp "</string>
     <string name="builders_name">MT</string>
+    <string name="termsCondition">
+        Restrictions on the use of your app
+Other important guidelines
+You can also maintain your rights including the right to exclude abusive users from your app, ownership rights in your content and legal rights against liability.
+
+Not only does a Terms &amp; Conditions agreement come with benefits to you, but it can also benefit your mobile app users. The agreement lets them know what you expect from them, what rights they have, and practical information like how to send payments, cancel an account, etc.
+    Restrictions on the use of your app
+Other important guidelines
+You can also maintain your rights including the right to exclude abusive users from your app, ownership rights in your content and legal rights against liability.
+
+Not only does a Terms &amp; Conditions agreement come with benefits to you, but it can also benefit your mobile app users. The agreement lets them know what you expect from them, what rights they have, and practical information like how to send payments, cancel an account, etc.
+    Restrictions on the use of your app
+Other important guidelines
+You can also maintain your rights including the right to exclude abusive users from your app, ownership rights in your content and legal rights against liability.
+
+Not only does a Terms &amp; Conditions agreement come with benefits to you, but it can also benefit your mobile app users. The agreement lets them know what you expect from them, what rights they have, and practical information like how to send payments, cancel an account, etc.</string>
 </resources>

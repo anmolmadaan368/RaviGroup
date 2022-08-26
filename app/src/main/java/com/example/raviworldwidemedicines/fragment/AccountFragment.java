@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -27,7 +28,11 @@ public class AccountFragment extends Fragment {
     private ImageView user_image;
     private Button editButton;
     private Button backButton;
-
+    private CardView cardViewProfile;
+    private Button btnLogout;
+    private CardView cardViewFAQ;
+    private CardView cardViewWishlist;
+    private CardView cardViewTerms;
     public AccountFragment() {
         // Required empty public constructor
     }
@@ -42,17 +47,54 @@ public class AccountFragment extends Fragment {
         acc_email = view.findViewById(R.id.account_email_txt);
         acc_mobile_no = view.findViewById(R.id.account_mobile_txt);
         user_image = view.findViewById(R.id.account_user_pic);
-        editButton = view.findViewById(R.id.Edit_Button);
 
+        cardViewProfile = view.findViewById(R.id.card_view_3);
+        cardViewFAQ = view.findViewById(R.id.card_view_5);
+        cardViewWishlist = view.findViewById(R.id.card_view_2);
+        cardViewTerms = view.findViewById(R.id.card_view_4);
 
-
-        editButton.setOnClickListener(new View.OnClickListener() {
+//
+//
+//
+        cardViewProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new EditDetailsFragment()).commit();
             }
         });
 
+
+        btnLogout = view.findViewById(R.id.logout);
+//
+//
+//
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new AccountLogoutFragment()).commit();
+            }
+        });
+
+        cardViewFAQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new FaqFragment()).commit();
+            }
+        });
+
+        cardViewWishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new WishListFragment()).commit();
+            }
+        });
+
+        cardViewTerms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new TermsAndConditions()).commit();
+            }
+        });
 
 
 //        .;
