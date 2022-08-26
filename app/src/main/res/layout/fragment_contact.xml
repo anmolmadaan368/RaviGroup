@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#97A9AC"
+    android:background="@color/white"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.ContactFragment"
     android:orientation="vertical">
@@ -87,7 +87,7 @@
             android:layout_below="@id/contact_contactdetails"
             android:layout_marginTop="9dp"
             android:elevation="9dp"
-            app:cardCornerRadius="67dp"
+
             app:cardElevation="9dp">
 
 
@@ -99,7 +99,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#C3BFCA"
+                    android:background="#8427A2"
                     android:orientation="vertical"
                     android:paddingLeft="21dp"
                     android:paddingRight="21dp">
@@ -111,7 +111,7 @@
                         android:padding="6dp"
                         android:text="Get In Touch"
                         android:textAlignment="center"
-                        android:textColor="#2177BC"
+                        android:textColor="@color/teal_200"
                         android:textSize="23dp"
                         android:textStyle="bold|normal" />
 
@@ -126,6 +126,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="0.3"
                             android:text="Name: "
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
                             tools:ignore="Suspicious0dp" />
 
                         <EditText
@@ -135,7 +137,9 @@
                             android:layout_weight="0.7"
                             android:contentDescription="Enter Your Name"
                             android:hint="Enter your name here "
-                            android:padding="9dp" />
+                            android:padding="9dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
 
                     </LinearLayout>
 
@@ -148,7 +152,9 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".3"
-                            android:text="Email: " />
+                            android:text="Email: "
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
 
                         <EditText
                             android:id="@+id/contactform_email"
@@ -156,7 +162,9 @@
                             android:layout_height="wrap_content"
                             android:layout_weight=".7"
                             android:hint="Enter your email here"
-                            android:padding="7dp" />
+                            android:padding="7dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
 
                     </LinearLayout>
 
@@ -169,7 +177,9 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".3"
-                            android:text="Contact No: " />
+                            android:text="Contact No: "
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
 
                         <EditText
                             android:id="@+id/contactform_contactno"
@@ -177,7 +187,9 @@
                             android:layout_height="wrap_content"
                             android:layout_weight=".7"
                             android:hint="Enter your Contact No. here "
-                            android:padding="7dp" />
+                            android:padding="7dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -188,7 +200,9 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".3"
-                            android:text="Your Subject" />
+                            android:text="Your Subject"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
 
                         <EditText
                             android:id="@+id/contactform_subject"
@@ -196,7 +210,9 @@
                             android:layout_height="wrap_content"
                             android:layout_weight=".7"
                             android:hint="Enter Your Subject here....   "
-                            android:padding="7dp" />
+                            android:padding="7dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
 
                     </LinearLayout>
 
@@ -208,36 +224,40 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".3"
-                            android:text="Your Message" />
+                            android:text="Your Message"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
 
                         <EditText
                             android:id="@+id/contactform_message"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".7"
-                            android:scrollbarAlwaysDrawVerticalTrack="true"
-                            android:minLines="3"
-                            android:maxLines="9"
                             android:hint="Enter You message here "
+                            android:maxLines="9"
+                            android:minLines="3"
                             android:padding="2dp"
-                            android:scrollbars="vertical" />
+                            android:scrollbarAlwaysDrawVerticalTrack="true"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
                     </LinearLayout>
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/contactform_submitBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_color_round_cut_blue"
                         android:layout_gravity="center_horizontal"
-                        android:paddingTop="7dp"
-                        android:paddingBottom="7dp"
-                        android:paddingLeft="37dp"
-                        android:textSize="19sp"
-                        android:textAlignment="center"
                         android:layout_marginBottom="7dp"
+                        android:backgroundTint="@color/black"
+                        android:paddingLeft="37dp"
+                        android:paddingTop="7dp"
                         android:paddingRight="37dp"
+                        android:paddingBottom="7dp"
                         android:text="Submit"
+                        android:textAlignment="center"
                         android:textAllCaps="false"
+                        android:textSize="19sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </RelativeLayout>
@@ -253,6 +273,7 @@
             android:background="#7C8E66"
         android:layout_marginBottom="57dp"
             android:orientation="vertical"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -260,6 +281,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
+                android:background="#3BA227"
                 android:paddingLeft="1dp">
 
                 <TextView
@@ -280,6 +302,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
                 android:gravity="end"
+                android:background="#3BA227"
                 android:paddingLeft="1dp">
 
                 <TextView
