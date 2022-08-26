@@ -94,11 +94,11 @@ public class CartFragment extends Fragment {
             }
         });
 
-        buy_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
+//        buy_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//            }
+//        });
 
 
 
