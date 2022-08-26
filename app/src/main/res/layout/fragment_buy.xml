@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragment.BuyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/medicine_1"/>
+
+        <TextView
+            android:id="@+id/med_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/medicine"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Aspirine"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/med_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/med_name"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Homeopathy"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/med_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/med_type"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Rs 250"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_count"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/med_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_minus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_vector_plus"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/place_order"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="The tablet  is available at 50% Off from the regular price. The best offer available at App purchase."/>
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_offer"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/add_location"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_offer"
+            app:layout_constraintStart_toEndOf="@id/location"
+            android:text="Dwarka, Delhi"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/Delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/truck"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintStart_toStartOf="@id/Delivery"
+            android:text="30 mins"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/place_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F7EC9"
+            app:layout_constraintTop_toBottomOf="@id/card_view_count"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Place order"
+            android:layout_marginTop="20dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

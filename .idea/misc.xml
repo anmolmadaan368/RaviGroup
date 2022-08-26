@@ -21,13 +21,23 @@
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/drawable/ic_arrow_down.xml" value="0.215" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.215" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/all_productsdetails_layouts.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/cat_list_item_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/dynamic_list_item_views.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_about.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_account.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_account_logout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_blog.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_blog_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_buy.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_contact.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_edit_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_faq.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/fragment_terms_and_conditions.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/list_item_blog_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/list_item_g_view_our_products.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/layout/list_item_layout_wishlist.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>

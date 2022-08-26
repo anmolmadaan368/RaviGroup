@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class CartFragment extends Fragment {
     public RecyclerView cartList;
     public SearchView sviews;
     private CartDataAdapter cartDataAdapter;
+    private Button buy_btn;
     private ArrayList<CartMultipleDataBinder> mydatalists;
     private TextView txt_no_data_found;
 
@@ -38,9 +40,10 @@ public class CartFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
         txt_no_data_found= view.findViewById(R.id.txt_no_data_exist);
-
+        buy_btn=(Button) view.findViewById(R.id.btn_buy);
         sviews = (SearchView) view.findViewById(R.id.searchviews);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
+
 
 //        sviews.setQueryHint("Hints ");
 //  Making whole search view Clickable here ...
@@ -90,6 +93,13 @@ public class CartFragment extends Fragment {
                 return false;
             }
         });
+
+        buy_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
 
 
 
