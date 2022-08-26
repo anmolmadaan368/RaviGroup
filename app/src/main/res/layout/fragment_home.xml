@@ -56,6 +56,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
                     android:layout_marginTop="10dp"
+                    android:fitsSystemWindows="true"
                     android:layout_marginRight="2dp">
 
                     <LinearLayout
@@ -68,8 +69,7 @@
                             android:layout_height="200dp"
                             android:layout_marginLeft="2dp"
                             android:layout_marginRight="2dp"
-                            android:fitsSystemWindows="true"
-                             app:iss_auto_cycle="true"
+                            app:iss_auto_cycle="true"
                             app:iss_corner_radius="10"
                             app:iss_delay="1000"
                             app:iss_period="2987"
@@ -100,35 +100,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginTop="3dp"
+                android:id="@+id/recently_viewed_outer_lays"
+                android:background="#97A9AC"
                 android:layout_below="@id/sliders_outer_lays"
                 >
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_recently_viewed"
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:textSize="13sp"
                     android:layout_alignParentTop="true"
-                    android:text="Recently viewed "
-                    android:id="@+id/btn_recently_viewed"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false"
+                    android:background="@color/white"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:paddingLeft="7dp"
                     android:paddingTop="3dp"
                     android:paddingRight="3dp"
-                    android:paddingLeft="7dp"
+                    android:text="   Recently viewed "
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
                     android:textColor="#000"
-                    android:background="@color/white"
-                    />
+                    android:textSize="15sp" />
+
                 <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/recently_viewed_recycler_view"
+                    android:layout_width="match_parent"
+                    android:paddingTop="10dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/btn_recently_viewed"
                     android:layout_alignParentBottom="true"
-                    android:background="@color/white"
-                    android:layout_marginBottom="3dp"
-                    />
+                    android:layout_marginBottom="17dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white" />
 
 
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
             </RelativeLayout>
         </RelativeLayout>
 

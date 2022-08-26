@@ -38,49 +38,6 @@
         android:orientation="vertical"
         >
 
-        <!--    <ImageView-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_marginTop="30dp"-->
-        <!--        android:id="@+id/myImages"-->
-        <!--        android:src="@drawable/imgf_8"-->
-        <!--        android:layout_marginRight="20dp"-->
-        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintHorizontal_bias="1"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toTopOf="parent"-->
-        <!--        app:layout_constraintVertical_bias="0"-->
-        <!--        />-->
-        <!--<ImageView-->
-        <!--    android:layout_width="wrap_content"-->
-        <!--    android:layout_height="wrap_content"-->
-        <!--    android:src="@drawable/cart_icc"-->
-        <!--    android:id="@+id/imgView2"-->
-        <!--    app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--    app:layout_constraintEnd_toStartOf="@id/myImages"-->
-        <!--    app:layout_constraintStart_toStartOf="parent"-->
-        <!--    app:layout_constraintTop_toTopOf="@id/myImages"-->
-        <!--    />-->
-
-        <!--    <TextView-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:text="Hello"-->
-        <!--        android:textColor="@color/black"-->
-        <!--        android:textSize="36sp"-->
-        <!--        android:layout_marginLeft="30dp"-->
-        <!--        android:layout_marginTop="10dp"-->
-        <!--        app:layout_constraintVertical_bias="0"-->
-        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"app:layout_constraintTop_toBottomOf="@id/imgView2"-->
-        <!--        />-->
-
-        <!--     <TextView-->
-        <!--         android:layout_width="wrap_content"-->
-        <!--         android:layout_height="wrap_content"-->
-        <!--         android:text=""-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myservices_recyclerViews"
@@ -93,23 +50,28 @@
     </LinearLayout>
 
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#97A9AC"
-        android:padding="29dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="215dp"
+        android:layout_marginLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view_outer_lays">
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="63dp"
+        app:cardCornerRadius="7dp"
+        android:background="#fff"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
 
         <TextView
             android:id="@+id/servicesDescp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="   Services Desc "
-            android:textSize="13sp" />
-    </LinearLayout>
+            android:textSize="16sp"
+            />
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

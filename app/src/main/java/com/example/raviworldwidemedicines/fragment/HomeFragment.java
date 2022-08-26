@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.SearchView;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.raviworldwidemedicines.ClickListener;
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.RecentlyViewedFragment;
 import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 
@@ -28,6 +30,7 @@ public class HomeFragment extends Fragment {
     public ViewPager pager;
     public SearchView sviews;
     private RecyclerView recyclerView_recently_viewed;
+    private Button btn_recently_viewed;
     private ShowAllProductsFragment showAllProductsFragment;
 
     public com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter product_slider_fixed_viewAdapter;
@@ -46,6 +49,7 @@ public class HomeFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_views);
         ImageSlider imageSlider = view.findViewById(R.id.img_slider);
         pager = (ViewPager) view.findViewById(R.id.viewPagerIds);
+        btn_recently_viewed=(Button) view.findViewById(R.id.btn_recently_viewed);
         sviews = (SearchView) view.findViewById(R.id.searchviews);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
@@ -82,7 +86,7 @@ public class HomeFragment extends Fragment {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext(), RecyclerView.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        Integer[] myimgs = {R.mipmap.ic_home, R.mipmap.ic_search, R.mipmap.ic_wpicn, R.mipmap.ic_search, R.mipmap.ic_search, R.mipmap.ic_cart};
+        int[] myimgs = {R.mipmap.ic_home, R.mipmap.ic_search, R.mipmap.ic_wpicn, R.mipmap.ic_search, R.mipmap.ic_search, R.mipmap.ic_cart};
         String[] list_names = {"java", "C", "C++", "PHP", "Python", ".Net"};
         dataAdapter adapter = new dataAdapter(myimgs, list_names, R.layout.list_item_view,new ClickListener() {
             @Override
@@ -95,12 +99,19 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
 //      Recently viewwd Panel code is here
+        btn_recently_viewed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new RecentlyViewedFragment()).commit();
+            }
+        });
+
 
         recyclerView_recently_viewed= view.findViewById(R.id.recently_viewed_recycler_view);
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity().getApplicationContext(),RecyclerView.HORIZONTAL,false);
         recyclerView_recently_viewed.setLayoutManager(layoutManager);
-        Integer[] myimgs2 = {R.drawable.user, R.drawable.search_icon, R.drawable.loading, R.drawable.imgf_8, R.drawable.imgf_4};
+        int [] myimgs2 = {R.drawable.user, R.drawable.search_icon, R.drawable.loading, R.drawable.imgf_8, R.drawable.imgf_4};
         String[] list_name3s = {"0 min ago", "2 min ago", "3 min ago", "4 min ago", "1 hr ago "};
         dataAdapter adapter1=new dataAdapter(myimgs2, list_name3s,R.layout.recently_viewed_list_item_views, new ClickListener() {
             @Override
@@ -110,6 +121,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        recyclerView_recently_viewed.setAdapter(adapter1);
         return view;
 
     }

@@ -1,5 +1,6 @@
 package com.example.raviworldwidemedicines.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +20,11 @@ import java.lang.ref.WeakReference;
 public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
 
     private String[]  data;
-    private Integer [] imgData;
+    private int [] imgData;
     private int list_item_view_to_be_placed;
     private ClickListener listener;
     private ShowAllProductsFragment showAllProductsFragment;
-    public dataAdapter(Integer [] imdata  ,String [] datas,int list_item_view_to_be_place,ClickListener clickListener){
+    public dataAdapter(int [] imdata  ,String [] datas,int list_item_view_to_be_place,ClickListener clickListener){
         this.data=datas;
         this.imgData=imdata;
         this.listener=clickListener;
@@ -32,16 +33,18 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
 
     @Override
     public DataAdapter onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater=LayoutInflater.from(parent.getContext());
-        View view=inflater.inflate(list_item_view_to_be_placed, parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(list_item_view_to_be_placed, parent,false);
+
         return new DataAdapter(view);
     }
 
     @Override
     public void onBindViewHolder(DataAdapter holder, int position) {
         String datas= data [position];
+        Log.d("Recently vie", "onBindViewHolder: "+datas);
         holder.mytexts.setText( datas);
         int myimgs= imgData[position];
+        Log.d("Recently vie", "onBindViewHolder: "+myimgs);
         holder.myimg.setImageResource(myimgs);
     }
 
