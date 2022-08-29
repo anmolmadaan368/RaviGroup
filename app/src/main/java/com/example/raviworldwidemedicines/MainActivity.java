@@ -25,7 +25,6 @@ import com.example.raviworldwidemedicines.fragment.ContactFragment;
 import com.example.raviworldwidemedicines.fragment.HomeFragment;
 import com.example.raviworldwidemedicines.fragment.LicenseFragment;
 import com.example.raviworldwidemedicines.fragment.LoginRegisterFragment;
-import com.example.raviworldwidemedicines.fragment.MenuFragment;
 import com.example.raviworldwidemedicines.fragment.OurPartnersFragment;
 import com.example.raviworldwidemedicines.fragment.OurProductFragment;
 import com.example.raviworldwidemedicines.fragment.ServicesFragment;
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public HomeFragment homeFragment = new HomeFragment();
     public CartFragment cartFragment = new CartFragment();
     public AccountFragment accountFragment = new AccountFragment();
-    public MenuFragment menuFragment = new MenuFragment();
     public Fragment previous_Fragment;
 
     public AboutFragment aboutFragment = new AboutFragment();
@@ -198,13 +196,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         }
                         previous_Fragment=cartFragment;
                         return true;
-                    case R.id.bottom_nav_menu:
-                        Toast.makeText(getApplicationContext(), "Menu  Fragment is called", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_lays, menuFragment).commit();
-                        if(previous_Fragment !=menuFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
-                        previous_Fragment=menuFragment;
-                        return true;
+
                     case R.id.bottom_nav_acc:
                         Toast.makeText(getApplicationContext(), "Account Fragment is called", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_lays, accountFragment).commit();

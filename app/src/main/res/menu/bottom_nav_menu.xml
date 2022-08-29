@@ -18,10 +18,4 @@
         android:enabled="true"
         android:icon="@drawable/user"
         />
-    <item
-        android:id="@+id/bottom_nav_menu"
-        android:enabled="true"
-        android:title="@string/bottom_nav_manu_val"
-        android:icon="@drawable/menu_icon"
-        />
 </menu>
