@@ -1,5 +1,6 @@
 package com.example.raviworldwidemedicines.adapter;
 
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,15 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.raviworldwidemedicines.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.ShowAllProductsFragment;
+import com.example.raviworldwidemedicines.model.Model;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
 
@@ -23,12 +28,19 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
     private int [] imgData;
     private int list_item_view_to_be_placed;
     private ClickListener listener;
+    Context context;
+    List<Model> medList;
     private ShowAllProductsFragment showAllProductsFragment;
     public dataAdapter(int [] imdata  ,String [] datas,int list_item_view_to_be_place,ClickListener clickListener){
         this.data=datas;
         this.imgData=imdata;
         this.listener=clickListener;
         this.list_item_view_to_be_placed=list_item_view_to_be_place;
+    }
+
+    public void setList(List<Model> medList){
+        this.medList = medList;
+        notifyDataSetChanged();
     }
 
     @Override
