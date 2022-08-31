@@ -15,9 +15,11 @@ import androidx.viewpager.widget.ViewPager;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.raviworldwidemedicines.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.RecentlyViewedFragment;
+import com.example.raviworldwidemedicines.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 
@@ -102,7 +104,7 @@ public class HomeFragment extends Fragment {
         btn_recently_viewed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new RecentlyViewedFragment()).commit();
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new RecentlyViewedFragment(new  ArrayList<>())).commit();
             }
         });
 
@@ -112,12 +114,13 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity().getApplicationContext(),RecyclerView.HORIZONTAL,false);
         recyclerView_recently_viewed.setLayoutManager(layoutManager);
         int [] myimgs2 = {R.drawable.user, R.drawable.search_icon, R.drawable.loading, R.drawable.imgf_8, R.drawable.imgf_4};
+        CartMultipleDataBinder item_singleDatas= new CartMultipleDataBinder( myimgs2[1], "sj","sij","sjs","sjd" );
         String[] list_name3s = {"0 min ago", "2 min ago", "3 min ago", "4 min ago", "1 hr ago "};
         dataAdapter adapter1=new dataAdapter(myimgs2, list_name3s,R.layout.recently_viewed_list_item_views, new ClickListener() {
             @Override
             public void onPositionClicked(int Position) {
                 showAllProductsFragment =new ShowAllProductsFragment();
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, showAllProductsFragment).commit();
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new SingleProductDetailsFragment(item_singleDatas)).commit();
             }
         });
 

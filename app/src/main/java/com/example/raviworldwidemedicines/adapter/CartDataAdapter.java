@@ -91,7 +91,7 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
 
 
             itemView.setOnClickListener(this);
-            if (currentfragmentNamethatareusingthis == "ShowallProducts") {
+            if (currentfragmentNamethatareusingthis == "showmyProducts") {
                 save_btn = (Button) itemView.findViewById(R.id.btn_saveforlater_product_details);
                 buy_btn = (Button) itemView.findViewById(R.id.btn_buy_product_details);
                 save_btn.setOnClickListener(this);
@@ -124,7 +124,7 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
                 else if( view.getId()== R.id.btn_remove){
                     fragmentManager.beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
                 }
-            } else if (currentfragmentNamethatareusingthis == "ShowallProducts") {
+            } else if (currentfragmentNamethatareusingthis == "showmyProducts") {
                     if (view.getId() == R.id.btn_buy_product_details) {
                         Toast.makeText(view.getContext(), "Button Pressed is : " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
                         fragmentManager.beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();

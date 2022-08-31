@@ -78,8 +78,8 @@ public class RecentlyViewAdapter extends RecyclerView.Adapter<RecentlyViewAdapte
             salt_comp = (TextView) itemView.findViewById(R.id.txt_salt_compostion);
             manufacturer_name = (TextView) itemView.findViewById(R.id.txt_salt_compostion);
             chemical_name = (TextView) itemView.findViewById(R.id.txtview_chemical_amount);
-            save_later_btn = (Button) itemView.findViewById(R.id.btn_saveforlater);
-            buy_btn = (Button) itemView.findViewById(R.id.btn_buy);
+            save_later_btn = (Button) itemView.findViewById(R.id.btn_saveforlater_product_details);
+            buy_btn = (Button) itemView.findViewById(R.id.btn_buy_product_details);
             weakReference=new WeakReference<>(listener);
 
             buy_btn.setOnClickListener(this);
@@ -88,10 +88,10 @@ public class RecentlyViewAdapter extends RecyclerView.Adapter<RecentlyViewAdapte
 
         @Override
         public void onClick(View view) {
-            if (view.getId() == R.id.btn_buy) {
+            if (view.getId() == R.id.btn_buy_product_details) {
                 Toast.makeText(buy_btn.getContext(), " Buy Button is clicked", Toast.LENGTH_SHORT).show();
                 parents_Fragments.beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
-            } else if (view.getId() == R.id.btn_saveforlater) {
+            } else if (view.getId() == R.id.btn_saveforlater_product_details) {
                 Toast.makeText(save_later_btn.getContext(), " Save for Later is clicked ", Toast.LENGTH_SHORT).show();
                 parents_Fragments.beginTransaction().replace(R.id.main_lays, new CartFragment()).commit();
             }

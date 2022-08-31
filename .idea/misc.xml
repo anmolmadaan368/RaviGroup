@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/activity_splash_sceen.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/all_productsdetails_layouts.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/all_productsdetails_layouts.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/cat_list_item_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_about.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_account.xml" value="0.20416666666666666" />
@@ -16,12 +16,15 @@
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_recently_viewed.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_recently_viewed_adapter.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_services.xml" value="0.25" />
-        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_show_all_products.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_show_all_products.xml" value="0.25" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_single_product_details.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_wish_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_layout_wishlist.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_view.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/recently_viewed_list_item_views.xml" value="0.25" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/showproducts_layouts.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/menu/nav_drawer_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/drawable/asset_cross.xml" value="0.215" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/drawable/bg_color_round_cut_blue.xml" value="0.215" />
         <entry key="..\:/Users/HP/Downloads/Ravi World Wide Medicines/RaviWorldWideMedicines/app/src/main/res/drawable/faq_bar_background.xml" value="0.215" />

@@ -18,8 +18,9 @@ public class RecentlyViewedFragment extends Fragment {
 
     public ArrayList<CartMultipleDataBinder> recently_viewed_list= new ArrayList<>();
     private RecyclerView recyclerView_recently_viewed;
-    public RecentlyViewedFragment() {
+    public RecentlyViewedFragment( ArrayList<CartMultipleDataBinder> all_recently_lists) {
         // Required empty public constructor
+        this.recently_viewed_list=all_recently_lists;
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
