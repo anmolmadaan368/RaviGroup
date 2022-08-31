@@ -4,6 +4,7 @@
     app:cardCornerRadius="9dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginLeft="9dp"
+
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 <RelativeLayout android:layout_height="match_parent"
@@ -11,25 +12,28 @@
     android:id="@+id/category_item_relative_layss"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
+
     <ImageView
         android:layout_width="37dp"
         android:layout_height="27dp"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:layout_marginLeft="2dp"
         android:scaleType="fitXY"
         android:layout_centerHorizontal="true"
         android:id="@+id/myimg"
         android:src="@mipmap/ic_launcher"
         />
+
     <TextView
+        android:id="@+id/mytxts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15sp"
+        android:layout_marginStart="20dp"
         android:layout_below="@id/myimg"
+        android:foregroundGravity="center"
+        android:layout_marginTop="20dp"
         android:text="This is my Text"
-        android:id="@+id/mytxts"
-        android:textSize="24dp"
-        />
+        android:textSize="20sp" />
 
 </RelativeLayout>
     </androidx.cardview.widget.CardView>

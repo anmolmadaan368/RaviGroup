@@ -8,7 +8,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <RelativeLayout android:layout_height="wrap_content"
-
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:id="@+id/category_item_relative_layss"
@@ -23,15 +22,15 @@
             android:scaleType="fitXY"
             android:src="@mipmap/ic_launcher"
             />
+
         <TextView
+            android:id="@+id/mytxts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
             android:layout_below="@id/myimg"
+            android:layout_marginTop="17dp"
             android:text="This is my Text"
-            android:id="@+id/mytxts"
-            android:textSize="24dp"
-            />
+            android:textSize="20sp" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

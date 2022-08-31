@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -21,7 +22,7 @@ import com.example.raviworldwidemedicines.adapter.CartDataAdapter;
 
 import java.util.ArrayList;
 
-public class CartFragment extends Fragment {
+public class CartFragment extends Fragment  {
 
     public RecyclerView cartList;
     public SearchView sviews;
@@ -45,6 +46,15 @@ public class CartFragment extends Fragment {
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
 
+//        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+//            @Override
+//            public void handleOnBackPressed() {
+//                getFragmentManager().popBackStackImmediate();
+//            }
+//        };
+//        requireActivity().getOnBackPressedDispatcher().addCallback(requireActivity(), callback);
+//
+
 //        sviews.setQueryHint("Hints ");
 //  Making whole search view Clickable here ...
         sviews.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +74,7 @@ public class CartFragment extends Fragment {
         String[] product_name = {"ABIRAPRO 250MG TABLET", "BDENZA 40MG CAPSULE", "BDPARIB 200MG TABLET", "ABEVMY 100MG INJECTION"};
         String[] comp_amount = {"1 VIAL(s) OF 4ML", "20 TABLET(s) IN A BOTTLE", "8 CAPSULE(s) IN A STRIP", "60 TABLET(s) IN A BOTTLE"};
         mydatalists = new ArrayList<>();
+
 
         CartMultipleDataBinder cartMultipleDataBinder;
         for (int i = 0; i < manufacturer_list.length; i++) {

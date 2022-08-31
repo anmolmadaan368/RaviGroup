@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
     private ShowAllProductsFragment showAllProductsFragment;
 
     public com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter product_slider_fixed_viewAdapter;
-    private int[] product_slider_fixed_images = {R.drawable.imgf_2, R.drawable.imgf_1, R.drawable.imgf_3, R.drawable.imgf_4, R.drawable.imgf_5};
+    private int[] product_slider_fixed_images = {R.drawable.medicine_image_7, R.drawable.medicine_image_2, R.drawable.medicine_image_3, R.drawable.medicine_image_5, R.drawable.medicine_image_6};
 
 
     public HomeFragment() {
@@ -75,12 +75,12 @@ public class HomeFragment extends Fragment {
 
 
         ArrayList<SlideModel> slidemodels = new ArrayList<>();
-        slidemodels.add(new SlideModel((R.drawable.imgf_1), ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.imgf_2, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.imgf_3, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.imgf_5, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.imgf_4, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.imgf_7, ScaleTypes.FIT));
+        slidemodels.add(new SlideModel((R.drawable.medicine_image_8), ScaleTypes.FIT));
+        slidemodels.add(new SlideModel(R.drawable.medicine_image_9, ScaleTypes.FIT));
+        slidemodels.add(new SlideModel(R.drawable.medicine_image_15, ScaleTypes.FIT));
+        slidemodels.add(new SlideModel(R.drawable.medicine_image_11, ScaleTypes.FIT));
+        slidemodels.add(new SlideModel(R.drawable.medicine_image_12, ScaleTypes.FIT));
+        slidemodels.add(new SlideModel(R.drawable.medicine_image_14, ScaleTypes.FIT));
         imageSlider.setImageList(slidemodels, ScaleTypes.FIT);
 
 
