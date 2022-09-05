@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.raviworldwidemedicines.R;
 
@@ -28,7 +29,7 @@ public class AccountLogoutFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private CardView cardViewTerms, cardViewFAQ;
-    private Button login;
+    private TextView login;
 
 
 
@@ -72,7 +73,7 @@ public class AccountLogoutFragment extends Fragment {
 
         cardViewTerms = view.findViewById(R.id.card_view_terms);
         cardViewFAQ = view.findViewById(R.id.card_view_faq);
-        login = view.findViewById(R.id.login_button);
+        login = (TextView)view.findViewById(R.id.login_button);
 
 
         cardViewTerms.setOnClickListener(new View.OnClickListener() {

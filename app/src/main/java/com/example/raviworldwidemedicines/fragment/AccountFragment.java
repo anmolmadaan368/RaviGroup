@@ -25,7 +25,6 @@ public class AccountFragment extends Fragment {
     private TextView acc_uname;
     private TextView acc_email;
     private TextView acc_mobile_no;
-    private ImageView user_image;
     private TextView editButton;
     private TextView backButton;
     private CardView cardViewProfile;
@@ -47,7 +46,6 @@ public class AccountFragment extends Fragment {
         acc_uname = (TextView) view.findViewById(R.id.login_uname);
         acc_email = view.findViewById(R.id.account_email_txt);
         acc_mobile_no = view.findViewById(R.id.account_mobile_txt);
-        user_image = view.findViewById(R.id.account_user_pic);
 
         cardViewProfile = view.findViewById(R.id.card_view_3);
         cardViewFAQ = view.findViewById(R.id.card_view_5);
@@ -66,7 +64,7 @@ public class AccountFragment extends Fragment {
         });
 
 
-        btnLogout = view.findViewById(R.id.logout);
+        btnLogout = (TextView) view.findViewById(R.id.logout);
 //
 //
 //
