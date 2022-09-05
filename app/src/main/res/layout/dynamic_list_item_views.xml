@@ -14,12 +14,12 @@
         android:gravity="center"
         android:layout_height="match_parent"
         >
+
         <ImageView
+            android:id="@+id/item_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/item_view"
-            android:fitsSystemWindows="true"
-            />
+            android:fitsSystemWindows="true" />
 
         <TextView
             android:layout_width="match_parent"

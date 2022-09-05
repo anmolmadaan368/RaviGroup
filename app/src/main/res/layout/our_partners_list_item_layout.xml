@@ -28,7 +28,7 @@
             <ImageView
                 android:id="@+id/our_partner_img"
                 android:layout_width="0dp"
-                android:layout_height="167dp"
+                android:layout_height="130dp"
                 android:layout_weight="0.3"
                 android:scaleType="fitXY"
                 android:src="@drawable/imgf_5" />
