@@ -14,4 +14,6 @@ public interface RetrofitApi {
 
         //on below line we are creating a method to post our data.
     Call<List<Model>> getData();
+
+
 }
