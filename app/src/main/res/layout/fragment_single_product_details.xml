@@ -9,11 +9,11 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="427dp"
+        android:layout_height="match_parent"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="4.7dp"
         android:layout_marginRight="3dp"
-        app:cardCornerRadius="19dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
@@ -39,28 +39,28 @@
                     <ImageView
                         android:id="@+id/product_img_from_sigle_layss"
                         android:layout_width="0.3dp"
-                        android:layout_height="221dp"
-                        android:scaleType="fitXY"
+                        android:layout_height="121dp"
                         android:layout_weight="0.3"
+                        android:scaleType="fitXY"
                         android:src="@drawable/remove" />
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="8dp"
-                        android:layout_weight="0.7"
                         android:layout_marginTop="1dp"
+                        android:layout_weight="0.7"
                         android:paddingLeft="1dp">
 
                         <TextView
                             android:id="@+id/cart_product_title"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:paddingLeft="3dp"
                             android:layout_marginTop="9dp"
-                            android:text="Product Title"
+                            android:layout_marginBottom="3dp"
                             android:gravity="center_horizontal"
+                            android:paddingLeft="3dp"
+                            android:text="Product Title"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -72,11 +72,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_marginTop="20dp"
                     android:padding="3dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
                         android:orientation="vertical">
 
@@ -91,14 +92,15 @@
                             android:id="@+id/txt_salt_compostion"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="salt Details "
+                            android:text="salt Details dgsgsgesgdddddddddsfdsfdsfdsfdddddddddddddddddddddddddddddddddddddffffffffffffffffffffffffffffffffffff"
+                            android:minLines="1"
                             android:textAlignment="textStart" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="15dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -112,6 +114,7 @@
                             android:id="@+id/texview_manufacturer_details"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:text="manufacturer's details " />
                     </LinearLayout>
 
@@ -143,27 +146,27 @@
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/btn_saveforlater_product_details"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/bg_color_round_cut_blue"
-                    android:gravity="center"
-                    android:layout_marginRight="28dp"
-                    android:layout_marginLeft="28dp"
                     android:layout_weight="1"
-                    android:text="Save Later "
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="16sp"
-                    app:iconGravity="start" />
-            </LinearLayout>
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_saveforlater_product_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginRight="28dp"
+                        android:layout_weight="1"
+                        android:background="@color/purple_700"
+                        android:gravity="center"
+                        android:text="Add to cart "
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:iconGravity="start" />
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_weight="1"
@@ -177,12 +180,12 @@
                     android:layout_marginLeft="28dp"
                     android:layout_marginRight="28dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_color_round_cut_blue"
+                    android:background="@color/yellow"
                     android:gravity="center"
                     android:text="Buy"
                     android:textAlignment="center"
                     android:textAllCaps="false"
-                    android:textColor="#fff"
+                    android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>
             </LinearLayout>
