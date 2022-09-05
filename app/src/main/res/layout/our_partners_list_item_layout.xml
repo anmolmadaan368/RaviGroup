@@ -5,6 +5,7 @@
     android:minHeight="258dp"
     android:layout_height="wrap_content"
     android:layout_marginRight="3dp"
+    android:backgroundTint="#E6FFFFFF"
     android:layout_marginLeft="3dp"
     android:layout_marginTop="9dp"
     app:cardCornerRadius="19dp">
