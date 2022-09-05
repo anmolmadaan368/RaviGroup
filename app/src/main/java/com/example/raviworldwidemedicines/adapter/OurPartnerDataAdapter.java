@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.raviworldwidemedicines.OurPartnerDataModel;
+import com.example.raviworldwidemedicines.exampl.OurPartnerDataModel;
 import com.example.raviworldwidemedicines.R;
 
 import java.util.ArrayList;

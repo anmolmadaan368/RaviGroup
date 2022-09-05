@@ -15,11 +15,11 @@ import androidx.viewpager.widget.ViewPager;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.raviworldwidemedicines.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.ClickListener;
+import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.exampl.ClickListener;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.RecentlyViewedFragment;
-import com.example.raviworldwidemedicines.SingleProductDetailsFragment;
+import com.example.raviworldwidemedicines.exampl.RecentlyViewedFragment;
+import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 

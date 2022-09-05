@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines;
+package com.example.raviworldwidemedicines.exampl;
 
 import com.example.raviworldwidemedicines.model.Model;
 

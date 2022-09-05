@@ -3,7 +3,6 @@ package com.example.raviworldwidemedicines.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,14 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.raviworldwidemedicines.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.ClickListener;
+import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.exampl.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.BuyFragment;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
 import com.example.raviworldwidemedicines.fragment.HomeFragment;
-import com.example.raviworldwidemedicines.fragment.OurProductFragment;
-import com.example.raviworldwidemedicines.fragment.WishListFragment;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

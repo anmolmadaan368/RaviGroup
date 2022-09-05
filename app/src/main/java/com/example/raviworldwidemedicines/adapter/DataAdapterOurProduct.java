@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.raviworldwidemedicines.DataModelOurProduct;
+import com.example.raviworldwidemedicines.exampl.DataModelOurProduct;
 import com.example.raviworldwidemedicines.R;
 
 import java.util.ArrayList;

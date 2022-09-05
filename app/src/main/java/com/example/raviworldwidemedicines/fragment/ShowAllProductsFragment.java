@@ -3,8 +3,6 @@ package com.example.raviworldwidemedicines.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,12 +14,10 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.raviworldwidemedicines.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.ClickListener;
+import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.SingleProductDetailsFragment;
+import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.adapter.AllProductDataAdapter;
-import com.example.raviworldwidemedicines.adapter.CartDataAdapter;
 
 import java.util.ArrayList;
 

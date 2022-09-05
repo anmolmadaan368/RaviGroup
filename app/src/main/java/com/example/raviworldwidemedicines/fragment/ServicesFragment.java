@@ -13,8 +13,8 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.raviworldwidemedicines.ClickListener;
-import com.example.raviworldwidemedicines.DynamicRvModel;
+import com.example.raviworldwidemedicines.exampl.ClickListener;
+import com.example.raviworldwidemedicines.exampl.DynamicRvModel;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.DynamicDataAdapter;
 

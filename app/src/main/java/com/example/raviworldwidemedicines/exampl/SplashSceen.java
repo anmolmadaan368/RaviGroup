@@ -1,10 +1,12 @@
-package com.example.raviworldwidemedicines;
+package com.example.raviworldwidemedicines.exampl;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.raviworldwidemedicines.R;
 
 public class SplashSceen extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines;
+package com.example.raviworldwidemedicines.exampl;
 
 import static android.content.ContentValues.TAG;
 
@@ -15,10 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.example.raviworldwidemedicines.adapter.dataAdapter;
+import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.AboutFragment;
 import com.example.raviworldwidemedicines.fragment.AccountFragment;
 import com.example.raviworldwidemedicines.fragment.BlogFragment;
@@ -27,18 +26,14 @@ import com.example.raviworldwidemedicines.fragment.ContactFragment;
 import com.example.raviworldwidemedicines.fragment.FaqFragment;
 import com.example.raviworldwidemedicines.fragment.HomeFragment;
 import com.example.raviworldwidemedicines.fragment.LicenseFragment;
-import com.example.raviworldwidemedicines.fragment.LoginRegisterFragment;
 import com.example.raviworldwidemedicines.fragment.OurPartnersFragment;
 import com.example.raviworldwidemedicines.fragment.OurProductFragment;
 import com.example.raviworldwidemedicines.fragment.ServicesFragment;
 import com.example.raviworldwidemedicines.fragment.TermsAndConditions;
 import com.example.raviworldwidemedicines.fragment.WishListFragment;
-import com.example.raviworldwidemedicines.model.Model;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 

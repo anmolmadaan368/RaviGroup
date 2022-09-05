@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.raviworldwidemedicines.OurPartnerDataModel;
+import com.example.raviworldwidemedicines.exampl.OurPartnerDataModel;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.OurPartnerDataAdapter;
 

@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines;
+package com.example.raviworldwidemedicines.exampl;
 
 import android.os.Bundle;
 
@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.RecentlyViewAdapter;
 
 import java.util.ArrayList;

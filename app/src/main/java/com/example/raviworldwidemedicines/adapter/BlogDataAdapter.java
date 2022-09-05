@@ -12,8 +12,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.raviworldwidemedicines.fragment.BlogItemFragment;
-import com.example.raviworldwidemedicines.BlogMultipleDataBinderObject;
-import com.example.raviworldwidemedicines.ClickListener;
+import com.example.raviworldwidemedicines.exampl.BlogMultipleDataBinderObject;
+import com.example.raviworldwidemedicines.exampl.ClickListener;
 import com.example.raviworldwidemedicines.R;
 
 import java.lang.ref.WeakReference;

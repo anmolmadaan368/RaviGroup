@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.raviworldwidemedicines.DataModelOurProduct;
+import com.example.raviworldwidemedicines.exampl.DataModelOurProduct;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.DataAdapterOurProduct;
 

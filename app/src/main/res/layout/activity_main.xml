@@ -10,7 +10,7 @@
     android:background="@color/status_bar_color"
     android:fitsSystemWindows="true"
     tools:ignore="HardCodedText"
-    tools:context=".MainActivity">
+    tools:context=".exampl.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

@@ -12,12 +12,12 @@
         android:theme="@style/Theme.RaviWorldWideMedicines"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".exampl.MainActivity"
             android:exported="true"
 
             />
         <activity
-            android:name=".SplashSceen"
+            android:name=".exampl.SplashSceen"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.RaviWorldWideMedicines.NoActionBar">
@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SearchableActivity"
+        <activity android:name=".exampl.SearchableActivity"
             android:exported="true"
             >
             <intent-filter >

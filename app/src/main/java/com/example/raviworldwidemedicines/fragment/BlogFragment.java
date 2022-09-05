@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.example.raviworldwidemedicines.BlogMultipleDataBinderObject;
-import com.example.raviworldwidemedicines.ClickListener;
+import com.example.raviworldwidemedicines.exampl.BlogMultipleDataBinderObject;
+import com.example.raviworldwidemedicines.exampl.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.BlogDataAdapter;
 

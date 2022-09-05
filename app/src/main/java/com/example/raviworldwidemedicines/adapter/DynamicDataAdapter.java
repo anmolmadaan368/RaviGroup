@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.raviworldwidemedicines.ClickListener;
-import com.example.raviworldwidemedicines.DynamicRvModel;
+import com.example.raviworldwidemedicines.exampl.ClickListener;
+import com.example.raviworldwidemedicines.exampl.DynamicRvModel;
 import com.example.raviworldwidemedicines.R;
 
 import java.lang.ref.WeakReference;

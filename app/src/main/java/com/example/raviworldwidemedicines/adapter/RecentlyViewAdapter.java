@@ -9,17 +9,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.raviworldwidemedicines.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.ClickListener;
+import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.exampl.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.BuyFragment;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
-import com.example.raviworldwidemedicines.fragment.HomeFragment;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
