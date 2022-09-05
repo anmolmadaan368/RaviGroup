@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragment.ContactFragment"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/status_bar_color"
+    android:orientation="vertical"
+    tools:context=".fragment.ContactFragment">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -90,233 +90,223 @@
 
             app:cardElevation="9dp">
 
-
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:id="@+id/contact_form_out_lays"
-                android:layout_height="wrap_content">
+                android:background="#7995C3"
+                android:layout_height="match_parent">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
+                    android:id="@+id/contact_forms_inner_lays"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="21dp"
+                        android:paddingRight="21dp"
+                        android:paddingBottom="29dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="6dp"
+                            android:text="Get In Touch"
+                            android:textAlignment="center"
+                            android:textColor="@color/teal_200"
+                            android:textSize="23dp"
+                            android:textStyle="bold|normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2.9dp">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:text="Name: "
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/contactform_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.7"
+                                android:contentDescription="Enter Your Name"
+                                android:hint="Enter your name here "
+                                android:padding="9dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2.9dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".3"
+                                android:text="Email: "
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/contactform_email"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".7"
+                                android:hint="Enter your email here"
+                                android:padding="7dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2.9dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".3"
+                                android:text="Contact No: "
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/contactform_contactno"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".7"
+                                android:hint="Enter your Contact No. here "
+                                android:padding="7dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".3"
+                                android:text="Your Subject"
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/contactform_subject"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".7"
+                                android:hint="Enter Your Subject here....   "
+                                android:padding="7dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".3"
+                                android:text="Your Message"
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/contactform_message"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".7"
+                                android:hint="Enter You message here "
+                                android:maxLines="9"
+                                android:minLines="3"
+                                android:padding="2dp"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:scrollbars="vertical" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/contactform_submitBtn"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#8427A2"
-                    android:orientation="vertical"
-                    android:paddingLeft="21dp"
-                    android:paddingRight="21dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:padding="6dp"
-                        android:text="Get In Touch"
-                        android:textAlignment="center"
-                        android:textColor="@color/teal_200"
-                        android:textSize="23dp"
-                        android:textStyle="bold|normal" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.9dp">
-
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.3"
-                            android:text="Name: "
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white"
-                            tools:ignore="Suspicious0dp" />
-
-                        <EditText
-                            android:id="@+id/contactform_name"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.7"
-                            android:contentDescription="Enter Your Name"
-                            android:hint="Enter your name here "
-                            android:padding="9dp"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.9dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".3"
-                            android:text="Email: "
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-
-                        <EditText
-                            android:id="@+id/contactform_email"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".7"
-                            android:hint="Enter your email here"
-                            android:padding="7dp"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.9dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".3"
-                            android:text="Contact No: "
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-
-                        <EditText
-                            android:id="@+id/contactform_contactno"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".7"
-                            android:hint="Enter your Contact No. here "
-                            android:padding="7dp"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".3"
-                            android:text="Your Subject"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-
-                        <EditText
-                            android:id="@+id/contactform_subject"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".7"
-                            android:hint="Enter Your Subject here....   "
-                            android:padding="7dp"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".3"
-                            android:text="Your Message"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-
-                        <EditText
-                            android:id="@+id/contactform_message"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".7"
-                            android:hint="Enter You message here "
-                            android:maxLines="9"
-                            android:minLines="3"
-                            android:padding="2dp"
-                            android:scrollbarAlwaysDrawVerticalTrack="true"
-                            android:scrollbars="vertical"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/contactform_submitBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="7dp"
-                        android:backgroundTint="@color/black"
-                        android:paddingLeft="37dp"
-                        android:paddingTop="7dp"
-                        android:paddingRight="37dp"
-                        android:paddingBottom="7dp"
-                        android:text="Submit"
-                        android:textAlignment="center"
-                        android:textAllCaps="false"
-                        android:textSize="19sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </RelativeLayout>
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/submit_btn_bg"
+                    android:paddingLeft="37dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="37dp"
+                    android:paddingBottom="7dp"
+                    android:text="Submit"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBottomOf="@id/contact_forms_inner_lays"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
     <LinearLayout
-            android:id="@+id/footer_lays"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:background="#7C8E66"
+        android:id="@+id/footer_lays"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:layout_marginBottom="57dp"
-            android:orientation="vertical"
+        android:background="#9EFFFFFF"
+        android:orientation="vertical"
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="22dp"
-                android:background="#3BA227"
-                android:paddingLeft="1dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:text="Copyright © "
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:text="Copyright © "
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:text="@string/app_name"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="22dp"
-                android:gravity="end"
-                android:background="#3BA227"
-                android:paddingLeft="1dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:text="Powered by @"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:text="@string/builders_name"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:text="@string/app_name"
+                android:textSize="19sp" />
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:gravity="end"
+            android:paddingLeft="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:text="Powered by @"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:text="@string/builders_name"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingLeft="9dp"
     android:paddingBottom="41dp"
+    android:background="@color/status_bar_color"
     android:paddingRight="9dp"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.CartFragment">
@@ -20,6 +21,8 @@
         android:layout_margin="8dp"
         app:circularflow_radiusInDP="13dp"
         android:layoutDirection="rtl"
+        android:backgroundTint="#9EFFFFFF"
+
         android:layout_marginRight="1dp"
         android:layout_alignParentTop="true"
         android:paddingTop="2.1dp"
@@ -27,7 +30,7 @@
         android:iconifiedByDefault="false"
         android:clickable="true"
         android:goIcon="@mipmap/ic_search"
-        android:background="#DAFFFFFF"
+        android:background="@drawable/bg_search_view"
         android:queryHint="@string/search_hint"
         >
     </SearchView>

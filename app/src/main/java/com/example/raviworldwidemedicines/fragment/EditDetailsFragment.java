@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.raviworldwidemedicines.R;
 
@@ -27,7 +28,7 @@ public class EditDetailsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private Button backButton;
+    private TextView backButton;
 
     public EditDetailsFragment() {
         // Required empty public constructor

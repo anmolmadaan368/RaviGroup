@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SearchView;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.activity.OnBackPressedCallback;
@@ -27,7 +28,6 @@ public class CartFragment extends Fragment  {
     public RecyclerView cartList;
     public SearchView sviews;
     private CartDataAdapter cartDataAdapter;
-    private Button buy_btn;
     private ArrayList<CartMultipleDataBinder> mydatalists;
     private TextView txt_no_data_found;
 
@@ -41,7 +41,6 @@ public class CartFragment extends Fragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
         txt_no_data_found= view.findViewById(R.id.txt_no_data_exist);
-        buy_btn=(Button) view.findViewById(R.id.btn_buy);
         sviews = (SearchView) view.findViewById(R.id.searchviews);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
@@ -68,7 +67,7 @@ public class CartFragment extends Fragment  {
         cartList = view.findViewById(R.id.cart_list_page);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         cartList.setLayoutManager(linearLayoutManager);
-        int[] medicines_images = {R.drawable.imgf_1, R.drawable.imgf_2, R.drawable.imgf_3, R.drawable.imgf_5};
+        int[] medicines_images = {R.drawable.medicine_image_6, R.drawable.medicine_image_5, R.drawable.medicine_image_4, R.drawable.medicine_image_1};
         String[] manufacturer_list = {"CELON LABORATORIES LTD", "GLENMARK PHARMACEUTICALS LTD", "MYLAN PHARMACEUTICALS PVT LTD", "CELON LABORATORIES LTD"};
         String[] salt_comp_name_list = {"ABEVMY 100MG INJECTION", "BEVACIZUMAB", "ABIRATERONE ACETATE", "ENZALUTAMIDE"};
         String[] product_name = {"ABIRAPRO 250MG TABLET", "BDENZA 40MG CAPSULE", "BDPARIB 200MG TABLET", "ABEVMY 100MG INJECTION"};

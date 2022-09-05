@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/status_bar_color"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     tools:context=".fragment.LicenseFragment">
@@ -13,10 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginLeft="1dp"
+        android:backgroundTint="#9EFFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         android:showDividers="middle"
         android:layout_margin="8dp"
         app:circularflow_radiusInDP="13dp"
+
         android:layoutDirection="rtl"
         android:layout_marginRight="1dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +29,7 @@
         android:iconifiedByDefault="false"
         android:clickable="true"
         android:goIcon="@mipmap/ic_search"
-        android:background="#FFFFFF"
+        android:background="@drawable/bg_search_view"
         android:queryHint="@string/search_hint"
         >
     </SearchView>

@@ -158,7 +158,7 @@
                     android:textSize="17sp"
                     android:layout_weight="1"
                     android:textStyle="bold"
-                    android:text="Add:" />
+                    android:text="Address:" />
 
                 <EditText
                     android:id="@+id/account_address_txt"
@@ -168,20 +168,21 @@
                     android:layout_weight="2"
                     android:hint="address is here .. "
                     android:maxLines="9"
-                    android:minLines="1"
+                    android:minLines="3"
                     android:scrollbars="vertical" />
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.button.MaterialButton
+    <TextView
         android:id="@+id/Profile_Back_button_1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="41dp"
         android:background="@drawable/bg_color_round_cut_blue"
         android:layout_marginLeft="10dp"
         android:paddingRight="49dp"
+        android:gravity="center"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:paddingLeft="49dp"
@@ -193,12 +194,13 @@
         app:layout_constraintVertical_bias="0.0"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="41dp"
         android:background="@drawable/bg_color_round_cut_blue"
         android:paddingRight="49dp"
         android:textAllCaps="false"
+        android:gravity="center"
         android:textSize="16sp"
         android:paddingLeft="49dp"
         android:layout_marginRight="10dp"

@@ -19,6 +19,7 @@ import kotlin.Suppress;
 
 public class ContactFragment extends Fragment {
 
+    TextView contactform_submitBtn;
     public ContactFragment() {
         // Required empty public constructor
     }
@@ -33,6 +34,8 @@ public class ContactFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
         txtViewContsctdeatil = (TextView) view.findViewById(R.id.txtViewContactdetail);
+        contactform_submitBtn= view.findViewById(R.id.contactform_submitBtn);
+
         String strss = "<h6><b>Email :</b> <spnan style=\"font-size:15px;\">ravi.raviworldwidemedicines@gmail.com</spnan>\n" +
                 "</h6><h6><b>Phone No : </b><spnan style=\"font-size:15px;\"> +91-9994330921</spnan>\n" +
                 "</h6>";

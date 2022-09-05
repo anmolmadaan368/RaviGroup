@@ -18,9 +18,12 @@
             android:id="@+id/nav_drawer_ourproduct"
             android:icon="@drawable/ouproduct"
             android:title="OUR PRODUCT" />
+        <item
+            android:id="@+id/nav_drawer_our_partners"
+            android:icon="@drawable/our_partner"
+            android:title="Our Partners" />
     </group>
-    <item
-        android:title="ABOUT">
+    <item android:title="ABOUT">
         <menu>
             <group>
                 <item
@@ -28,31 +31,31 @@
                     android:icon="@drawable/about_us"
                     android:title=" About Us"></item>
                 <item
-                    android:id="@+id/nav_drawer_our_partners"
-                    android:icon="@drawable/our_partner"
-                    android:title="Our Partners" />
-                <item
                     android:id="@+id/nav_drawer_license"
-                    android:title="License "
-                    android:icon="@drawable/license"/>
+                    android:icon="@drawable/license"
+                    android:title="License " />
             </group>
         </menu>
     </item>
     <item android:title="">
         <menu>
-                <item
-                    android:id="@+id/nav_drawer_contact"
-                    android:icon="@drawable/contact"
-                    android:title=" CONTACT " />
-                <item
-                    android:id="@+id/nav_drawer_wishlist"
-                    android:icon="@drawable/wishlist"
-                    android:title="WISHLIST" />
-                <item
-                    android:id="@+id/nav_drawer_loginreg"
-                    android:icon="@drawable/login"
-                    android:title="LOGIN / REGISTER" />
+            <item
+                android:id="@+id/nav_drawer_contact"
+                android:icon="@drawable/contact"
+                android:title=" CONTACT " />
+            <item
+                android:id="@+id/nav_drawer_wishlist"
+                android:icon="@drawable/wishlist"
+                android:title="WISHLIST" />
 
+            <item
+                android:id="@+id/nav_drawer_termandconditions"
+                android:icon="@drawable/ic_terms"
+                android:title="Terms and Conditions " />
+            <item
+                android:id="@+id/id_faq"
+                android:icon="@drawable/ic_baseline_question_mark"
+                android:title=" FAQ " />
         </menu>
     </item>
 </menu>

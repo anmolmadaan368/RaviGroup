@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#97A9AC"
+    android:background="@color/status_bar_color"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="10dp"
@@ -63,16 +63,22 @@
     </LinearLayout>
 
 
-    <Button
+    <TextView
         android:id="@+id/btn_Go"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:paddingLeft="69dp"
         android:layout_marginTop="13dp"
+        android:paddingRight="69dp"
         android:background="@drawable/bg_color_round_cut_blue"
+        android:paddingTop="17dp"
         android:textAllCaps="false"
+        android:paddingBottom="17dp"
         android:textColor="#fff"
         android:textStyle="bold" />
+
+
 
     <Button
         android:id="@+id/btn_createAnaccount"

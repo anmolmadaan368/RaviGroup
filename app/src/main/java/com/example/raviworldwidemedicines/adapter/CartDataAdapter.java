@@ -76,9 +76,9 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
         public TextView chemical_amount;
         public TextView product_name;
         public TextView salt_compostion;
-        private Button remove_btn;
-        private Button save_btn;
-        private Button buy_btn;
+        private TextView remove_btn;
+        private TextView save_btn;
+        private TextView buy_btn;
         public WeakReference<ClickListener> weakReference;
 
         public CartDataViewHolder(@NonNull View itemView) {
@@ -92,17 +92,17 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
 
             itemView.setOnClickListener(this);
             if (currentfragmentNamethatareusingthis == "showmyProducts") {
-                save_btn = (Button) itemView.findViewById(R.id.btn_saveforlater_product_details);
-                buy_btn = (Button) itemView.findViewById(R.id.btn_buy_product_details);
+                save_btn = (TextView) itemView.findViewById(R.id.btn_saveforlater_product_details);
+                buy_btn = (TextView) itemView.findViewById(R.id.btn_buy_product_details);
                 save_btn.setOnClickListener(this);
             } else if (currentfragmentNamethatareusingthis == "WishList") {
-                remove_btn = (Button) itemView.findViewById(R.id.btn_remove_wishlist);
-                buy_btn=(Button) itemView.findViewById(R.id.btn_buy_wishlist);
+                remove_btn = (TextView) itemView.findViewById(R.id.btn_remove_wishlist);
+                buy_btn=(TextView) itemView.findViewById(R.id.btn_buy_wishlist);
                 remove_btn.setOnClickListener(this);
             } else if (currentfragmentNamethatareusingthis == "Cart") {
-                save_btn = (Button) itemView.findViewById(R.id.btn_saveforlater);
-                remove_btn = (Button) itemView.findViewById(R.id.btn_remove);
-                buy_btn=(Button) itemView.findViewById(R.id.btn_buy);
+                save_btn = (TextView) itemView.findViewById(R.id.btn_saveforlater);
+                remove_btn = (TextView) itemView.findViewById(R.id.btn_remove);
+                buy_btn=(TextView) itemView.findViewById(R.id.btn_buy);
                 save_btn.setOnClickListener(this);
                 remove_btn.setOnClickListener(this);
             }

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.raviworldwidemedicines.R;
@@ -22,7 +23,7 @@ public class SignUpFragment extends Fragment {
     }
 
 
-    Button signup;
+    private TextView signup;
     private TextInputLayout name;
     private TextInputLayout mobile_no;
     private TextInputLayout u_name;
@@ -43,7 +44,7 @@ public class SignUpFragment extends Fragment {
         mobile_no= (TextInputLayout) view.findViewById(R.id.inpt_contactno );
         password =(TextInputLayout) view.findViewById(R.id.inpt_pwd);
 
-        signup= (Button) view.findViewById(R.id.btn_signUp);
+        signup= (TextView) view.findViewById(R.id.btn_signUp);
         login=(Button) view.findViewById(R.id.btn_AlreadyRegisered) ;
         login.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -35,9 +35,9 @@ public class SingleProductDetailsFragment extends Fragment {
         ImageView product_imgs= (ImageView) view.findViewById(R.id.product_img_from_sigle_layss);
         TextView product_chemical_name= (TextView) view.findViewById(R.id.txtview_chemical_amount);
         TextView manufacturer_names=(TextView) view.findViewById(R.id.texview_manufacturer_details);
-        Button buy_btn_show_products=(Button) view.findViewById(R.id.btn_buy_product_details);
+        TextView buy_btn_show_products=(TextView) view.findViewById(R.id.btn_buy_product_details);
 
-        Button save_for_later_btnd=(Button) view.findViewById(R.id.btn_saveforlater_product_details);
+        TextView save_for_later_btnd=(TextView) view.findViewById(R.id.btn_saveforlater_product_details);
 
         product_imgs.setImageResource( cartMultipleDataBinder.getProduct_image());
         product_name.setText( cartMultipleDataBinder.getProduct_name());

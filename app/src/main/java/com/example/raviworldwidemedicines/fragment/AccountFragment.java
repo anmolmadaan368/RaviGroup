@@ -26,10 +26,10 @@ public class AccountFragment extends Fragment {
     private TextView acc_email;
     private TextView acc_mobile_no;
     private ImageView user_image;
-    private Button editButton;
-    private Button backButton;
+    private TextView editButton;
+    private TextView backButton;
     private CardView cardViewProfile;
-    private Button btnLogout;
+    private TextView btnLogout;
     private CardView cardViewFAQ;
     private CardView cardViewWishlist;
     private CardView cardViewTerms;

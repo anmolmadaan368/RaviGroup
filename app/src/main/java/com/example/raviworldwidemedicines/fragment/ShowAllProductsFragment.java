@@ -53,7 +53,7 @@ public class ShowAllProductsFragment extends Fragment {
         CartMultipleDataBinder cartMultipleDataBinder;
         my_all_product_lists= new ArrayList<>();
         for (int i=0;i<item_imag_lists.length;i++){
-            cartMultipleDataBinder= new CartMultipleDataBinder(item_imag_lists[i],"","","","");
+            cartMultipleDataBinder= new CartMultipleDataBinder(item_imag_lists[i],"dfgf","dfd","dfdsfsd","dfsdf");
             my_all_product_lists.add(cartMultipleDataBinder);
         }
 

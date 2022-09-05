@@ -24,12 +24,14 @@ import com.example.raviworldwidemedicines.fragment.AccountFragment;
 import com.example.raviworldwidemedicines.fragment.BlogFragment;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
 import com.example.raviworldwidemedicines.fragment.ContactFragment;
+import com.example.raviworldwidemedicines.fragment.FaqFragment;
 import com.example.raviworldwidemedicines.fragment.HomeFragment;
 import com.example.raviworldwidemedicines.fragment.LicenseFragment;
 import com.example.raviworldwidemedicines.fragment.LoginRegisterFragment;
 import com.example.raviworldwidemedicines.fragment.OurPartnersFragment;
 import com.example.raviworldwidemedicines.fragment.OurProductFragment;
 import com.example.raviworldwidemedicines.fragment.ServicesFragment;
+import com.example.raviworldwidemedicines.fragment.TermsAndConditions;
 import com.example.raviworldwidemedicines.fragment.WishListFragment;
 import com.example.raviworldwidemedicines.model.Model;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -41,30 +43,31 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
 
-    public ActionBarDrawerToggle actionBarDrawerToggle;
-    public DrawerLayout drawerLayout;
-    public android.widget.SearchView sviews;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
+    private DrawerLayout drawerLayout;
+    private android.widget.SearchView sviews;
     //    public ExpandableListView expandableListView;
-    public NavigationView navigationView;
-    public BottomNavigationView bottomNavigationView;
+    private NavigationView navigationView;
+    private BottomNavigationView bottomNavigationView;
 
-    public HomeFragment homeFragment = new HomeFragment();
-    public CartFragment cartFragment = new CartFragment();
-    public AccountFragment accountFragment = new AccountFragment();
-    public Fragment previous_Fragment;
+    private HomeFragment homeFragment = new HomeFragment();
+    private CartFragment cartFragment = new CartFragment();
+    private AccountFragment accountFragment = new AccountFragment();
+    private Fragment previous_Fragment;
 
-    public AboutFragment aboutFragment = new AboutFragment();
-    public OurPartnersFragment ourPartnersFragment=new OurPartnersFragment();
-    public LicenseFragment licenseFragment= new LicenseFragment();
-    public OurProductFragment ourProductFragment = new OurProductFragment();
-    public BlogFragment blogFragment = new BlogFragment();
-    public ContactFragment contactFragment = new ContactFragment();
-    ;
-    public WishListFragment wishListFragment = new WishListFragment();
-    public LoginRegisterFragment loginRegisterFragment = new LoginRegisterFragment();
-    public ServicesFragment servicesFragment = new ServicesFragment();
-    public int previous_navDrawer_ItemId;
-    public int previous_nav_drawer_selected_ItemId;
+    private AboutFragment aboutFragment = new AboutFragment();
+    private OurPartnersFragment ourPartnersFragment=new OurPartnersFragment();
+    private LicenseFragment licenseFragment= new LicenseFragment();
+    private OurProductFragment ourProductFragment = new OurProductFragment();
+    private BlogFragment blogFragment = new BlogFragment();
+    private ContactFragment contactFragment = new ContactFragment();
+
+    private WishListFragment wishListFragment = new WishListFragment();
+    private TermsAndConditions termsAndConditions = new TermsAndConditions();
+    private FaqFragment faqFragment= new FaqFragment();
+    private ServicesFragment servicesFragment = new ServicesFragment();
+    private int previous_navDrawer_ItemId;
+    private int previous_nav_drawer_selected_ItemId;
 
 
 
@@ -79,7 +82,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
         bottomNavigationView = findViewById(R.id.bottom_navigation_views);
 //        EditText searchedittxt = (EditText) sviews.findViewById(R.id.se);
-//        searchedittxt.setHintTextColor(Color.BLACK);
+        drawerLayout.setBackgroundColor(getResources().getColor(R.color.status_bar_color));
+        //        searchedittxt.setHintTextColor(Color.BLACK);
         // create instance of the material toolbar
 //        expandableListView=(ExpandableListView) findViewById(R.id.navigation_view_Expandable_Listview);
 
@@ -242,71 +246,58 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case R.id.nav_drawer_services:
                         Toast.makeText(getApplicationContext(), item.getTitle() + "", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, servicesFragment).commit();
-                        if(previous_Fragment!=servicesFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment=servicesFragment;
                         break;
                     case R.id.nav_drawer_home:
                         Toast.makeText(getApplicationContext(), item.getTitle() + "", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, homeFragment).commit();
-                        if (previous_Fragment!= homeFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment= homeFragment;
                         break;
                     case R.id.nav_drawer_blog:
                         Toast.makeText(getApplicationContext(), item.getTitle() + "", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, blogFragment).commit();
-                        if(previous_Fragment !=blogFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment=blogFragment;
                         break;
                     case R.id.nav_drawer_contact:
                         Toast.makeText(MainActivity.this, item.getTitle() + " ", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, contactFragment).commit();
-                        if(previous_Fragment!= contactFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment=contactFragment;
                         break;
                     case R.id.nav_drawer_ourproduct:
                         Toast.makeText(MainActivity.this, item.getTitle() + "", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, ourProductFragment).commit();
-                        if (previous_Fragment != ourProductFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment= ourPartnersFragment;
                         break;
                     case R.id.nav_drawer_about:
                         Toast.makeText(MainActivity.this, item.getTitle() + " ", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, aboutFragment).commit();
-                        if(previous_Fragment != aboutFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment=aboutFragment;
                         break;
                     case R.id.nav_drawer_wishlist:
                         Toast.makeText(MainActivity.this, item.getTitle() + "", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, wishListFragment).commit();
-                        if (previous_Fragment!= wishListFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment= wishListFragment;
                         break;
-                    case R.id.nav_drawer_loginreg:
+                    case R.id.nav_drawer_termandconditions:
                         Toast.makeText(MainActivity.this, item.getTitle() + ":    ", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, loginRegisterFragment).commit();
-                        if(previous_Fragment !=loginRegisterFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
-                        previous_Fragment=loginRegisterFragment;
+                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, termsAndConditions).commit();
+                        previous_Fragment=termsAndConditions;
                         break;
                     case R.id.nav_drawer_license:
                         Toast.makeText(MainActivity.this, "" + item.getTitle() + ":  ", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, licenseFragment).commit();
-                        if(previous_Fragment != licenseFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
                         previous_Fragment= licenseFragment;
                         break;
                     case R.id.nav_drawer_our_partners:
                         Toast.makeText(MainActivity.this, item.getTitle() + ": ", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace( R.id.main_lays,ourPartnersFragment).commit();
-                        if ( previous_Fragment != ourPartnersFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
+//                        if ( previous_Fragment != ourPartnersFragment)
+//                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
+                        previous_Fragment=ourPartnersFragment;
+                        break;
+                    case R.id.id_faq:
+                        Toast.makeText(MainActivity.this, item.getTitle()+"", Toast.LENGTH_SHORT).show();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_lays, faqFragment).commit();
                         previous_Fragment=ourPartnersFragment;
                         break;
                 }

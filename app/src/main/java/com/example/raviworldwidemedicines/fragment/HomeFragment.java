@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment {
 
 //        sviews.setQueryHint("Hints ");
 //  Making whole search view Clickable here ...
+
         sviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,11 +87,11 @@ public class HomeFragment extends Fragment {
 
 //       RecyclerView Code
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext(), RecyclerView.HORIZONTAL, false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getActivity().getApplicationContext(), RecyclerView.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        int[] myimgs = {R.mipmap.ic_home, R.mipmap.ic_search, R.mipmap.ic_wpicn, R.mipmap.ic_search, R.mipmap.ic_search, R.mipmap.ic_cart};
-        String[] list_names = {"java", "C", "C++", "PHP", "Python", ".Net"};
-        dataAdapter adapter = new dataAdapter(myimgs, list_names, R.layout.list_item_view,new ClickListener() {
+        int[] myimgs = {R.drawable.cardiology_cat, R.drawable.cat_transplant, R.drawable.antibactrial_cat, R.drawable.dermatology_cat, R.drawable.endocrinology_cat, R.drawable.blood_pressure_cat};
+        String[] list_names = {"Cardiology", "Transplant", "Antibactrial", "Dermatology", "Endocrinology", "Blood Pressure"};
+        dataAdapter adapter = new dataAdapter(this.getContext(),myimgs, list_names, R.layout.list_item_view,new ClickListener() {
             @Override
             public void onPositionClicked(int Position) {
             showAllProductsFragment=new ShowAllProductsFragment();
@@ -113,10 +114,10 @@ public class HomeFragment extends Fragment {
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity().getApplicationContext(),RecyclerView.HORIZONTAL,false);
         recyclerView_recently_viewed.setLayoutManager(layoutManager);
-        int [] myimgs2 = {R.drawable.user, R.drawable.search_icon, R.drawable.loading, R.drawable.imgf_8, R.drawable.imgf_4};
+        int [] myimgs2 = {R.drawable.medicine_image_3, R.drawable.medicine_image_2, R.drawable.medicine_image_4, R.drawable.medicine_image_5, R.drawable.medicine_image_6};
         CartMultipleDataBinder item_singleDatas= new CartMultipleDataBinder( myimgs2[1], "sj","sij","sjs","sjd" );
         String[] list_name3s = {"0 min ago", "2 min ago", "3 min ago", "4 min ago", "1 hr ago "};
-        dataAdapter adapter1=new dataAdapter(myimgs2, list_name3s,R.layout.recently_viewed_list_item_views, new ClickListener() {
+        dataAdapter adapter1=new dataAdapter(this.getContext(), myimgs2, list_name3s,R.layout.recently_viewed_list_item_views, new ClickListener() {
             @Override
             public void onPositionClicked(int Position) {
                 showAllProductsFragment =new ShowAllProductsFragment();

@@ -4,34 +4,34 @@
     app:cardCornerRadius="9dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginLeft="9dp"
-
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-<RelativeLayout android:layout_height="match_parent"
+<RelativeLayout
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:id="@+id/category_item_relative_layss"
+    android:id="@+id/category_item_relative_lays"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
 
     <ImageView
-        android:layout_width="37dp"
-        android:layout_height="27dp"
-        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="match_parent"
         android:layout_marginLeft="2dp"
         android:scaleType="fitXY"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/myimg"
+        android:id="@+id/myimgas"
+        android:layout_marginBottom="42dp"
         android:src="@mipmap/ic_launcher"
         />
 
     <TextView
         android:id="@+id/mytxts"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_below="@id/myimg"
-        android:foregroundGravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentBottom="true"
         android:text="This is my Text"
         android:textSize="20sp" />
 

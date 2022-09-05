@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#97A9AC"
+    android:background="@color/status_bar_color"
     android:paddingRight="9dp"
     android:paddingLeft="9dp"
     tools:context=".fragment.OurPartnersFragment">

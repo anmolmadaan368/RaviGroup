@@ -114,12 +114,19 @@
     </androidx.cardview.widget.CardView>
 
 
-    <com.google.android.material.button.MaterialButton
+    <TextView
         android:id="@+id/login_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:background="@drawable/bg_color_round_cut_blue"
+        android:paddingLeft="69dp"
+        android:textAllCaps="false"
+        android:paddingRight="69dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold|normal"
         android:text="LogIn"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"

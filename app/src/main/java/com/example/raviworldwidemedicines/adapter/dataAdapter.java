@@ -10,10 +10,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.raviworldwidemedicines.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.ShowAllProductsFragment;
@@ -28,11 +27,12 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
     private int [] imgData;
     private int list_item_view_to_be_placed;
     private ClickListener listener;
-    Context context;
+    private Context context;
     List<Model> medList;
     private ShowAllProductsFragment showAllProductsFragment;
-    public dataAdapter(int [] imdata  ,String [] datas,int list_item_view_to_be_place,ClickListener clickListener){
+    public dataAdapter(Context context1,int [] imdata  ,String [] datas,int list_item_view_to_be_place,ClickListener clickListener){
         this.data=datas;
+        this.context=context1;
         this.imgData=imdata;
         this.listener=clickListener;
         this.list_item_view_to_be_placed=list_item_view_to_be_place;
@@ -45,7 +45,7 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
 
     @Override
     public DataAdapter onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(parent.getContext()).inflate(list_item_view_to_be_placed, parent,false);
+        View view=LayoutInflater.from(context).inflate(list_item_view_to_be_placed, parent,false);
 
         return new DataAdapter(view);
     }
@@ -68,24 +68,24 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
     public class DataAdapter extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView mytexts;
-        private RelativeLayout category_item;
+        private RelativeLayout category_items;
         private ImageView myimg;
         private WeakReference<ClickListener> weakReference;
         public DataAdapter(View itemView) {
             super(itemView);
-            myimg=(ImageView) itemView.findViewById(R.id.myimg);
+            myimg=(ImageView) itemView.findViewById(R.id.myimgas);
             mytexts=(TextView) itemView.findViewById(R.id.mytxts);
-            category_item=(RelativeLayout) itemView.findViewById(R.id.category_item_relative_layss);
+            category_items= (RelativeLayout) itemView.findViewById(R.id.category_item_relative_lays);
 
             weakReference= new WeakReference<>(listener);
 
-            category_item.setOnClickListener(this);
+            category_items.setOnClickListener(this);
 
         }
 
         @Override
         public void onClick(View view) {
-             if(view.getId()==R.id.category_item_relative_layss){
+             if(view.getId()==R.id.category_item_relative_lays){
                  Toast.makeText(view.getContext(), " "+String.valueOf( getAdapterPosition())+" . ", Toast.LENGTH_SHORT).show();
 
              }
