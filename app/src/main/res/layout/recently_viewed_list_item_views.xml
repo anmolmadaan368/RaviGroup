@@ -15,26 +15,27 @@
 
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="2dp"
-        android:scaleType="fitXY"
         android:id="@+id/myimgas"
-        android:layout_marginBottom="42dp"
-        android:src="@mipmap/ic_launcher"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+
+        android:scaleType="fitXY"
+
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/mytxts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="3dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="2dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="3dp"
+        android:gravity="center"
         android:text="This is my Text"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
 </RelativeLayout>
     </androidx.cardview.widget.CardView>

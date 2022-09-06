@@ -17,7 +17,8 @@
         app:layout_constraintBottom_toTopOf="@id/footer_lays"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        >
 
         <!--            <TextView-->
         <!--                android:id="@+id/raviapp_name"-->
@@ -84,8 +85,8 @@
             android:id="@+id/contactforms_outerlays"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/contact_contactdetails"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="150dp"
+
             android:elevation="9dp"
 
             app:cardElevation="9dp">
@@ -112,17 +113,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:padding="6dp"
+                            android:padding="4dp"
                             android:text="Get In Touch"
                             android:textAlignment="center"
                             android:textColor="@color/teal_200"
-                            android:textSize="23dp"
+                            android:textSize="22dp"
                             android:textStyle="bold|normal" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2.9dp">
+                            android:layout_marginTop="2dp">
 
 
                             <TextView
@@ -261,7 +262,7 @@
     <LinearLayout
         android:id="@+id/footer_lays"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="57dp"
         android:background="#9EFFFFFF"
         android:orientation="vertical"
@@ -272,21 +273,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="25dp"
             android:paddingLeft="1dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
                 android:text="Copyright © "
-                android:textSize="17sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="27dp"
                 android:text="@string/app_name"
-                android:textSize="19sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -299,13 +300,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
                 android:text="Powered by @"
-                android:textSize="17sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
                 android:text="@string/builders_name"
-                android:textSize="19sp" />
+                android:textSize="17sp" />
         </LinearLayout>
 
     </LinearLayout>
