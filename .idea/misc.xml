@@ -49,10 +49,12 @@
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_single_product_details.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_terms_and_conditions.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_top_brands_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_wish_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_blog_layout.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_g_view_our_products.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_layout_wishlist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_top_brands_recycler_views_layout.xml" value="0.33" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_view.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/our_partners_list_item_layout.xml" value="0.33" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/product_auto_slider.xml" value="0.20416666666666666" />
@@ -60,6 +62,7 @@
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/recently_viewed_list_item_views.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/showproducts_layouts.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/top_brands_main_panel_items.xml" value="0.14" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/top_brands_recycler_view_data_lists_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/menu/nav_drawer_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/menu/search_options_menu.xml" value="0.20416666666666666" />

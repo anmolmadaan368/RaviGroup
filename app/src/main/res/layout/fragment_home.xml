@@ -35,8 +35,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="3dp"
         android:layout_alignParentBottom="true"
-        android:paddingLeft="17dp"
-        android:paddingRight="17dp"
         android:layout_height="match_parent">
 
         <RelativeLayout
@@ -186,6 +184,7 @@
                             android:padding="3dp"
                             android:layout_height="wrap_content"
                             android:text="View All"
+                            android:id="@+id/txt_btn_views"
                             android:gravity="center"
                             android:textStyle="bold"
                             android:textSize="13sp"
@@ -199,7 +198,7 @@
                     <GridView
                         android:layout_width="match_parent"
                         android:id="@+id/grid_view_top_brands"
-                        android:background="@color/black"
+                        android:background="#C9000000"
                         android:numColumns="2"
                         android:verticalSpacing="1dp"
                         android:horizontalSpacing="1dp"

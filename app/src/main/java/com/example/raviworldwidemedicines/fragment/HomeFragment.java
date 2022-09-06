@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -26,6 +27,7 @@ import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
+import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
@@ -37,6 +39,7 @@ public class HomeFragment extends Fragment {
     public SearchView sviews;
     private RecyclerView recyclerView_recently_viewed;
     private Button btn_recently_viewed;
+    private TextView txt_btn_view;
     private ShowAllProductsFragment showAllProductsFragment;
 
     public com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter product_slider_fixed_viewAdapter;
@@ -59,6 +62,7 @@ public class HomeFragment extends Fragment {
         btn_recently_viewed=(Button) view.findViewById(R.id.btn_recently_viewed);
         grid_view_top_brands= view.findViewById(R.id.grid_view_top_brands);
         sviews = (SearchView) view.findViewById(R.id.searchviews);
+        txt_btn_view= view.findViewById(R.id.txt_btn_views);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
 //        sviews.setQueryHint("Hints ");
@@ -134,13 +138,20 @@ public class HomeFragment extends Fragment {
         recyclerView_recently_viewed.setAdapter(adapter1);
 
         ArrayList<TopBrandsItemDetails> topBrandsItemDetailslists=new ArrayList<>();
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir / lamivudine (Epzicom®)","02 feb,2024","1000",R.drawable.medicine_image_3,24));
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Acyclovir","04 mar,2025","2000",R.drawable.medicine_image_4,24));
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir","07 may,2024","1187",R.drawable.medicine_image_5,23));
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Alendronate","06 sep,2026","2227",R.drawable.medicine_image_2,7));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir / lamivudine (Epzicom®)","02 feb,2024","1000","SII",R.drawable.medicine_image_3,24));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Acyclovir","04 mar,2025","2000","Cipla",R.drawable.medicine_image_4,24));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir","07 may,2024","1187","Dolo",R.drawable.medicine_image_5,23));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Alendronate","06 sep,2026","2227","Dettol",R.drawable.medicine_image_2,7));
 
         TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters=new TopBrandsItemDataAdapter(this.getContext(),topBrandsItemDetailslists);
         grid_view_top_brands.setAdapter(mainPanelTopBrandsItemsAdapters);
+
+        txt_btn_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new TopBrandsListFragment()).commit();
+            }
+        });
 
         return view;
 

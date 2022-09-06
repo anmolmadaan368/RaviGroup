@@ -13,11 +13,11 @@ import android.widget.TextView;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.BuyFragment;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
+import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 public class SingleProductDetailsFragment extends Fragment {
 
     private CartMultipleDataBinder cartMultipleDataBinder;
-
     public SingleProductDetailsFragment( CartMultipleDataBinder cartMultipleDataBinder){
         this.cartMultipleDataBinder=cartMultipleDataBinder;
         // Required empty public constructor
