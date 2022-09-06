@@ -126,45 +126,45 @@
             <TextView
                 android:id="@+id/btn_saveforlater"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="3dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="3dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/bg_color_round_cut_blue"
+                android:layout_weight="0.4  "
+                android:background="@drawable/example_button_1"
                 android:gravity="center"
                 android:text="Add to Wishlist"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="#fff"
-                android:textSize="19sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/btn_remove"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 android:layout_weight="0.3"
-                android:background="@drawable/bg_color_round_cut_blue"
+                android:background="@drawable/example_button_1"
                 android:gravity="center"
                 android:text="Remove"
                 android:textAllCaps="false"
                 android:textColor="#fff"
-                android:textSize="19sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/btn_buy"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="0.3"
-                android:background="@drawable/bg_color_round_cut_blue"
+                android:background="@drawable/example_button_1"
                 android:gravity="center"
                 android:text="Buy"
                 android:textAllCaps="false"
                 android:textColor="#fff"
-                android:textSize="19sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
     </RelativeLayout>

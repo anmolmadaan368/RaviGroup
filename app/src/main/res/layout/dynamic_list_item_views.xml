@@ -2,7 +2,7 @@
 <com.google.android.material.card.MaterialCardView android:layout_height="97dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="39dp"
+    app:cardCornerRadius="20dp"
     android:background="@drawable/bg_round_shape_icon_frame"
     android:layout_marginLeft="5.3dp"
     android:layout_marginRight="5.3dp"

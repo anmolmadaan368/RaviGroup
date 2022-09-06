@@ -47,16 +47,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="30dp" />
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/purchased_items_lists"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_below="@id/cart_list_page"
-            android:id="@+id/purchased_items_lists"
-            />
+            android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="match_parent"
