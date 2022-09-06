@@ -140,14 +140,74 @@
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
+                android:layout_below="@id/recently_viewed_outer_lays"
+                android:layout_marginBottom="268dp"
                 android:layout_height="wrap_content"
                 >
-
-                <androidx.recyclerview.widget.RecyclerView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/top_to_down_blue_palette"
+                    android:paddingLeft="10dp"
+                    android:layout_height="50dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
 
-                </androidx.recyclerview.widget.RecyclerView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Top Brands"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Room for only the BEST"
+                        />
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:gravity="end|center"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:padding="3dp"
+                            android:layout_height="wrap_content"
+                            android:text="View All"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:background="@drawable/bg_white_rounded_cut_white_btn"
+                            android:drawableRight="@drawable/ic_right_arrow"
+                            android:textColor="#3F51B5"
+                            />
+                    </LinearLayout>
+                  </LinearLayout>
+
+                    <GridView
+                        android:layout_width="match_parent"
+                        android:id="@+id/grid_view_top_brands"
+                        android:background="@color/black"
+                        android:numColumns="2"
+                        android:verticalSpacing="1dp"
+                        android:horizontalSpacing="1dp"
+                        android:layout_height="440dp"/>
+
+
+                </LinearLayout>
+
             </RelativeLayout>
 
         </RelativeLayout>

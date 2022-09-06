@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.SearchView;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.raviworldwidemedicines.adapter.TopBrandsItemDataAdapter;
 import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.exampl.ClickListener;
 import com.example.raviworldwidemedicines.R;
@@ -22,6 +24,7 @@ import com.example.raviworldwidemedicines.exampl.RecentlyViewedFragment;
 import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
+import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;
 
@@ -30,6 +33,7 @@ public class HomeFragment extends Fragment {
 
     RecyclerView recyclerView;
     public ViewPager pager;
+    private GridView grid_view_top_brands;
     public SearchView sviews;
     private RecyclerView recyclerView_recently_viewed;
     private Button btn_recently_viewed;
@@ -47,11 +51,13 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_views);
         ImageSlider imageSlider = view.findViewById(R.id.img_slider);
         pager = (ViewPager) view.findViewById(R.id.viewPagerIds);
         btn_recently_viewed=(Button) view.findViewById(R.id.btn_recently_viewed);
+        grid_view_top_brands= view.findViewById(R.id.grid_view_top_brands);
         sviews = (SearchView) view.findViewById(R.id.searchviews);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
@@ -126,6 +132,16 @@ public class HomeFragment extends Fragment {
         });
 
         recyclerView_recently_viewed.setAdapter(adapter1);
+
+        ArrayList<TopBrandsItemDetails> topBrandsItemDetailslists=new ArrayList<>();
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir / lamivudine (Epzicom®)","02 feb,2024","1000",R.drawable.medicine_image_3,24));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Acyclovir","04 mar,2025","2000",R.drawable.medicine_image_4,24));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir","07 may,2024","1187",R.drawable.medicine_image_5,23));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Alendronate","06 sep,2026","2227",R.drawable.medicine_image_2,7));
+
+        TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters=new TopBrandsItemDataAdapter(this.getContext(),topBrandsItemDetailslists);
+        grid_view_top_brands.setAdapter(mainPanelTopBrandsItemsAdapters);
+
         return view;
 
     }
