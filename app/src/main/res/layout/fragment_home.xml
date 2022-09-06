@@ -37,11 +37,11 @@
         android:layout_alignParentBottom="true"
         android:paddingLeft="17dp"
         android:paddingRight="17dp"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -140,8 +140,8 @@
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
+                android:id="@+id/top_Brands_item_panel"
                 android:layout_below="@id/recently_viewed_outer_lays"
-                android:layout_marginBottom="268dp"
                 android:layout_height="wrap_content"
                 >
                 <LinearLayout
@@ -209,7 +209,64 @@
                 </LinearLayout>
 
             </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@id/top_Brands_item_panel"
+                android:layout_marginBottom="60dp">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/refer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Refer and Earn"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/refer_message"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Invite family and friends to earn cashbacks"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/refer" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Invite Friends"
+                        android:textAllCaps="false"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/refer_message" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/thums_up"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
         </RelativeLayout>
 
     </ScrollView>
