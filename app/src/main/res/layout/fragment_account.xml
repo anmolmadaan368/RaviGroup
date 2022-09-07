@@ -186,7 +186,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:gravity="center"
         android:paddingLeft="67dp"
-        android:textSize="31dp"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingRight="67dp"
         app:layout_constraintStart_toStartOf="parent"

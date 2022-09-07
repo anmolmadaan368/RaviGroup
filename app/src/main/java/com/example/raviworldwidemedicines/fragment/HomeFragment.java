@@ -17,6 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.raviworldwidemedicines.adapter.AvailableBrandsDataAdapter;
 import com.example.raviworldwidemedicines.adapter.TopBrandsItemDataAdapter;
 import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.exampl.ClickListener;
@@ -25,6 +26,7 @@ import com.example.raviworldwidemedicines.exampl.RecentlyViewedFragment;
 import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
+import com.example.raviworldwidemedicines.model.AvailableBrandsDataModel;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.awt.font.TextAttribute;
@@ -39,6 +41,9 @@ public class HomeFragment extends Fragment {
     public SearchView sviews;
     private RecyclerView recyclerView_recently_viewed;
     private Button btn_recently_viewed;
+    private TextView btn_availble_brands_view_alls;
+    private GridView grid_view_available_brands;
+    private ArrayList<AvailableBrandsDataModel> myAvailable_brands_list= new ArrayList<>();
     private TextView txt_btn_view;
     private ShowAllProductsFragment showAllProductsFragment;
 
@@ -62,7 +67,9 @@ public class HomeFragment extends Fragment {
         btn_recently_viewed=(Button) view.findViewById(R.id.btn_recently_viewed);
         grid_view_top_brands= view.findViewById(R.id.grid_view_top_brands);
         sviews = (SearchView) view.findViewById(R.id.searchviews);
-        txt_btn_view= view.findViewById(R.id.txt_btn_views);
+        txt_btn_view= view.findViewById(R.id.btns_popular_medicines_views);
+        grid_view_available_brands= (GridView) view.findViewById(R.id.grid_view_avaialble_brands);
+        btn_availble_brands_view_alls= view.findViewById(R.id.txt_available_brands_view_btn_views);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
 //        sviews.setQueryHint("Hints ");
@@ -153,6 +160,21 @@ public class HomeFragment extends Fragment {
             }
         });
 
+
+        String [] available_brands = {"Cipla", "DayHawk","SII","Dettol","Medihuman","Mankind"};
+        for(int i=0;i<6;i++){
+            AvailableBrandsDataModel brandsDataModel=new AvailableBrandsDataModel(R.drawable.medicine_image_3);
+            myAvailable_brands_list.add(brandsDataModel);
+        }
+        AvailableBrandsDataAdapter availableBrandsDataAdapter=new AvailableBrandsDataAdapter(this.getActivity().getApplicationContext(),myAvailable_brands_list);
+
+        grid_view_available_brands.setAdapter(availableBrandsDataAdapter);
+        btn_availble_brands_view_alls.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays  ,new AvailableBrandsFragment()).commit();
+            }
+        });
         return view;
 
     }

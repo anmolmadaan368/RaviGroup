@@ -30,11 +30,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/searchviews"
         android:layout_below="@id/searchviews"
+        android:layout_marginBottom="67dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="3dp"
-        android:layout_alignParentBottom="true"
         android:layout_height="match_parent">
 
         <RelativeLayout
@@ -163,13 +161,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Top Brands"
+                        android:text="Popular Medicines"
                         android:textStyle="bold"
                         />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text=" Room for only the BEST"
+                        android:text=" Room for only the BEST Selling"
                         />
                 </LinearLayout>
                     <LinearLayout
@@ -184,7 +182,7 @@
                             android:padding="3dp"
                             android:layout_height="wrap_content"
                             android:text="View All"
-                            android:id="@+id/txt_btn_views"
+                            android:id="@+id/btns_popular_medicines_views"
                             android:gravity="center"
                             android:textStyle="bold"
                             android:textSize="13sp"
@@ -198,7 +196,7 @@
                     <GridView
                         android:layout_width="match_parent"
                         android:id="@+id/grid_view_top_brands"
-                        android:background="#C9000000"
+                        android:background="#e3e4e6"
                         android:numColumns="2"
                         android:verticalSpacing="1dp"
                         android:horizontalSpacing="1dp"
@@ -208,15 +206,15 @@
                 </LinearLayout>
 
             </RelativeLayout>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="400dp"
+                android:id="@+id/refer_and_earn_outer_lays"
                 android:layout_height="150dp"
                 android:layout_marginTop="11dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
                 app:cardCornerRadius="10dp"
                 android:layout_below="@id/top_Brands_item_panel"
-                android:layout_marginBottom="60dp">
+                >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -266,6 +264,77 @@
 
 
             </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/refer_and_earn_outer_lays"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical"
+                android:background="@color/black"
+                android:id="@+id/available_brands_outer_lays"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/top_to_down_blue_palette"
+                    android:paddingLeft="10dp"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Available Brands "
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text= "only Trusted Brands"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:gravity="end|center"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:padding="3dp"
+                            android:layout_height="wrap_content"
+                            android:text="View All"
+                            android:id="@+id/txt_available_brands_view_btn_views"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:background="@drawable/bg_white_rounded_cut_white_btn"
+                            android:drawableRight="@drawable/ic_right_arrow"
+                            android:textColor="#3F51B5"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:numColumns="3"
+                    android:layout_marginTop="3dp"
+                    android:horizontalSpacing="3dp"
+                    android:layout_height="205dp"
+                    android:verticalSpacing="3dp"
+                    android:id="@+id/grid_view_avaialble_brands"
+                    />
+
+            </LinearLayout>
+
         </RelativeLayout>
 
     </ScrollView>

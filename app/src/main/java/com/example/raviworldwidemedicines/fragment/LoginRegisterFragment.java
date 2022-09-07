@@ -26,10 +26,10 @@ public class LoginRegisterFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private TextView btn_Go;
+    private Button btn_Go;
     private com.google.android.material.textfield.TextInputLayout login_u_name;
     private com.google.android.material.textfield.TextInputLayout login_pwd;
-    private Button btn_CreateAnaccount;
+    private TextView btn_CreateAnaccount;
 
 
     @Override

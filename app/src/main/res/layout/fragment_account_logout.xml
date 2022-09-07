@@ -112,6 +112,7 @@
         android:background="@drawable/bg_color_round_cut_blue"
         android:paddingLeft="69dp"
         android:textAllCaps="false"
+        android:textSize="23sp"
         android:paddingRight="69dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:textStyle="bold|normal"

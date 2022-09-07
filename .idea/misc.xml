@@ -8,6 +8,7 @@
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/drawable/backgnd_rectangle_simples.xml" value="0.1265" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/drawable/backgnd_while_rounded.xml" value="0.1265" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/drawable/bg_color_round_cut_blue.xml" value="0.1265" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/drawable/bg_edittext.xml" value="0.1" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/drawable/bg_round_shape_icon_frame.xml" value="0.1265" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/drawable/bg_search_view.xml" value="0.1265" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/drawable/bg_white_rounded_cut_white_btn.xml" value="0.1" />
@@ -30,6 +31,7 @@
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_about.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_account.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_account_logout.xml" value="0.25" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_available_brands.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_blog.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_blog_item.xml" value="0.12696941612604262" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_buy.xml" value="0.20416666666666666" />
@@ -37,20 +39,21 @@
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_contact.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_edit_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_faq.xml" value="0.22" />
-        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_home.xml" value="0.16983240223463686" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_home.xml" value="0.21" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_license.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_login_register.xml" value="0.18" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_login_register.xml" value="0.17" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_our_partners.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_our_product.xml" value="0.18" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_recently_viewed.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_recently_viewed_adapter.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_services.xml" value="0.33" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_show_all_products.xml" value="0.25" />
-        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_sign_up.xml" value="0.18" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_single_product_details.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_terms_and_conditions.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_top_brands_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/fragment_wish_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/item_available_brands_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_blog_layout.xml" value="0.25" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_g_view_our_products.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/3D/AndroidStudioProjects/RaviGroup/app/src/main/res/layout/list_item_layout_wishlist.xml" value="0.20416666666666666" />

@@ -15,7 +15,6 @@ import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TopBrandsItemDataAdapter extends ArrayAdapter<TopBrandsItemDetails> {
 

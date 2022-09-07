@@ -1,94 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/status_bar_color"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
+    android:background="@drawable/bg_register_form_layout"
     android:padding="10dp"
     tools:context=".fragment.LoginRegisterFragment">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="fitXY"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/raviwwmwdicinesogo" />
+<!--    <ImageView-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:src="@drawable/raviwwmwdicinesogo" />-->
 
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="-20dp"-->
+<!--        android:text="Welcome"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="bold" />-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="10dp"-->
+<!--    android:orientation="vertical"-->
+<!--    >-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="User Name"-->
+<!--        android:id="@+id/login_uname"-->
+<!--        android:layout_marginTop="11dp"-->
+<!--        style="@style/ThemeOverlay.Material3.TextInputEditText"-->
+<!--        >-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="text"-->
+<!--            />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Password"-->
+<!--        android:id="@+id/login_pwd"-->
+<!--        android:layout_marginTop="11dp"-->
+<!--        style="@style/ThemeOverlay.Material3.TextInputEditText"-->
+<!--        >-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="textPassword"-->
+<!--            />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    </LinearLayout>-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/btn_Go"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Login"-->
+<!--        android:paddingLeft="69dp"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:paddingRight="69dp"-->
+<!--        android:background="@drawable/bg_color_round_cut_blue"-->
+<!--        android:paddingTop="17dp"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:paddingBottom="17dp"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textStyle="bold" />-->
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_createAnaccount"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:textStyle="italic"-->
+<!--        android:textColor="#000"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="11dp"-->
+<!--        android:text="New User ? Create An Account "-->
+<!--        android:textAllCaps="false"-->
+<!--        android:background="#00000000"-->
+<!--        />-->
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/raviwwmwdicinesogo" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
-        android:text="Welcome"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp"
-    android:orientation="vertical"
-    >
+        android:text="Login "
+        android:layout_marginTop="3dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="3dp"
+        android:layout_below="@id/image1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/tvlogin"/>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="User Name"
+        android:layout_height="70dp"
         android:id="@+id/login_uname"
-        android:layout_marginTop="11dp"
-        style="@style/ThemeOverlay.Material3.TextInputEditText"
-        >
+        android:layout_below="@id/tvlogin"
+        android:layout_margin="3dp"
+        android:layout_marginTop="100dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
+            android:layout_height="70dp"
+            android:hint="Enter Email Here"
+            android:background="@drawable/bg_edittext"
+            android:textSize="20dp"
             />
 
+
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
+        android:layout_height="70dp"
         android:id="@+id/login_pwd"
-        android:layout_marginTop="11dp"
-        style="@style/ThemeOverlay.Material3.TextInputEditText"
-        >
+        app:passwordToggleEnabled="true"
+        android:layout_margin="10dp"
+        android:layout_below="@id/login_uname">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            />
+            android:layout_height="70dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Enter Password Here"
+            android:textSize="20dp"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/login_contact_no"
 
+        android:layout_margin="10dp"
+        android:layout_below="@id/login_pwd">
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Enter Contact Here"
+            android:background="@drawable/bg_edittext"
+            android:textSize="20dp"
+            android:inputType="number"
+            android:id="@+id/eticontact"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
         android:id="@+id/btn_Go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:paddingLeft="69dp"
-        android:layout_marginTop="13dp"
-        android:paddingRight="69dp"
-        android:background="@drawable/bg_color_round_cut_blue"
-        android:paddingTop="17dp"
+        android:layout_below="@id/login_contact_no"
         android:textAllCaps="false"
-        android:paddingBottom="17dp"
-        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textSize="25sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/not_registered_txt_view_outer_lays"
+        android:layout_below="@id/btn_Go"
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:text="if Your Are New User"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            >
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_createAnaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_Go"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/not_registered_txt_view_outer_lays"
+        android:text="SignUp!"
+        android:textColor="@color/purple_700"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
 
 
-    <Button
-        android:id="@+id/btn_createAnaccount"
-        android:layout_width="match_parent"
-        android:textStyle="italic"
-        android:textColor="#000"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="New User ? Create An Account "
-        android:textAllCaps="false"
-        android:background="#00000000"
-        />
-</LinearLayout>
+</RelativeLayout>

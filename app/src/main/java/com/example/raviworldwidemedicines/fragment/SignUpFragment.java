@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,11 +24,11 @@ public class SignUpFragment extends Fragment {
     }
 
 
-    private TextView signup;
+    private Button signup;
     private TextInputLayout name;
     private TextInputLayout mobile_no;
     private TextInputLayout u_name;
-    private Button login;
+    private ImageView login;
     private TextInputLayout u_email;
     private TextInputLayout password;
 
@@ -39,13 +40,13 @@ public class SignUpFragment extends Fragment {
 
 
         name= (TextInputLayout)view.findViewById(R.id.inpt_name) ;
-        u_name= (TextInputLayout) view.findViewById(R.id.inpt_uname);
+        u_name= (TextInputLayout) view.findViewById(R.id.login_uname);
         u_email=(TextInputLayout) view.findViewById(R.id.inpt_emailaddress);
-        mobile_no= (TextInputLayout) view.findViewById(R.id.inpt_contactno );
+        mobile_no= (TextInputLayout) view.findViewById(R.id.et_contact_no );
         password =(TextInputLayout) view.findViewById(R.id.inpt_pwd);
 
-        signup= (TextView) view.findViewById(R.id.btn_signUp);
-        login=(Button) view.findViewById(R.id.btn_AlreadyRegisered) ;
+        signup= (Button) view.findViewById(R.id.btn_signUp);
+        login=(ImageView) view.findViewById(R.id.btn_Already_registered) ;
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
