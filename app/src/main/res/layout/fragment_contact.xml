@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/status_bar_color"
-    android:orientation="vertical"
+
     tools:context=".fragment.ContactFragment">
 
     <RelativeLayout
@@ -94,6 +94,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:background="#7995C3"
+
                 android:layout_height="match_parent">
 
                 <RelativeLayout
@@ -189,7 +190,8 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            >
 
                             <TextView
                                 android:layout_width="0dp"
