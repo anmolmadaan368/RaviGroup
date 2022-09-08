@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -44,8 +45,8 @@ public class CartFragment extends Fragment  {
 
 //        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
 //            @Override
-//            public void handleOnBackPressed() {
-//                getFragmentManager().popBackStackImmediate();
+//          public void handleOnBackPressed() {
+//        getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
 //            }
 //        };
 //        requireActivity().getOnBackPressedDispatcher().addCallback(requireActivity(), callback);

@@ -234,7 +234,7 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:src="@drawable/rating"/>
+                        android:src="@drawable/rating_3"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

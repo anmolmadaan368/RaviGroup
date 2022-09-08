@@ -8,17 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.raviworldwidemedicines.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link EditDetailsFragment#newInstance} factory method to
+ * Use the {@link ChangePassword#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EditDetailsFragment extends Fragment {
+public class ChangePassword extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,10 +27,9 @@ public class EditDetailsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private ImageView backButton;
-    private TextView changePassword;
+    private Button submitButton;
 
-    public EditDetailsFragment() {
+    public ChangePassword() {
         // Required empty public constructor
     }
 
@@ -42,11 +39,11 @@ public class EditDetailsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment EditDetailsFragment.
+     * @return A new instance of fragment ChangePassword.
      */
     // TODO: Rename and change types and number of parameters
-    public static EditDetailsFragment newInstance(String param1, String param2) {
-        EditDetailsFragment fragment = new EditDetailsFragment();
+    public static ChangePassword newInstance(String param1, String param2) {
+        ChangePassword fragment = new ChangePassword();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,25 +64,16 @@ public class EditDetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_edit_details, container, false);
+        View view =  inflater.inflate(R.layout.fragment_change_password, container, false);
 
-        backButton = view.findViewById(R.id.back_button);
-        changePassword = view.findViewById(R.id.change_pass);
+        submitButton = view.findViewById(R.id.submit_btn);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+        submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new AccountFragment()).commit();
             }
         });
-
-        changePassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new ChangePassword()).commit();
-            }
-        });
-
 
         return view;
     }
