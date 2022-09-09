@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines.model;
 
 import android.widget.ImageView;
 import android.widget.TextView;

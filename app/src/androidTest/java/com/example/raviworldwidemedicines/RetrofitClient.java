@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

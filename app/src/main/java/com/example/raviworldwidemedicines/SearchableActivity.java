@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines;
 
 import android.app.Activity;
 import android.app.SearchManager;

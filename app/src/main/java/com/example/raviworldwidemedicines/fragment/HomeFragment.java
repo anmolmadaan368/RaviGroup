@@ -19,17 +19,14 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.raviworldwidemedicines.adapter.AvailableBrandsDataAdapter;
 import com.example.raviworldwidemedicines.adapter.TopBrandsItemDataAdapter;
-import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.exampl.ClickListener;
+import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.exampl.RecentlyViewedFragment;
-import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 import com.example.raviworldwidemedicines.model.AvailableBrandsDataModel;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
-import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {

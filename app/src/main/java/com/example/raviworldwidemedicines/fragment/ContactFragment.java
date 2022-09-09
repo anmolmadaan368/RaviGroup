@@ -1,5 +1,7 @@
 package com.example.raviworldwidemedicines.fragment;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -20,12 +22,13 @@ import kotlin.Suppress;
 public class ContactFragment extends Fragment {
 
     TextView contactform_submitBtn;
+
     public ContactFragment() {
         // Required empty public constructor
     }
 
-    public TextView txtViewContsctdeatil;
-
+    private TextView txt_Email_add;
+    private TextView txt_Contact_no;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,25 +36,39 @@ public class ContactFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        txtViewContsctdeatil = (TextView) view.findViewById(R.id.txtViewContactdetail);
-        contactform_submitBtn= view.findViewById(R.id.contactform_submitBtn);
+        txt_Email_add = (TextView) view.findViewById(R.id.txtView_Email);
+        txt_Contact_no = (TextView) view.findViewById(R.id.txt_Contact_No);
+        contactform_submitBtn = view.findViewById(R.id.contactform_submitBtn);
 
-        String strss = "<h6><b>Email :</b> <spnan style=\"font-size:15px;\">ravi.raviworldwidemedicines@gmail.com</spnan>\n" +
-                "</h6><h6><b>Phone No : </b><spnan style=\"font-size:15px;\"> +91-9994330921</spnan>\n" +
-                "</h6>";
-
+        String strss_Email = "<h4><b>Email :</b> <span >ravi.raviworldwidemedicines@gmail.com</span>" +
+                "</h4>";
+        String stris_contactno = "<h4><b>Phone No : </b><span> +91-9994330921</span></h4>";
         if (Build.VERSION.SDK_INT >= 24) {
-            txtViewContsctdeatil.setText(Html.fromHtml(strss, Html.FROM_HTML_MODE_LEGACY));
+            txt_Email_add.setText(Html.fromHtml(strss_Email, Html.FROM_HTML_MODE_LEGACY));
+            txt_Contact_no.setText(Html.fromHtml(stris_contactno, Html.FROM_HTML_MODE_LEGACY));
 
         } else {
-            txtViewContsctdeatil.setText(Html.fromHtml(strss));
+            txt_Email_add.setText(Html.fromHtml(strss_Email));
+            txt_Contact_no.setText(Html.fromHtml(stris_contactno));
 
-
-            return view;
         }
-
-
-
+        txt_Email_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO,Uri.parse("mailto:ravi.raviworldwidemedicines@gmail.com"));
+                emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(emailIntent);
+            }
+        });
+        txt_Contact_no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent contactIntent= new Intent(Intent.ACTION_DIAL);
+                contactIntent.setData(Uri.parse("tel:+919994330921"));
+                contactIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(contactIntent);
+            }
+        });
 
         return view;
     }

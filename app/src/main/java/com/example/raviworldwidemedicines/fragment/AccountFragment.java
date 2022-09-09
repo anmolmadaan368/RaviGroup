@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -16,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 
 import org.w3c.dom.Text;
@@ -72,7 +72,7 @@ public class AccountFragment extends Fragment {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new AccountLogoutFragment()).commit();
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(),new AccountLogoutFragment());
             }
         });
 
@@ -103,14 +103,6 @@ public class AccountFragment extends Fragment {
                 getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
             }
         });
-//
-//        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
-//            @Override
-//            public void handleOnBackPressed() {
-//                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
-//            }
-//        };
-//        requireActivity().getOnBackPressedDispatcher().addCallback(requireActivity(), callback);
 
 
 //        .;

@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.topBrandsRecyclerviewDataListAdapters;
-import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;

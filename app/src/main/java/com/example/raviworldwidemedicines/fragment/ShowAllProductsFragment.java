@@ -6,22 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.raviworldwidemedicines.adapter.TopBrandsItemDataAdapter;
 import com.example.raviworldwidemedicines.adapter.topBrandsRecyclerviewDataListAdapters;
-import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
-import com.example.raviworldwidemedicines.adapter.AllProductDataAdapter;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;

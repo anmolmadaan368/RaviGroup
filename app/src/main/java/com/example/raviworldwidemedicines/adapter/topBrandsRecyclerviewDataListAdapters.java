@@ -9,13 +9,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.exampl.SingleProductDetailsFragment;
+import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.fragment.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;

@@ -1,13 +1,11 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines.Interfaces;
 
 import com.example.raviworldwidemedicines.model.Model;
 
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 
 public interface RetrofitApi {
     @GET("api_data.php")

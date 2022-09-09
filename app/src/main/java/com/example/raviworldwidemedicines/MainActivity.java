@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines;
 
 import static android.content.ContentValues.TAG;
 
@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,9 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 
-import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.AboutFragment;
 import com.example.raviworldwidemedicines.fragment.AccountFragment;
 import com.example.raviworldwidemedicines.fragment.BlogFragment;
@@ -35,7 +36,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -45,27 +46,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NavigationView navigationView;
     private BottomNavigationView bottomNavigationView;
 
-    private HomeFragment homeFragment = new HomeFragment();
-    private CartFragment cartFragment = new CartFragment();
-    private AccountFragment accountFragment = new AccountFragment();
-    private Fragment previous_Fragment;
+    public static HomeFragment homeFragment;
+    private CartFragment cartFragment;
+    private AccountFragment accountFragment;
+    public static Fragment current_Fragment;
 
-    private AboutFragment aboutFragment = new AboutFragment();
-    private OurPartnersFragment ourPartnersFragment=new OurPartnersFragment();
-    private LicenseFragment licenseFragment= new LicenseFragment();
-    private OurProductFragment ourProductFragment = new OurProductFragment();
-    private BlogFragment blogFragment = new BlogFragment();
-    private ContactFragment contactFragment = new ContactFragment();
+    private AboutFragment aboutFragment ;
+    private OurPartnersFragment ourPartnersFragment;
+    private LicenseFragment licenseFragment;
+    private OurProductFragment ourProductFragment;
+    private BlogFragment blogFragment;
+    private ContactFragment contactFragment;
 
-    private WishListFragment wishListFragment = new WishListFragment();
-    private TermsAndConditions termsAndConditions = new TermsAndConditions();
-    private FaqFragment faqFragment= new FaqFragment();
-    private ServicesFragment servicesFragment = new ServicesFragment();
+    private WishListFragment wishListFragment;
+    private TermsAndConditions termsAndConditions;
+    private FaqFragment faqFragment;
+    private ServicesFragment servicesFragment;
     private int previous_navDrawer_ItemId;
     private int previous_nav_drawer_selected_ItemId;
-
-
-
 
 
     //    public
@@ -165,7 +163,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 //       Default loading Home Fragment in  container layout of Main Activity
-        previous_Fragment=new HomeFragment();
+        homeFragment= new HomeFragment();
+        current_Fragment = homeFragment;
         getSupportFragmentManager().beginTransaction().replace(R.id.main_lays, homeFragment).commit();
 
 //        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -196,31 +195,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 switch (item.getItemId()) {
                     case R.id.bottom_nav_cart:
-                        Toast.makeText(getApplicationContext(), "Cart Fragment is called", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, cartFragment).commit();
-                        if(previous_Fragment!=cartFragment) {
-                            getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
-                        }
-                        previous_Fragment=cartFragment;
+                        cartFragment= new CartFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), cartFragment);
                         return true;
 
                     case R.id.bottom_nav_acc:
-                        Toast.makeText(getApplicationContext(), "Account Fragment is called", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_lays, accountFragment).commit();
-                        if (previous_Fragment != accountFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
-                        previous_Fragment= accountFragment;
+                        accountFragment = new AccountFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), accountFragment);
                         return true;
                     case R.id.bottom_nav_home:
-                        Toast.makeText(getApplicationContext(), "Home Fragment is called", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, homeFragment).commit();
-                        if(previous_Fragment !=homeFragment)
-                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
-                        previous_Fragment=homeFragment ;
+                        replaceCurrentFragment(getSupportFragmentManager(), homeFragment);
                         return true;
 
                 }
-
 
                 return false;
             }
@@ -239,61 +226,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 switch (item.getItemId()) {
                     case R.id.nav_drawer_services:
-                        Toast.makeText(getApplicationContext(), item.getTitle() + "", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, servicesFragment).commit();
-                        previous_Fragment=servicesFragment;
+                        servicesFragment = new ServicesFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), servicesFragment);
                         break;
                     case R.id.nav_drawer_home:
-                        Toast.makeText(getApplicationContext(), item.getTitle() + "", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, homeFragment).commit();
-                        previous_Fragment= homeFragment;
+                        replaceCurrentFragment(getSupportFragmentManager(), homeFragment);
                         break;
                     case R.id.nav_drawer_blog:
-                        Toast.makeText(getApplicationContext(), item.getTitle() + "", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, blogFragment).commit();
-                        previous_Fragment=blogFragment;
+                        blogFragment = new BlogFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), blogFragment);
                         break;
                     case R.id.nav_drawer_contact:
-                        Toast.makeText(MainActivity.this, item.getTitle() + " ", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, contactFragment).commit();
-                        previous_Fragment=contactFragment;
+                        contactFragment = new ContactFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), contactFragment);
                         break;
                     case R.id.nav_drawer_ourproduct:
-                        Toast.makeText(MainActivity.this, item.getTitle() + "", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, ourProductFragment).commit();
-                        previous_Fragment= ourPartnersFragment;
+                        ourProductFragment = new OurProductFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), ourProductFragment);
                         break;
                     case R.id.nav_drawer_about:
-                        Toast.makeText(MainActivity.this, item.getTitle() + " ", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, aboutFragment).commit();
-                        previous_Fragment=aboutFragment;
+                        aboutFragment = new AboutFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), aboutFragment);
                         break;
                     case R.id.nav_drawer_wishlist:
-                        Toast.makeText(MainActivity.this, item.getTitle() + "", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, wishListFragment).commit();
-                        previous_Fragment= wishListFragment;
+                        wishListFragment = new WishListFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), wishListFragment);
                         break;
                     case R.id.nav_drawer_termandconditions:
-                        Toast.makeText(MainActivity.this, item.getTitle() + ":    ", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, termsAndConditions).commit();
-                        previous_Fragment=termsAndConditions;
+                        termsAndConditions = new TermsAndConditions();
+                        replaceCurrentFragment(getSupportFragmentManager(), termsAndConditions);
                         break;
                     case R.id.nav_drawer_license:
-                        Toast.makeText(MainActivity.this, "" + item.getTitle() + ":  ", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays, licenseFragment).commit();
-                        previous_Fragment= licenseFragment;
+                        licenseFragment = new LicenseFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), licenseFragment);
                         break;
                     case R.id.nav_drawer_our_partners:
-                        Toast.makeText(MainActivity.this, item.getTitle() + ": ", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace( R.id.main_lays,ourPartnersFragment).commit();
-//                        if ( previous_Fragment != ourPartnersFragment)
-//                        getSupportFragmentManager().beginTransaction().remove(previous_Fragment).commitNow();
-                        previous_Fragment=ourPartnersFragment;
+                        ourPartnersFragment = new OurPartnersFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), ourPartnersFragment);
                         break;
                     case R.id.id_faq:
-                        Toast.makeText(MainActivity.this, item.getTitle()+"", Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_lays, faqFragment).commit();
-                        previous_Fragment=ourPartnersFragment;
+                        faqFragment = new FaqFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), faqFragment);
                         break;
                 }
 
@@ -334,6 +307,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+    }
+
+    public static void replaceCurrentFragment(FragmentManager parent_Fragment_Manager, Fragment nextFragment) {
+
+        if ((current_Fragment!= nextFragment) && (parent_Fragment_Manager!= null)) {
+            parent_Fragment_Manager.beginTransaction().replace(R.id.main_lays, nextFragment).addToBackStack(current_Fragment.getClass().toString()).commit();
+            removePreviousFragment(parent_Fragment_Manager);
+            current_Fragment = nextFragment;
+        }
+    }
+
+    public static void removePreviousFragment(FragmentManager parent_fragment_manager) {
+        if ((current_Fragment.getClass() != MainActivity.homeFragment.getClass())&&(current_Fragment !=null))
+            parent_fragment_manager.beginTransaction().remove(current_Fragment).commitNow();
+
     }
 
 
@@ -343,7 +334,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Log.d(TAG, "onBackPressed: "+ getSupportFragmentManager().getBackStackEntryAt(getSupportFragmentManager().getBackStackEntryCount()-1));
+            if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                Fragment preFragment;
+                getSupportFragmentManager().popBackStack();
+            } else {
+                super.onBackPressed();
+            }
+//            Intent backPressedIntent= new Intent(Intent.ACTION_MAIN);
+//            backPressedIntent.addCategory(Intent.CATEGORY_HOME);
+//            backPressedIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(backPressedIntent);
         }
 
     }
@@ -384,6 +385,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         }
+
+
         return false;
     }
 }

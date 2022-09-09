@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines.fragment;
 
 import android.os.Bundle;
 
@@ -11,9 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.fragment.BuyFragment;
-import com.example.raviworldwidemedicines.fragment.CartFragment;
-import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
+import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 
 public class SingleProductDetailsFragment extends Fragment {
 

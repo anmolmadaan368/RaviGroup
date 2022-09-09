@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/status_bar_color"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".exampl.SingleProductDetailsFragment">
+    tools:context=".fragment.SingleProductDetailsFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"

@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.exampl.ClickListener;
+import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.BuyFragment;
 import com.example.raviworldwidemedicines.fragment.CartFragment;

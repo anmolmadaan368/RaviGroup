@@ -7,15 +7,14 @@ import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.exampl.ClickListener;
+import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.CartDataAdapter;
 

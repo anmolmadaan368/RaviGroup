@@ -1,12 +1,10 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
-import com.example.raviworldwidemedicines.R;
 
 public class SplashSceen extends AppCompatActivity {
 
@@ -20,7 +18,7 @@ public class SplashSceen extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent=new Intent(SplashSceen.this,MainActivity.class);
+                Intent intent=new Intent(SplashSceen.this, MainActivity.class);
                 startActivity(intent);
                 finish();
 

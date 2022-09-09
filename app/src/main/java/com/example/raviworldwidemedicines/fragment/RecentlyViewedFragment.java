@@ -1,4 +1,4 @@
-package com.example.raviworldwidemedicines.exampl;
+package com.example.raviworldwidemedicines.fragment;
 
 import android.os.Bundle;
 
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.RecentlyViewAdapter;
+import com.example.raviworldwidemedicines.Interfaces.ClickListener;
+import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 
 import java.util.ArrayList;
 

@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.raviworldwidemedicines.exampl.ClickListener;
+import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.ShowAllProductsFragment;
 import com.example.raviworldwidemedicines.model.Model;

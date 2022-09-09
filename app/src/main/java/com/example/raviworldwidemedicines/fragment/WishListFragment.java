@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.example.raviworldwidemedicines.exampl.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.exampl.ClickListener;
+import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
+import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.CartDataAdapter;
 
