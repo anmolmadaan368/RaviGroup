@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 
 /**
@@ -69,7 +70,7 @@ public class TermsAndConditions extends Fragment {
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(),new HomeFragment());
             }
         });
 

@@ -147,29 +147,11 @@
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/login_contact_no"
-
-        android:layout_margin="10dp"
-        android:layout_below="@id/login_pwd">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:hint="Enter Contact Here"
-            android:background="@drawable/bg_edittext"
-            android:textSize="20dp"
-            android:inputType="number"
-            android:id="@+id/eticontact"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
         android:id="@+id/btn_Go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login_contact_no"
+        android:layout_below="@id/login_pwd"
         android:textAllCaps="false"
         android:layout_centerHorizontal="true"
         android:text="Login"

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 
 /**
@@ -93,7 +94,7 @@ public class AccountLogoutFragment extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new LoginRegisterFragment()).commit();
+                MainActivity.replaceCurrentFragment( getParentFragmentManager(),new LoginRegisterFragment());
             }
         });
 

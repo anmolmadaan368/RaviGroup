@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 
 /**
@@ -71,7 +72,7 @@ public class ChangePassword extends Fragment {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new AccountFragment()).commit();
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(),new AccountFragment());
             }
         });
 

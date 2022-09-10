@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.model.BlogMultipleDataBinderObject;
 import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
@@ -28,7 +29,6 @@ public class BlogFragment extends Fragment {
     private ArrayList<BlogMultipleDataBinderObject> blog_data_lists;
     private TextView blog_desc;
     private BlogDataAdapter blogDataAdapter;
-    private BlogItemFragment blogItemFragment;
     private RecyclerView recyclerView_blog_data_lists;
     private TextView txt_no_data_exist;
     private int[] blog_image = {R.drawable.imgf_2, R.drawable.imgf_1, R.drawable.imgf_3, R.drawable.imgf_4, R.drawable.imgf_5};
@@ -48,7 +48,6 @@ public class BlogFragment extends Fragment {
         recyclerView_blog_data_lists = view.findViewById(R.id.recycler_view_blog_list);
         txt_no_data_exist= view.findViewById(R.id.no_data_exist_txt);
         blog_searchview_layss= view.findViewById(R.id.blog_item_searchviews);
-        blogItemFragment=new BlogItemFragment();
 
         blog_imageView= (ImageView) view.findViewById(R.id.blog_img);
 
@@ -64,7 +63,7 @@ public class BlogFragment extends Fragment {
         blogDataAdapter = new BlogDataAdapter(blog_data_lists, getParentFragmentManager(), new ClickListener() {
             @Override
             public void onPositionClicked(int Position)  {
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, blogItemFragment).commit();
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(),new BlogItemFragment());
 
             }
         });

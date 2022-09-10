@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 
 import java.awt.font.TextAttribute;
@@ -61,8 +62,7 @@ public class LoginRegisterFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 signUpFragment = new SignUpFragment();
-                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, signUpFragment).commit();
-
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(),signUpFragment);
             }
         });
 

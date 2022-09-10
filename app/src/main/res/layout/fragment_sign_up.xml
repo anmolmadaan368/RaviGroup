@@ -188,6 +188,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Enter Name Here"
+            android:inputType="text"
             android:background="@drawable/bg_edittext"
             android:textSize="20dp"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -203,6 +204,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
             android:hint="Enter Email Here"
             android:background="@drawable/bg_edittext"
             android:textSize="20dp"
@@ -227,36 +229,76 @@
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <com.google.android.material.textfield.TextInputLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:id="@+id/confirm_pwd"
-        app:passwordToggleEnabled="true"
+        android:id="@+id/confirm_pwd_outer_lays"
+        android:layout_below="@id/inpt_pwd"
         android:layout_margin="10dp"
-        android:layout_below="@id/inpt_pwd">
+        >
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Confirm Password"
-            android:background="@drawable/bg_edittext"
-            android:textSize="20dp"
-            android:inputType="textPassword"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:id="@+id/confirm_pwd"
+            app:passwordToggleEnabled="true">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Confirm Password"
+                android:background="@drawable/bg_edittext"
+                android:textSize="20dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/otp_outer_lays"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:id="@+id/et_otp"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint=" Enter otp here"
+                    android:background="@drawable/bg_edittext"
+                    android:textSize="17sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_otp"
+                android:gravity="center"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textSize="27sp"
+                android:layout_weight="0.3"
+                android:background="@drawable/bg_color_save_button"
+                />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:id="@+id/et_contact_no"
+        android:id="@+id/contact_no_outer_lays"
         android:layout_margin="3dp"
-        android:layout_below="@id/confirm_pwd">
+        android:layout_below="@id/confirm_pwd_outer_lays">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Enter Contact Here"
+            android:id="@+id/et_contact_no"
+            android:nextFocusForward="@id/et_otp"
             android:background="@drawable/bg_edittext"
             android:textSize="20dp"
             android:inputType="number"/>
@@ -266,7 +308,7 @@
         android:id="@+id/btn_signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_contact_no"
+        android:layout_below="@id/contact_no_outer_lays"
         android:textAllCaps="false"
         android:layout_centerHorizontal="true"
         android:text="Sign Up"
