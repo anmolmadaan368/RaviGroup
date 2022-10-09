@@ -2,26 +2,14 @@
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/status_bar_color"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+    android:background="@drawable/background1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
     <ImageView
         android:layout_width="253dp"
         android:layout_height="253dp"
         android:scaleType="fitXY"
         android:id="@+id/view_Logom"
-        android:src="@drawable/raviwwmwdicinesogo"
-        />
+        android:src="@drawable/raviwwmwdicinesogo"/>
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="189dp"
-        android:layout_height="189dp"
-        android:layout_below="@id/view_Logom"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/loading" />
-    </RelativeLayout>
 </RelativeLayout>
