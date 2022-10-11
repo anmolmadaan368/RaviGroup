@@ -14,16 +14,18 @@ import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.model.AvailableBrandsDataModel;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class AvailableBrandsDataAdapter extends ArrayAdapter<AvailableBrandsDataModel> {
 
     private Context context;
     private ArrayList<AvailableBrandsDataModel> my_availble_brands_lists;
 
-    public AvailableBrandsDataAdapter(@NonNull Context context,@NonNull ArrayList<AvailableBrandsDataModel> availableBrandsDataModels) {
-        super(context, 0, availableBrandsDataModels);
+    public AvailableBrandsDataAdapter(@NonNull Context context,@NonNull ArrayList<AvailableBrandsDataModel> availableBrandsDataModelLists) {
+        super(context, 0, availableBrandsDataModelLists);
         this.context= context;
-        this.my_availble_brands_lists= availableBrandsDataModels;
+        this.my_availble_brands_lists= availableBrandsDataModelLists;
     }
 
     @NonNull

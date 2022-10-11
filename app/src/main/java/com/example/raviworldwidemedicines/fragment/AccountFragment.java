@@ -44,9 +44,9 @@ public class AccountFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_account, container, false);
 
-        acc_uname = (TextView) view.findViewById(R.id.login_uname);
-        acc_email = view.findViewById(R.id.account_email_txt);
-        acc_mobile_no = view.findViewById(R.id.account_mobile_txt);
+        acc_uname = (TextView) view.findViewById(R.id.tv_user_name);
+        acc_email = view.findViewById(R.id.txtView_Email);
+        acc_mobile_no = view.findViewById(R.id.tv_contact_no);
 
         cardViewProfile = view.findViewById(R.id.card_view_3);
         cardViewFAQ = view.findViewById(R.id.card_view_5);
@@ -104,10 +104,6 @@ public class AccountFragment extends Fragment {
             }
         });
 
-
-//        .;
-
         return view;
-
     }
 }

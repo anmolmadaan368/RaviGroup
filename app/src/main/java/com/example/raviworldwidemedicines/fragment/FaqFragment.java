@@ -130,6 +130,7 @@ public class FaqFragment extends Fragment {
         txt29 = view.findViewById(R.id.txt29);
 
 
+
         click1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

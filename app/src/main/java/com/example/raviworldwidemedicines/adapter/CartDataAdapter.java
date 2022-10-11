@@ -20,6 +20,8 @@ import com.example.raviworldwidemedicines.fragment.HomeFragment;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDataViewHolder> {
 
@@ -30,11 +32,17 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
     private String currentfragmentNamethatareusingthis;
 
     public CartDataAdapter(ArrayList<CartMultipleDataBinder> cartDataList, String currentfragmentname, int one_Item_Lays_Id, FragmentManager fragmentManager, ClickListener clickListener) {
-        this.cartlist = cartDataList;
         this.clickListener = clickListener;
         this.fragmentManager = fragmentManager;
         this.currentfragmentNamethatareusingthis = currentfragmentname;
         this.single_item_Layout_Id = one_Item_Lays_Id;
+        Collections.sort(cartDataList, new Comparator<CartMultipleDataBinder>() {
+            @Override
+            public int compare(CartMultipleDataBinder cartDataList01, CartMultipleDataBinder  cartDataLst2) {
+                return cartDataList01.getProduct_name().compareTo(cartDataLst2.getProduct_name());
+            }
+        });
+        this.cartlist = cartDataList;
     }
 
     @NonNull
@@ -143,5 +151,4 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
         }
 
     }
-
-}
+    }

@@ -15,13 +15,21 @@ import com.example.raviworldwidemedicines.model.DynamicRvModel;
 import com.example.raviworldwidemedicines.R;
 
 import java.lang.ref.WeakReference;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class DynamicDataAdapter extends RecyclerView.Adapter<DynamicDataAdapter.DynamicRvHolder> {
 
     public List<DynamicRvModel> dynamicRvModelsDataArrayLst;
     private ClickListener clickListener;
-    public DynamicDataAdapter(List<DynamicRvModel> dynamicRvModels,ClickListener clickListener){
+    public DynamicDataAdapter(List<DynamicRvModel> dynamicRvModels,ClickListener clickListener) {
+        Collections.sort(dynamicRvModels, new Comparator<DynamicRvModel>() {
+            @Override
+            public int compare(DynamicRvModel dynamicRvMode01, DynamicRvModel dynamicRvMode02) {
+                return dynamicRvMode01.getItemname().compareTo(dynamicRvMode02.getItemname());
+            }
+        });
         this.dynamicRvModelsDataArrayLst=dynamicRvModels;
         this.clickListener=clickListener;
     }

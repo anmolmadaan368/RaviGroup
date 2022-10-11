@@ -11,13 +11,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:elevation="19dp"
-        android:layout_marginTop="27dp"
+        android:orientation="vertical"
+        android:layout_marginTop="13dp"
         >
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,7 +27,36 @@
             android:layout_height="96dp"
             android:src="@drawable/user"
             app:civ_border_width="2dp"
+            android:layout_gravity="center"
             app:civ_border_color="#FF000000"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/tv_user_name"
+        android:textAlignment="center"
+
+    />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact No is here "
+            android:layout_marginTop="13dp"
+            android:id="@+id/tv_contact_no"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text=" Email "
+            android:id="@+id/txtView_Email"
+            />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout2"

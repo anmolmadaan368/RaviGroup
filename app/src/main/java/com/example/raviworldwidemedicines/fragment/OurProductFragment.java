@@ -15,6 +15,8 @@ import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.DataAdapterOurProduct;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class OurProductFragment extends Fragment {
 
@@ -36,6 +38,13 @@ public class OurProductFragment extends Fragment {
             dataLists.add(new DataModelOurProduct(R.drawable.imgf_1,"image no : "+(i+1)));
         }
 
+        //   Sort by  product name
+        Collections.sort(dataLists, new Comparator<DataModelOurProduct>() {
+            @Override
+            public int compare(DataModelOurProduct dataModel01, DataModelOurProduct dataModel2) {
+                return dataModel01.getItem_name().compareTo(dataModel2.getItem_name());
+            }
+        });
         DataAdapterOurProduct adapter= new DataAdapterOurProduct(getContext().getApplicationContext() , dataLists );
         gridView.setAdapter(adapter);
         showAllProductsFragment= new ShowAllProductsFragment();
