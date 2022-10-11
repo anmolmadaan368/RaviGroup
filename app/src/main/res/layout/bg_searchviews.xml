@@ -9,12 +9,11 @@
         android:background="@drawable/backgnd_while_rounded"
         android:layout_height="match_parent"
         >
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="@drawable/bg_search_view"
-            android:layout_height="match_parent"
-            >
-        </RelativeLayout>
+            android:layout_height="579dp"
+            android:background="@drawable/bg_search_view"></RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>
