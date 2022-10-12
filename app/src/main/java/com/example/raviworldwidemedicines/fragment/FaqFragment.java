@@ -1,5 +1,6 @@
 package com.example.raviworldwidemedicines.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.databinding.FragmentFaqBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +30,7 @@ public class FaqFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     int bclick = 1;
+    private FragmentFaqBinding faqBinding;
     private ImageView click1,click2,click3,click4,click5,click6,click7,click8,click9,click10,click11,click12,click13,click14,click15,click16,click17,click18,click19,click20,click21,click22,click23,click24,click25,click26,click27,click28,click29;
     private TextView txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txt11,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt20,txt21,txt22,txt23,txt24,txt25,txt26,txt27,txt28,txt29;
 
@@ -67,7 +70,10 @@ public class FaqFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_faq, container, false);
+
+        faqBinding= FragmentFaqBinding.inflate(getLayoutInflater());
+        View view= faqBinding.getRoot();
+
 
         click1 = view.findViewById(R.id.click1);
         click2 = view.findViewById(R.id.click2);
@@ -144,6 +150,12 @@ public class FaqFragment extends Fragment {
             }
         });
 
+        faqBinding.btnMoveBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit() ;
+            }
+        });
         click2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

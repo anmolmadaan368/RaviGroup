@@ -53,7 +53,6 @@ public class SignUpFragment extends Fragment {
 
 
         name= (TextInputLayout)view.findViewById(R.id.inpt_name) ;
-        u_name= (TextInputLayout) view.findViewById(R.id.login_uname);
         u_email=(TextInputLayout) view.findViewById(R.id.inpt_emailaddress);
         mobile_no_outer_lays=view.findViewById(R.id.contact_no_outer_lays);
         mobile_no= (TextInputEditText) view.findViewById(R.id.et_contact_no );
