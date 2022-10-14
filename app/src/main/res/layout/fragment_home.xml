@@ -259,19 +259,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_below="@id/card_view_1"
-
-
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="10dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/fynalrate"
                     android:background="@drawable/orange_button"
                     >
 
                     <TextView
-                        android:id="@+id/rate_us"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"
@@ -284,11 +282,13 @@
                         />
 
                     <TextView
+                        android:id="@+id/rate_us"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toBottomOf="@id/rate_us"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="30dp"
                         app:layout_constraintStart_toStartOf="parent"
-                        android:text="If you like our service then please rate us"
+                        android:text="if you like our service then please rate us"
                         android:textColor="@color/black"
                         android:layout_marginStart="10dp"/>
 

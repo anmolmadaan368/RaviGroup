@@ -1,6 +1,7 @@
 package com.example.raviworldwidemedicines.fragment;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.GridView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -45,6 +47,8 @@ public class HomeFragment extends Fragment {
     private ArrayList<AvailableBrandsDataModel> myAvailable_brands_list = new ArrayList<>();
     private TextView txt_btn_view;
     private ShowAllProductsFragment showAllProductsFragment;
+    private TextView rate_us;
+    private ConstraintLayout fynalerate;
 
     public com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter product_slider_fixed_viewAdapter;
     private int[] product_slider_fixed_images = {R.drawable.medicine_image_7, R.drawable.medicine_image_2, R.drawable.medicine_image_3, R.drawable.medicine_image_5, R.drawable.medicine_image_6};
@@ -54,12 +58,15 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        rate_us = view.findViewById(R.id.rate_us);
+        fynalerate=view.findViewById(R.id.fynalrate);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_views);
         ImageSlider imageSlider = view.findViewById(R.id.img_slider);
         pager = (ViewPager) view.findViewById(R.id.viewPagerIds);
@@ -71,7 +78,7 @@ public class HomeFragment extends Fragment {
         btn_availble_brands_view_alls = view.findViewById(R.id.txt_available_brands_view_btn_views);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
-//        sviews.setQueryHint("Hints ");
+ //        sviews.setQueryHint("Hints ");
 //  Making whole search view Clickable here ...
         sviews.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +89,6 @@ public class HomeFragment extends Fragment {
 
 
 //       Fixed Image Slider Code
-
 
         product_slider_fixed_viewAdapter = new product_slider_fixed_viewAdapter(product_slider_fixed_images, getActivity().getApplicationContext());
         pager.setAdapter(product_slider_fixed_viewAdapter);
@@ -152,6 +158,7 @@ public class HomeFragment extends Fragment {
         TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters = new TopBrandsItemDataAdapter(this.getContext(), topBrandsItemDetailslists);
         grid_view_top_brands.setAdapter(mainPanelTopBrandsItemsAdapters);
 
+
         txt_btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -174,6 +181,18 @@ public class HomeFragment extends Fragment {
                 MainActivity.replaceCurrentFragment(getParentFragmentManager(),new AvailableBrandsFragment());
             }
         });
+
+            fynalerate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+//
+//                    Bundle bundle = new Bundle();
+//                    RateusFragment fragment = new RateusFragment();
+//                        fragment.setArguments(bundle);
+//                    getFragmentManager().beginTransaction().replace(R.id._mycontainer,fragment).commit();
+                    MainActivity.replaceCurrentFragment(getParentFragmentManager(),new RateusFragment());
+                }
+            });
         return view;
 
     }
