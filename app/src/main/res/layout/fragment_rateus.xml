@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".fragment.RateusFragment">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rateus_image"
+        android:src="@drawable/rate_background_screen"/>
+
+    <RatingBar
+        android:id="@+id/rate_us2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rateus_image"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:isIndicator="true"
+        android:layout_marginBottom="30dp"
+        android:progressBackgroundTint="#838181"
+        android:progressTint="#1EB8FD"
+        android:rating="2.5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/rate_us2"
+            android:layout_margin="20dp"
+            android:background="#F4F2F2"
+            android:id="@+id/relative_rate_us">
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="80dp"
+               android:hint="Comment here"
+               android:textColorHint="#837F7F"
+               android:textSize="22sp"
+               android:padding="10dp"
+               android:textStyle="bold"
+               android:id="@+id/comment_rate_us"/>
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/relative_rate_us"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relative_rate_us1"
+        android:background="#7FC1F6">
+
+        <TextView
+            android:id="@+id/submit_btn_ratus"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="#2C2C2C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/msg1"
+        android:layout_below="@id/relative_rate_us1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>
