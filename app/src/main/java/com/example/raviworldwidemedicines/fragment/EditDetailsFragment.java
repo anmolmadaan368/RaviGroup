@@ -31,7 +31,7 @@ public class EditDetailsFragment extends Fragment {
     private String mParam2;
 
     private ImageView backButton;
-    private TextView changePassword;
+    private TextView changePassword,btn_save;
 
     public EditDetailsFragment() {
         // Required empty public constructor
@@ -70,7 +70,8 @@ public class EditDetailsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_edit_details, container, false);
 
-        backButton = view.findViewById(R.id.back_button);
+        backButton = (ImageView) view.findViewById(R.id.back_button);
+        btn_save= (TextView) view.findViewById(R.id.save_profile);
         changePassword = view.findViewById(R.id.change_pass);
 
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +88,12 @@ public class EditDetailsFragment extends Fragment {
             }
         });
 
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.main_lays,new AccountFragment()).commit();
+            }
+        });
 
         return view;
     }

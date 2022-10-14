@@ -1,9 +1,9 @@
 package com.example.raviworldwidemedicines.model;
 
 public class TopBrandsItemDetails {
-    String medicines_name,expairy_date,original_price,manufacturer_name;
-    int medicine_image;
-    float discount_rate;
+    private String medicines_name,expairy_date,original_price,manufacturer_name;
+    private int medicine_image;
+    private float discount_rate;
 
     public TopBrandsItemDetails(String medicines_name, String expairy_date, String original_price,String manufacturers_name, int medicine_image,float discount_rate) {
         this.medicines_name = medicines_name;

@@ -15,26 +15,25 @@
     <SearchView
         android:id="@+id/searchviews"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_height="43dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="7dp"
         android:clickable="true"
         android:goIcon="@mipmap/ic_search"
         android:background="@drawable/bg_search_view"
         android:iconifiedByDefault="false"
         android:backgroundTint="#9EFFFFFF"
         android:layoutDirection="rtl"
-        android:paddingTop="2.1dp"
-        android:paddingBottom="2.1dp"
         android:queryHint="@string/search_hint"
         android:showDividers="middle"
-        app:circularflow_radiusInDP="13dp" />
+        android:layout_marginBottom="7dp"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_below="@id/searchviews"
-        android:layout_marginBottom="67dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="51dp"
+        android:layout_marginTop="3dp"
         android:layout_height="match_parent">
 
         <RelativeLayout
@@ -152,9 +151,12 @@
                         android:layout_width="match_parent"
                         android:numColumns="3"
                         android:layout_marginTop="3dp"
-                        android:horizontalSpacing="3dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:horizontalSpacing="4dp"
                         android:layout_height="205dp"
-                        android:verticalSpacing="3dp"
+                        android:verticalSpacing="4dp"
+                        android:paddingBottom="4dp"
                         android:id="@+id/grid_view_avaialble_brands"
                         />
 
@@ -243,6 +245,7 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/btn_call"
                         android:layout_marginEnd="20dp"
                         android:layout_marginTop="2dp"
                         android:text="Call"
@@ -371,8 +374,8 @@
                         android:numColumns="2"
                         android:verticalSpacing="1dp"
                         android:horizontalSpacing="1dp"
-                        android:layout_height="440dp"/>
-
+                        android:layout_height="440dp"
+                        />
 
                 </LinearLayout>
 
@@ -421,6 +424,7 @@
                         android:text="Invite Friends"
                         android:textAllCaps="false"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/btn_refer"
                         app:layout_constraintTop_toBottomOf="@id/refer_message" />
 
                     <ImageView

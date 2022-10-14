@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:elevation="19dp"
+    android:background="#8000BCD4"
     android:filterTouchesWhenObscured="false"
     tools:context=".fragment.AccountFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="169dp"
+        android:layout_height="169dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,8 +22,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="167dp"
+            android:layout_height="167dp"
             android:src="@drawable/user"
             app:civ_border_width="2dp"
             app:civ_border_color="#FF000000"/>
@@ -40,9 +40,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </LinearLayout>
-
-
-
 
 
     <androidx.cardview.widget.CardView
@@ -109,19 +106,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:gravity="center"
-        android:background="@drawable/bg_color_round_cut_blue"
-        android:paddingLeft="69dp"
+        android:background="@drawable/profile_background"
+        android:paddingLeft="37dp"
         android:textAllCaps="false"
         android:textSize="23sp"
-        android:paddingRight="69dp"
+        android:paddingRight="37dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:textStyle="bold|normal"
         android:text="LogIn"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="65dp"/>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

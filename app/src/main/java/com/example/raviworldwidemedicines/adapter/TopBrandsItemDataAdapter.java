@@ -1,6 +1,7 @@
 package com.example.raviworldwidemedicines.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.fragment.WishListFragment;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;
@@ -20,11 +23,12 @@ public class TopBrandsItemDataAdapter extends ArrayAdapter<TopBrandsItemDetails>
 
     private Context context;
     private ArrayList<TopBrandsItemDetails> myTopBrandsLists;
-    public TopBrandsItemDataAdapter(@NonNull Context context, @NonNull ArrayList<TopBrandsItemDetails> objects) {
+    private FragmentManager  fragment_managers;
+    public TopBrandsItemDataAdapter(@NonNull Context context, FragmentManager parent_fragment,  @NonNull ArrayList<TopBrandsItemDetails> objects) {
         super(context, 0,objects);
         this.context=context;
         this.myTopBrandsLists=objects;
-
+        this.fragment_managers=parent_fragment;
     }
 
     @NonNull
@@ -49,13 +53,6 @@ public class TopBrandsItemDataAdapter extends ArrayAdapter<TopBrandsItemDetails>
         discounted_price.setText((discounted_priceafterDiscountIsCalculated+""));
         medicine_name.setText(brandsItem.getMedicines_name());
         product_images.setImageResource(brandsItem.getMedicine_image());
-
-        txt_v_btn_add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
     return itemViewss;
     }

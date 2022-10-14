@@ -18,10 +18,6 @@ import java.util.ArrayList;
 
 public class TopBrandsListFragment extends Fragment {
 
-    public TopBrandsListFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,7 +37,7 @@ public class TopBrandsListFragment extends Fragment {
         mydatalists.add(new TopBrandsItemDetails("Alendronate","06 sep,2026","2227","SII ",R.drawable.medicine_image_2,9));
 
 
-        topBrandsRecyclerviewDataListAdapters myAdapters= new topBrandsRecyclerviewDataListAdapters(this.getContext(), mydatalists, "singleProductdetail",getParentFragmentManager());
+        topBrandsRecyclerviewDataListAdapters myAdapters= new topBrandsRecyclerviewDataListAdapters(this.getContext(), mydatalists, "singleProductdetails",getParentFragmentManager());
 
         recyclerView.setAdapter(myAdapters);
         return view;

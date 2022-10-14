@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/accountbackground"
+    android:background="#5103A9F4"
     android:elevation="19dp"
     android:filterTouchesWhenObscured="false"
     tools:context=".fragment.AccountFragment">
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="Name"
         android:textStyle="bold"
-        android:textSize="21sp"
+        android:textSize="19sp"
         android:layout_marginTop="11dp"
         android:id="@+id/tv_user_name"
         android:textAlignment="center"
@@ -47,14 +47,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contact No is here "
-            android:layout_marginTop="13dp"
+            android:textSize="17sp"
+            android:layout_marginTop="9dp"
             android:id="@+id/tv_contact_no"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="9dp"
+            android:textSize="17sp"
             android:text=" Email "
             android:id="@+id/txtView_Email"
             />
@@ -63,7 +65,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="217dp"
-        android:background="#7EEDDC"
+        android:background="#83009688"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -198,7 +200,6 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="40dp"
-
             android:src="@drawable/ic_baseline_question_mark"/>
 
         <TextView
@@ -221,12 +222,12 @@
         android:layout_height="39dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:gravity="center"
-        android:paddingLeft="67dp"
+        android:paddingLeft="33dp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingRight="67dp"
+        android:paddingRight="33dp"
         app:layout_constraintStart_toStartOf="parent"
         android:text="Logout"
         android:layout_marginStart="10dp"

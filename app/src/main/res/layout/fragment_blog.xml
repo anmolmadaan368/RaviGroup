@@ -22,16 +22,14 @@
 
         <SearchView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="43dp"
             android:queryHint=" Search blog here ... "
             android:id="@+id/blog_item_searchviews"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="7dp"
             android:backgroundTint="#9EFFFFFF"
-            android:elevation="7dp"
-            android:paddingBottom="20dp"
+            android:elevation="1dp"
             android:background="@drawable/bg_search_view"
             android:iconifiedByDefault="false"
-            android:padding="7dp"
             android:layout_alignParentTop="true"
             />
 

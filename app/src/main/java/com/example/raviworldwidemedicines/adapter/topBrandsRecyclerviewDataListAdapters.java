@@ -7,12 +7,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.fragment.CartFragment;
+import com.example.raviworldwidemedicines.fragment.WishListFragment;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.fragment.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
@@ -20,7 +23,7 @@ import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 import java.util.ArrayList;
 
 public class topBrandsRecyclerviewDataListAdapters extends RecyclerView.Adapter<topBrandsRecyclerviewDataListAdapters.topBrandsDataViewHolder> {
-    ArrayList<TopBrandsItemDetails> topBrandsItemsList =new ArrayList<>() ;
+    ArrayList<TopBrandsItemDetails> topBrandsItemsList ;
     private FragmentManager fragmentManager;
     private String fragment_to_be_called;
     private Context context;
@@ -55,8 +58,15 @@ public class topBrandsRecyclerviewDataListAdapters extends RecyclerView.Adapter<
         holder.item_lays.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(fragment_to_be_called=="singleProductdetails")
-                fragmentManager.beginTransaction().replace(R.id.main_lays, new SingleProductDetailsFragment( cartMultipleDataBinder)).commit();
+//                if(fragment_to_be_called.equals("singleProductdetails"))
+                fragmentManager.beginTransaction().replace(R.id.main_lays, new SingleProductDetailsFragment( cartMultipleDataBinder, "popularMedicinesFragment")).commit();
+            }
+        });
+
+        holder.btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentManager.beginTransaction().replace(R.id.main_lays, new CartFragment()).commit();
             }
         });
 
@@ -89,7 +99,7 @@ public class topBrandsRecyclerviewDataListAdapters extends RecyclerView.Adapter<
             original_price= itemView.findViewById(R.id.txt_original_price);
             manufacturer_name= itemView.findViewById(R.id.txt_manufacutrer_name);
             item_lays= itemView.findViewById(R.id.txt_product_outers);
-            btn_add= itemView.findViewById(R.id.btn_Add);
+            btn_add= (TextView) itemView.findViewById(R.id.btn_Add_Item);
 
         }
     }
