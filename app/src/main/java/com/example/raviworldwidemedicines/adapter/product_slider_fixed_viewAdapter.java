@@ -44,7 +44,6 @@ public class product_slider_fixed_viewAdapter extends PagerAdapter {
         ImageView imageView=(ImageView)     itemview.findViewById(R.id.imageview_Main);
         imageView.setImageResource(images[position]);
         Objects.requireNonNull(container).addView(itemview);
-
         return  itemview;
     }
 

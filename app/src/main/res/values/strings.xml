@@ -39,4 +39,5 @@ Other important guidelines
 You can also maintain your rights including the right to exclude abusive users from your app, ownership rights in your content and legal rights against liability.
 
 Not only does a Terms &amp; Conditions agreement come with benefits to you, but it can also benefit your mobile app users. The agreement lets them know what you expect from them, what rights they have, and practical information like how to send payments, cancel an account, etc.</string>
+    <string name="address_detail">Address Detail</string>
 </resources>

@@ -2,7 +2,7 @@
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/background1"
+    android:background="#00BCD4"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
@@ -10,6 +10,7 @@
         android:layout_height="253dp"
         android:scaleType="fitXY"
         android:id="@+id/view_Logom"
-        android:src="@drawable/raviwwmwdicinesogo"/>
+        android:src="@drawable/logo_fynal"/>
+
 
 </RelativeLayout>

@@ -51,15 +51,13 @@ public class ServicesFragment extends Fragment {
         dynamicDataAdapter = new DynamicDataAdapter(itemlists, new ClickListener() {
             @Override
             public void onPositionClicked(int Position) {
-
             }
         });
         recyclerView.setAdapter(dynamicDataAdapter);
-
 //        item = new ArrayList<>();
-
 //        servicesContents= container.findViewById(R.id.servicesDesc  );
 //        item.add(new DynamicRvModel("This is the service of one ",-1));
+
         searchViews = view.findViewById(R.id.searchviews);
         searchViews.clearFocus();
         searchViews.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
