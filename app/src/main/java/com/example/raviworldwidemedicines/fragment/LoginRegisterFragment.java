@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ public class LoginRegisterFragment extends Fragment {
     private Button btn_Go;
     private com.google.android.material.textfield.TextInputLayout login_u_name;
     private com.google.android.material.textfield.TextInputLayout login_pwd;
-    private TextView btn_CreateAnaccount;
+    private LinearLayout btn_CreateAnaccount;
 
 
     @Override

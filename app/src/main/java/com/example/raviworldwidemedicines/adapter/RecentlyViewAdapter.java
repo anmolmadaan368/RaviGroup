@@ -12,11 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.raviworldwidemedicines.fragment.WishListFragment;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.BuyFragment;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -63,8 +65,8 @@ public class RecentlyViewAdapter extends RecyclerView.Adapter<RecentlyViewAdapte
         private TextView salt_comp;
         private TextView manufacturer_name;
         private TextView chemical_name;
-        private Button save_later_btn;
-        private Button buy_btn;
+        private TextView save_later_btn;
+        private TextView buy_btn;
         private WeakReference<ClickListener> weakReference;
 
         public Recently_View_Data_View_Holder(@NonNull View itemView) {
@@ -75,8 +77,8 @@ public class RecentlyViewAdapter extends RecyclerView.Adapter<RecentlyViewAdapte
             salt_comp = (TextView) itemView.findViewById(R.id.txt_salt_compostion);
             manufacturer_name = (TextView) itemView.findViewById(R.id.txt_salt_compostion);
             chemical_name = (TextView) itemView.findViewById(R.id.txtview_chemical_amount);
-            save_later_btn = (Button) itemView.findViewById(R.id.btn_saveforlater_product_details);
-            buy_btn = (Button) itemView.findViewById(R.id.btn_buy_product_details);
+            save_later_btn = (TextView) itemView.findViewById(R.id.btn_saveforlater_product_details);
+            buy_btn = (TextView) itemView.findViewById(R.id.btn_buy_product_details);
             weakReference=new WeakReference<>(listener);
 
             buy_btn.setOnClickListener(this);
@@ -90,7 +92,7 @@ public class RecentlyViewAdapter extends RecyclerView.Adapter<RecentlyViewAdapte
                 parents_Fragments.beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
             } else if (view.getId() == R.id.btn_saveforlater_product_details) {
                 Toast.makeText(save_later_btn.getContext(), " Save for Later is clicked ", Toast.LENGTH_SHORT).show();
-                parents_Fragments.beginTransaction().replace(R.id.main_lays, new CartFragment()).commit();
+                parents_Fragments.beginTransaction().replace(R.id.main_lays, new WishListFragment()).commit();
             }
             weakReference.get().onPositionClicked(getAdapterPosition());
         }

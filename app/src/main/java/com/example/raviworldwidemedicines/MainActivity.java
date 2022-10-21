@@ -37,6 +37,7 @@ import com.example.raviworldwidemedicines.fragment.WishListFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.progressindicator.BaseProgressIndicator;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -209,6 +210,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         replaceCurrentFragment(getSupportFragmentManager(), accountFragment);
                         break;
                     case R.id.bottom_nav_home:
+                        homeFragment= new HomeFragment();
                         replaceCurrentFragment(getSupportFragmentManager(), homeFragment);
                         break;
 
@@ -342,6 +344,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static void replaceCurrentFragment(FragmentManager parent_Fragment_Manager, Fragment nextFragment) {
 
         if ((current_Fragment!= nextFragment) && (parent_Fragment_Manager!= null)) {
+
             parent_Fragment_Manager.beginTransaction().replace(R.id.main_lays, nextFragment).addToBackStack(null).commit();
             removePreviousFragment(parent_Fragment_Manager);
             current_Fragment = nextFragment;

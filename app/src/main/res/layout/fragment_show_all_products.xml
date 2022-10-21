@@ -5,32 +5,24 @@
     android:layout_height="match_parent"
     android:background="@color/status_bar_color"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingRight="9dp"
-    android:paddingLeft="9dp"
+    android:paddingRight="7dp"
+    android:paddingLeft="7dp"
     tools:context=".fragment.ShowAllProductsFragment">
 
     <SearchView
         android:id="@+id/searchviews"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_height="48dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="3dp"
         android:background="@drawable/bg_search_view"
         android:backgroundTint="#C3FFFFFF"
         android:clickable="true"
         android:goIcon="@mipmap/ic_search"
         android:iconifiedByDefault="false"
         android:layoutDirection="rtl"
-        android:paddingTop="2.1dp"
-        android:paddingBottom="2.1dp"
         android:queryHint="@string/search_hint"
-        android:showDividers="middle"
-        app:circularflow_radiusInDP="13dp" />
+        android:showDividers="middle" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

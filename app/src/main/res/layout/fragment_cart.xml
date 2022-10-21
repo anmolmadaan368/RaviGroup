@@ -5,35 +5,30 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingLeft="9dp"
+    android:paddingLeft="7dp"
     android:paddingBottom="41dp"
     android:background="@color/status_bar_color"
-    android:paddingRight="9dp"
+    android:paddingRight="7dp"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.CartFragment">
 
     <SearchView
         android:id="@+id/searchviews"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:layout_marginLeft="1dp"
-        android:showDividers="middle"
-        android:layout_margin="8dp"
-        app:circularflow_radiusInDP="13dp"
-        android:layoutDirection="rtl"
-        android:backgroundTint="#9EFFFFFF"
-
-        android:layout_marginRight="1dp"
+        android:layout_height="43dp"
         android:layout_alignParentTop="true"
-        android:paddingTop="2.1dp"
-        android:paddingBottom="2.1dp"
-        android:iconifiedByDefault="false"
-        android:clickable="true"
-        android:goIcon="@mipmap/ic_search"
         android:background="@drawable/bg_search_view"
+        android:backgroundTint="#9EFFFFFF"
+        android:clickable="true"
+        android:layout_marginTop="7dp"
+        android:elevation="1dp"
+        android:goIcon="@mipmap/ic_search"
+        android:iconifiedByDefault="false"
+        android:layoutDirection="rtl"
         android:queryHint="@string/search_hint"
-        >
-    </SearchView>
+        android:layout_marginBottom="7dp"
+        android:showDividers="middle"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.raviworldwidemedicines.fragment.WishListFragment;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
@@ -124,7 +125,7 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
                     fragmentManager.beginTransaction().replace(R.id.main_lays, new BuyFragment()).commit();
                 }
                 else if( view.getId()== R.id.btn_saveforlater){
-                    fragmentManager.beginTransaction().replace(R.id.main_lays, new CartFragment()).commit();
+                    fragmentManager.beginTransaction().replace(R.id.main_lays, new WishListFragment()).commit();
                 }
                 else if( view.getId()== R.id.btn_remove){
                     fragmentManager.beginTransaction().replace(R.id.main_lays, new HomeFragment()).commit();

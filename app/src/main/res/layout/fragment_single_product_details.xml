@@ -146,6 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
+                android:id="@+id/price_outer_lays"
                 app:layout_constraintTop_toBottomOf="@id/linear_layout"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
@@ -239,6 +240,33 @@
                 </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:id="@+id/expiery_date_outer_lays"
+                app:layout_constraintTop_toBottomOf="@id/price_outer_lays"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+
+                    android:text="Expiary Date: "
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:id="@+id/tv_expeiry_date"
+                    android:text="01/07/2007"
+                    />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/btn_outer_layss"

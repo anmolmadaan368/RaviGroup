@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class RecentlyViewedFragment extends Fragment {
 
-    public ArrayList<CartMultipleDataBinder> recently_viewed_list= new ArrayList<>();
+    public ArrayList<CartMultipleDataBinder> recently_viewed_list ;
     private RecyclerView recyclerView_recently_viewed;
     public RecentlyViewedFragment( ArrayList<CartMultipleDataBinder> all_recently_lists) {
         // Required empty public constructor

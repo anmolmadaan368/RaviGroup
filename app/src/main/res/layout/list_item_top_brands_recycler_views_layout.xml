@@ -199,6 +199,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_white_rounded_cut_white_btn"
                     android:backgroundTint="#453F51B5"
+                    android:id="@+id/btn_Add_Item"
                     android:backgroundTintMode="src_atop"
                     android:gravity="center"
                     android:paddingTop="7dp"

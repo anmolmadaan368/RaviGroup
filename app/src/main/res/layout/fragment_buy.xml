@@ -69,14 +69,19 @@
 
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:id="@+id/btn_minus"
+                android:background="#00f00000"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:src="@drawable/ic_vector_minus"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
+                android:id="@+id/tv_no_of_items"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
@@ -84,6 +89,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/btn_plus_item"
                 android:layout_gravity="end"
                 android:src="@drawable/ic_vector_plus"/>
 

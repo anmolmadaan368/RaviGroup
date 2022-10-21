@@ -172,17 +172,16 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
 
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="17dp"
         android:id="@+id/tvlogin"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="53dp"
         android:id="@+id/inpt_name"
         android:layout_below="@id/tvlogin"
 
-        android:layout_margin="3dp"
-        android:layout_marginTop="100dp">
+        android:layout_margin="3dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -195,10 +194,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="53dp"
         android:id="@+id/inpt_emailaddress"
         android:layout_below="@id/inpt_name"
-        android:layout_margin="3dp"
+        android:layout_margin="7dp"
         android:layout_marginTop="100dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -213,11 +212,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="53dp"
         android:id="@+id/inpt_pwd"
         app:passwordToggleEnabled="true"
 
-        android:layout_margin="3dp"
+        android:layout_margin="7dp"
         android:layout_below="@id/inpt_emailaddress">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -231,10 +230,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="53dp"
         android:id="@+id/confirm_pwd_outer_lays"
         android:layout_below="@id/inpt_pwd"
-        android:layout_margin="10dp"
+        android:layout_margin="7dp"
         >
 
         <com.google.android.material.textfield.TextInputLayout
@@ -288,9 +287,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="53dp"
         android:id="@+id/contact_no_outer_lays"
-        android:layout_margin="3dp"
+        android:layout_margin="7dp"
         android:layout_below="@id/confirm_pwd_outer_lays">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -304,15 +303,40 @@
             android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        style="@style/ThemeOverlay.Material3.TextInputEditText"
+        android:layout_below="@id/contact_no_outer_lays"
+        android:id="@+id/address_outer_lays"
+        android:layout_marginTop="7dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="7"
+            android:background="@drawable/bg_edittext"
+            android:textSize="20sp"
+            android:nextFocusForward="@id/btn_signUp"
+            android:hint="enter your address here "
+            android:id="@+id/et_address"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btn_signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/contact_no_outer_lays"
+        android:layout_below="@id/address_outer_lays"
         android:textAllCaps="false"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingRight="17dp"
+        android:paddingLeft="17dp"
         android:layout_centerHorizontal="true"
         android:text="Sign Up"
-        android:textSize="25sp" />
+        android:textSize="23sp" />
 
 
 </RelativeLayout>
