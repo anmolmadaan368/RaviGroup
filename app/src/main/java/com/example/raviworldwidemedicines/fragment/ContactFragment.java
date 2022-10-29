@@ -36,8 +36,8 @@ public class ContactFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        txt_Email_add = (TextView) view.findViewById(R.id.txt_Email_add);
-        txt_Contact_no = (TextView) view.findViewById(R.id.txt_Contact_no);
+        txt_Email_add = (TextView) view.findViewById(R.id.contactform_email);
+        txt_Contact_no = (TextView) view.findViewById(R.id.contactform_contactno);
         contactform_submitBtn = view.findViewById(R.id.contactform_submitBtn);
 
         String strss_Email = "<h4><b>Email :</b> <span >ravi.raviworldwidemedicines@gmail.com</span>" +
