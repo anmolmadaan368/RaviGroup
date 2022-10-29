@@ -10,7 +10,7 @@
         android:layout_height="253dp"
         android:scaleType="fitXY"
         android:id="@+id/view_Logom"
-        android:src="@drawable/logo_fynal"/>
+        android:src="@drawable/raviwwmwdicinesogo"/>
 
 
 </RelativeLayout>

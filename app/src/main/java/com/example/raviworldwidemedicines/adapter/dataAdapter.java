@@ -1,5 +1,6 @@
 package com.example.raviworldwidemedicines.adapter;
 
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,7 @@ public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
         CategoryResponseModelItem categoryModel= medList.get(position);
         holder.mytexts.setText(categoryModel.getName());
         if( categoryModel.getImage()!= null){
-            Glide.with(holder.myimg.getContext()).load("https://raviworldwidemedicines.com/wp-content/uploads/2022/08/transplant.png").error(R.drawable.ic_left_arrow).into(holder.myimg);
+            Glide.with(holder.myimg.getContext()).load(Uri.parse( categoryModel.getImage().getSrc())).error(R.drawable.ic_left_arrow).into(holder.myimg);
 
         }
         else {
