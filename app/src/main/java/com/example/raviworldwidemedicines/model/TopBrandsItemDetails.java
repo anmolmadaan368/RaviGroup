@@ -1,7 +1,8 @@
 package com.example.raviworldwidemedicines.model;
 
 public class TopBrandsItemDetails {
-    private String medicines_name,expairy_date,original_price,manufacturer_name;
+
+        private String medicines_name,expairy_date,original_price,manufacturer_name;
     private int medicine_image;
     private float discount_rate;
 

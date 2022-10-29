@@ -42,7 +42,6 @@ public class ShowAllProductsFragment extends Fragment {
         recycler_views_data_lists= (RecyclerView) viw.findViewById(R.id.recycler_view_item_lists);
         searchView= viw.findViewById(R.id.searchviews);
         searchView.setBackgroundResource(R.drawable.backgnd_while_rounded);
-
         LinearLayoutManager  linearLayoutManager=new LinearLayoutManager(this.getContext());
         recycler_views_data_lists.setLayoutManager(linearLayoutManager);
         TopBrandsItemDetails topBrandsItemDetails;
@@ -82,7 +81,7 @@ public class ShowAllProductsFragment extends Fragment {
     private void filterList(String s) {
         ArrayList<TopBrandsItemDetails> filteredList=new ArrayList<>();
         for ( TopBrandsItemDetails topBrandsItemDetails:my_all_product_lists ){
-            if (topBrandsItemDetails.getMedicines_name().toLowerCase().contains(s.toLowerCase())|| topBrandsItemDetails.getManufacturer_name().toLowerCase().contains(s.toLowerCase())){
+            if (topBrandsItemDetails.getMedicines_name().toLowerCase().contains(s.toLowerCase())|| topBrandsItemDetails.getMedicines_name().toLowerCase().contains(s.toLowerCase())){
                 filteredList.add(topBrandsItemDetails);
             }
 
@@ -93,6 +92,6 @@ public class ShowAllProductsFragment extends Fragment {
         else {
             txt_no_data_found.setText("");
         }
-//        mydatas_adapters_list.setFilteredListToRecyclerViews(filteredList);
+        mydatas_adapters_list.setFilteredListToRecyclerViews(filteredList);
     }
 }
