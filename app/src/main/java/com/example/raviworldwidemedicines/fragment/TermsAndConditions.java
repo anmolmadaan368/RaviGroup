@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
+import com.google.android.material.button.MaterialButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +30,7 @@ public class TermsAndConditions extends Fragment {
     private String mParam1;
     private String mParam2;
     private ImageView close;
+    private MaterialButton btn_Ok;
 
     public TermsAndConditions() {
         // Required empty public constructor
@@ -71,6 +74,15 @@ public class TermsAndConditions extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity.replaceCurrentFragment(getParentFragmentManager(),new HomeFragment());
+            }
+        });
+
+        btn_Ok= view.findViewById(R.id.btn_ok);
+        btn_Ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity() , " Term and conditions accepted . ", Toast.LENGTH_SHORT).show();
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new HomeFragment());
             }
         });
 

@@ -10,8 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
 
+import java.lang.ref.WeakReference;
 import java.util.Objects;
 
 public class product_slider_fixed_viewAdapter extends PagerAdapter {
@@ -38,7 +40,7 @@ public class product_slider_fixed_viewAdapter extends PagerAdapter {
 
     @NonNull
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, int position)  {
 
         View itemview= layoutInflater.inflate(R.layout.product_slider_fixed_layout, container, false);
         ImageView imageView=(ImageView)     itemview.findViewById(R.id.imageview_Main);
@@ -51,4 +53,5 @@ public class product_slider_fixed_viewAdapter extends PagerAdapter {
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
          container.removeView((ConstraintLayout)  object);
     }
+
 }

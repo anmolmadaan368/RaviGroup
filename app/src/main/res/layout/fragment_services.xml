@@ -66,13 +66,14 @@
         >
 
         <TextView
-            android:padding="3dp"
+            android:padding="12dp"
             android:id="@+id/servicesDescp"
-            android:paddingTop="9dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="   Services Desc "
-            android:textSize="16sp"
+            android:fontFamily="@font/inria_serif_light"
+            android:textStyle="bold"
+            android:text="According to international drug guidelines (such as FDA 21 CFR part 211.142), we always transport and store drugs &amp; vaccines within a validated temperature range at every point in the supply chain efficiently and seamlessly. "
+            android:textSize="23sp"
             />
     </androidx.cardview.widget.CardView>
 

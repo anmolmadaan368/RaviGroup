@@ -1,9 +1,11 @@
 package com.example.raviworldwidemedicines.fragment;
 
-import android.Manifest;
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +25,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.raviworldwidemedicines.Controller.myController;
 import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.adapter.AvailableBrandsDataAdapter;
 import com.example.raviworldwidemedicines.adapter.TopBrandsItemDataAdapter;
@@ -32,10 +36,16 @@ import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.dataAdapter;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 import com.example.raviworldwidemedicines.model.AvailableBrandsDataModel;
+import com.example.raviworldwidemedicines.model.CategoryDetailsModel.CategoryResponseModelItem;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
@@ -52,6 +62,7 @@ public class HomeFragment extends Fragment {
     private ArrayList<AvailableBrandsDataModel> myAvailable_brands_list = new ArrayList<>();
     private MaterialButton btn_refer;
     private TextView txt_btn_view;
+    private CardView rate_Us_Lays;
     private ShowAllProductsFragment showAllProductsFragment;
 
     public com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter product_slider_fixed_viewAdapter;
@@ -66,7 +77,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        homeBinding= FragmentHomeBinding.inflate(getLayoutInflater());
+        homeBinding = FragmentHomeBinding.inflate(getLayoutInflater());
         View view = homeBinding.getRoot();
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_views);
         ImageSlider imageSlider = view.findViewById(R.id.img_slider);
@@ -76,7 +87,8 @@ public class HomeFragment extends Fragment {
         sviews = (SearchView) view.findViewById(R.id.searchviews);
         txt_btn_view = (TextView) view.findViewById(R.id.btns_popular_medicines_views);
         grid_view_available_brands = (GridView) view.findViewById(R.id.grid_view_avaialble_brands);
-        btn_refer= (MaterialButton) view.findViewById(R.id.btn_refer);
+        rate_Us_Lays= (CardView) view.findViewById(R.id.card_view_2);
+        btn_refer = (MaterialButton) view.findViewById(R.id.btn_refer);
         btn_availble_brands_view_alls = view.findViewById(R.id.txt_available_brands_view_btn_views);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
@@ -84,7 +96,8 @@ public class HomeFragment extends Fragment {
 //  Making whole search view Clickable here ...
         sviews.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 sviews.setIconified(false);
             }
         });
@@ -100,12 +113,9 @@ public class HomeFragment extends Fragment {
 
 
         ArrayList<SlideModel> slidemodels = new ArrayList<>();
-        slidemodels.add(new SlideModel((R.drawable.medicine_image_8), ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.medicine_image_9, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.medicine_image_15, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.medicine_image_11, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.medicine_image_12, ScaleTypes.FIT));
-        slidemodels.add(new SlideModel(R.drawable.medicine_image_14, ScaleTypes.FIT));
+        slidemodels.add(new SlideModel((R.drawable.slider3), ScaleTypes.FIT));
+        slidemodels.add(new SlideModel(R.drawable.slider1, ScaleTypes.FIT));
+        slidemodels.add(new SlideModel(R.drawable.slider2, ScaleTypes.FIT));
         imageSlider.setImageList(slidemodels, ScaleTypes.FIT);
 
 
@@ -113,24 +123,44 @@ public class HomeFragment extends Fragment {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getActivity().getApplicationContext(), RecyclerView.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        int[] myimgs = {R.drawable.cardiology_cat, R.drawable.cat_transplant, R.drawable.antibactrial_cat, R.drawable.dermatology_cat, R.drawable.endocrinology_cat, R.drawable.blood_pressure_cat};
-        String[] list_names = {"Cardiology", "Transplant", "Antibactrial", "Dermatology", "Endocrinology", "Blood Pressure"};
-        dataAdapter adapter = new dataAdapter(this.getContext(), myimgs, list_names, R.layout.list_item_view, new ClickListener() {
+
+
+        Call<List<CategoryResponseModelItem>> call= myController.getInstance().getCategoryDetails_Api().getData();
+        call.enqueue(new Callback<List<CategoryResponseModelItem>>() {
             @Override
-            public void onPositionClicked(int Position) {
-                showAllProductsFragment = new ShowAllProductsFragment();
-                MainActivity.replaceCurrentFragment(getParentFragmentManager(),showAllProductsFragment);
+            public void onResponse(Call<List<CategoryResponseModelItem>> call, Response<List<CategoryResponseModelItem>> response) {
+                if (response.isSuccessful() && response != null) {
+                     List<CategoryResponseModelItem> myResponseLists= response.body();
+
+                    dataAdapter adapter = new dataAdapter(myResponseLists , R.layout.list_item_view, new ClickListener() {
+                        @Override
+                        public void onPositionClicked(int Position) {
+                            showAllProductsFragment = new ShowAllProductsFragment(myResponseLists.get(Position).getId());
+                            MainActivity.replaceCurrentFragment(getParentFragmentManager(), showAllProductsFragment);
+                        }
+                    });
+
+                    recyclerView.setAdapter(adapter);
+//
+                }
+                else {
+                    Toast.makeText(getActivity(), " Response is null  ", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<CategoryResponseModelItem>> call, Throwable t) {
+                Toast.makeText(getActivity(), " Not getting response. "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onFailure: "+ t.getMessage());
             }
         });
 
-        recyclerView.setAdapter(adapter);
-//
 
 //      Recently viewwd Panel code is here
         btn_recently_viewed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.replaceCurrentFragment(getParentFragmentManager(),new RecentlyViewedFragment(new ArrayList<>()));
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new RecentlyViewedFragment(new ArrayList<>()));
             }
         });
 
@@ -142,15 +172,28 @@ public class HomeFragment extends Fragment {
         int[] myimgs2 = {R.drawable.medicine_image_3, R.drawable.medicine_image_2, R.drawable.medicine_image_4, R.drawable.medicine_image_5, R.drawable.medicine_image_6};
         CartMultipleDataBinder item_singleDatas = new CartMultipleDataBinder(myimgs2[1], "sj", "sij", "sjs", "sjd");
         String[] list_name3s = {"0 min ago", "2 min ago", "3 min ago", "4 min ago", "1 hr ago "};
-        dataAdapter adapter1 = new dataAdapter(this.getContext(), myimgs2, list_name3s, R.layout.recently_viewed_list_item_views, new ClickListener() {
+//        dataAdapter adapter1 = new dataAdapter(this.getContext(), myimgs2, list_name3s, R.layout.recently_viewed_list_item_views, new ClickListener() {
+//            @Override
+//            public void onPositionClicked(int Position) {
+//                showAllProductsFragment = new ShowAllProductsFragment();
+//                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new SingleProductDetailsFragment(item_singleDatas, "recentlyviewedlayout"));
+//            }
+//        });
+
+
+        //   Rate us  Layout
+
+
+        rate_Us_Lays.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPositionClicked(int Position) {
-                showAllProductsFragment = new ShowAllProductsFragment();
-                MainActivity.replaceCurrentFragment(getParentFragmentManager(),new SingleProductDetailsFragment(item_singleDatas, "recentlyviewedlayout"));
+            public void onClick(View view) {
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new RateusFragment());
             }
         });
 
-        recyclerView_recently_viewed.setAdapter(adapter1);
+
+
+//        recyclerView_recently_viewed.setAdapter(adapter1);
 
         ArrayList<TopBrandsItemDetails> topBrandsItemDetailslists = new ArrayList<>();
         topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir / lamivudine (Epzicom®)", "02 feb,2024", "1000", "SII", R.drawable.medicine_image_3, 24));
@@ -158,7 +201,7 @@ public class HomeFragment extends Fragment {
         topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir", "07 may,2024", "1187", "Dolo", R.drawable.medicine_image_5, 23));
         topBrandsItemDetailslists.add(new TopBrandsItemDetails("Alendronate", "06 sep,2026", "2227", "Dettol", R.drawable.medicine_image_2, 7));
 
-        TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters = new TopBrandsItemDataAdapter(this.getContext(), getParentFragmentManager() ,  topBrandsItemDetailslists );
+        TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters = new TopBrandsItemDataAdapter(this.getContext(), getParentFragmentManager(), topBrandsItemDetailslists);
 
         grid_view_top_brands.setAdapter(mainPanelTopBrandsItemsAdapters);
 
@@ -166,11 +209,11 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                TextView btn_add_popular_medicines= (TextView) view.findViewById(R.id.btn_Add);
+                TextView btn_add_popular_medicines = (TextView) view.findViewById(R.id.btn_Add);
                 btn_add_popular_medicines.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        MainActivity.replaceCurrentFragment(getParentFragmentManager(),new CartFragment());
+                        MainActivity.replaceCurrentFragment(getParentFragmentManager(), new CartFragment());
                     }
                 });
 
@@ -178,11 +221,11 @@ public class HomeFragment extends Fragment {
         });
 
         txt_btn_view.setOnClickListener(new View.OnClickListener() {
-                                            @Override
-                                            public void onClick(View view) {
-                                                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new TopBrandsListFragment());
-                                            }
-                                        });
+            @Override
+            public void onClick(View view) {
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new TopBrandsListFragment());
+            }
+        });
 
 
         //  Refer and earn here ....
@@ -193,13 +236,14 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getActivity(), " Referred to another person. ", Toast.LENGTH_SHORT).show();
             }
         });
+        
 
         // Call to action button
 
         homeBinding.btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent call_intent= new Intent(Intent.ACTION_DIAL);
+                Intent call_intent = new Intent(Intent.ACTION_DIAL);
                 call_intent.setData(Uri.parse("tel:+919994330921"));
                 call_intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(call_intent);
@@ -217,7 +261,7 @@ public class HomeFragment extends Fragment {
         btn_availble_brands_view_alls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.replaceCurrentFragment(getParentFragmentManager(),new AvailableBrandsFragment());
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new AvailableBrandsFragment());
             }
         });
         return view;

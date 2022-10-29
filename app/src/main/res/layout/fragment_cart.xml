@@ -15,20 +15,19 @@
     <SearchView
         android:id="@+id/searchviews"
         android:layout_width="match_parent"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
         android:background="@drawable/bg_search_view"
         android:backgroundTint="#9EFFFFFF"
         android:clickable="true"
-        android:layout_marginTop="7dp"
         android:elevation="1dp"
         android:goIcon="@mipmap/ic_search"
         android:iconifiedByDefault="false"
         android:layoutDirection="rtl"
         android:queryHint="@string/search_hint"
-        android:layout_marginBottom="7dp"
-        android:showDividers="middle"
-        />
+        android:showDividers="middle" />
 
     <RelativeLayout
         android:layout_width="match_parent"

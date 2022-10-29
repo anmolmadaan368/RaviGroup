@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         replaceCurrentFragment(getSupportFragmentManager(), servicesFragment);
                         break;
                     case R.id.nav_drawer_home:
-                        bottomNavigationView.getMenu().getItem(R.id.bottom_nav_home).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.bottom_nav_home).setChecked(true);
                         replaceCurrentFragment(getSupportFragmentManager(), homeFragment);
                         break;
                     case R.id.nav_drawer_blog:
@@ -383,29 +383,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.user_profileicons:
-                Toast.makeText(this, "This is User Icons.   : " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                return true;
-            default:
+//
+//        switch (item.getItemId()) {
+//            case R.id.user_profileicons:
+//                Toast.makeText(this, "This is User Icons.   : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+//                return true;
+//            default:
                 if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                 } else {
                     drawerLayout.openDrawer(GravityCompat.START);
                 }
                 return true;
-        }
+//        }
 
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.top_app_bar_menu, menu);
-        return true;
-    }
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//
+//        getMenuInflater().inflate(R.menu.top_app_bar_menu, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

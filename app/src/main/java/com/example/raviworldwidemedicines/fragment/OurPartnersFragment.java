@@ -34,11 +34,12 @@ public class OurPartnersFragment extends Fragment {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         recycler_views_our_product.setLayoutManager(linearLayoutManager);
         ArrayList<OurPartnerDataModel> our_partner_lists=new ArrayList<>();
-        OurPartnerDataModel dataModel;
-        for (int i=0;i<39;i++) {
-            dataModel = new OurPartnerDataModel(R.drawable.cart_icc, "Partner : " + i, "CEO:  " + (i + 1), " " + (i + 1) + " This is Nice .  ");
-            our_partner_lists.add(dataModel);
-        }
+
+            our_partner_lists.add( new OurPartnerDataModel(R.drawable.baxalta) );
+            our_partner_lists.add(new OurPartnerDataModel(R.drawable.admin));
+            our_partner_lists.add(new OurPartnerDataModel(R.drawable.cipla));
+            our_partner_lists.add(new OurPartnerDataModel(R.drawable.cardila));
+
 
         OurPartnerDataAdapter dataAdapter=new OurPartnerDataAdapter(our_partner_lists);
         recycler_views_our_product.setAdapter( dataAdapter);

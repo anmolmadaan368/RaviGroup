@@ -2,8 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:minHeight="258dp"
-    android:layout_height="wrap_content"
+    android:layout_height="168dp"
     android:layout_marginRight="3dp"
     android:backgroundTint="#E6FFFFFF"
     android:layout_marginLeft="3dp"
@@ -13,74 +12,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <LinearLayout
-            android:id="@+id/our_partner_outer_lays"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:paddingBottom="-16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
             <ImageView
                 android:id="@+id/our_partner_img"
-                android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_weight="0.3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 android:src="@drawable/imgf_5" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.7"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/our_pertners_parnter_name_txt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
-                    android:maxLines="1"
-                    android:text="parnter_name"
-                    android:textAlignment="center"
-                    android:textSize="23sp"
-                    android:textStyle="bold|normal" />
-
-                <TextView
-                    android:id="@+id/our_parnter_partner_designation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="0.7"
-                    android:maxLines="1"
-                    android:gravity="center"
-                    android:text=" Our Partner Designation "
-                    android:textSize="17sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/our_partners_partner_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="7dp"
-            android:paddingTop="4dp"
-            android:padding="3dp"
-            android:layout_marginTop="3dp"
-            android:inputType="textLongMessage"
-            android:maxLines="10"
-            android:minLines="6"
-            android:scrollbars="vertical"
-            android:text=" About my Persons descriadfjasdfjhalsjhfjhasdflhjsfh ajslhfjsdl fsajhf sadfdsafasddfption .  sfnsafmnsanfasfkasfkhadsjklshflhdslkfhjlkshfjlhsjlhfjlhsljdkhfjlshfjlslfhdsh,masnmnms,naf,mnsa,mdnfms,nfm,sndm,fnsm,dn"
-            android:textSize="16sp"
-            android:layout_marginBottom="40dp"
-            app:layout_constraintTop_toBottomOf="@id/our_partner_outer_lays" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
