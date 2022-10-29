@@ -16,7 +16,6 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textStyle="bold"
-
         android:id="@+id/contact_headTitle"/>
 
 
