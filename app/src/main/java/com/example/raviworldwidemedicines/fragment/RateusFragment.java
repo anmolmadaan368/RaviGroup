@@ -9,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 
 /**
@@ -31,6 +33,7 @@ public class RateusFragment extends Fragment {
     private String mParam2;
 
     EditText comment_rate_us;
+    private RatingBar ratingBar;
     TextView submit_btn_ratus;
 
     public RateusFragment() {
@@ -73,6 +76,7 @@ public class RateusFragment extends Fragment {
 
         submit_btn_ratus=view.findViewById(R.id.submit_btn_ratus);
         comment_rate_us = view.findViewById(R.id.comment_rate_us);
+        ratingBar= view.findViewById(R.id.rate_us_bar);
 
         submit_btn_ratus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,11 +88,10 @@ public class RateusFragment extends Fragment {
                     comment_rate_us.setError("Enter Comment Here");
                     comment_rate_us.requestFocus();
                 } else {
-                    Toast.makeText(getContext(), "clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), " Submitted ", Toast.LENGTH_SHORT).show();
                     comment_rate_us.setText("");
+                    MainActivity.replaceCurrentFragment(getParentFragmentManager(), new HomeFragment());
                 }
-
-
 
 
             }

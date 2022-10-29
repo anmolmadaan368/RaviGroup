@@ -1,12 +1,13 @@
 package com.example.raviworldwidemedicines.model;
 
 public class DynamicRvModel {
-    String itemname;
+    String itemname,services_Contents;
 
     int images;
-    public DynamicRvModel(String itemname,int image){
+    public DynamicRvModel(String itemname,int image, String services_Contents){
         this.itemname=itemname;
         this.images=image;
+        this.services_Contents=services_Contents;
     }
 
     public String getItemname() {
@@ -15,5 +16,10 @@ public class DynamicRvModel {
 
     public int getImages() {
         return images;
+    }
+
+
+    public String getServices_Contents() {
+        return services_Contents;
     }
 }

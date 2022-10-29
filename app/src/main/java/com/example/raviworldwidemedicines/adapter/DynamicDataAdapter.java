@@ -23,7 +23,8 @@ public class DynamicDataAdapter extends RecyclerView.Adapter<DynamicDataAdapter.
 
     public List<DynamicRvModel> dynamicRvModelsDataArrayLst;
     private ClickListener clickListener;
-    public DynamicDataAdapter(List<DynamicRvModel> dynamicRvModels,ClickListener clickListener) {
+    private TextView tvServicesContent;
+    public DynamicDataAdapter(List<DynamicRvModel> dynamicRvModels, TextView tVSServicesContent, ClickListener clickListener) {
         Collections.sort(dynamicRvModels, new Comparator<DynamicRvModel>() {
             @Override
             public int compare(DynamicRvModel dynamicRvMode01, DynamicRvModel dynamicRvMode02) {
@@ -32,6 +33,7 @@ public class DynamicDataAdapter extends RecyclerView.Adapter<DynamicDataAdapter.
         });
         this.dynamicRvModelsDataArrayLst=dynamicRvModels;
         this.clickListener=clickListener;
+        this.tvServicesContent= tVSServicesContent;
     }
 
     public void setFilteredListtoRecyclerViews(List<DynamicRvModel> filteredlists){
@@ -78,8 +80,8 @@ public class DynamicDataAdapter extends RecyclerView.Adapter<DynamicDataAdapter.
         @Override
         public void onClick(View view) {
 
-            if (view.getId()==R.id.relativeItemLays){
-                Toast.makeText(view.getContext(), " "+"Item pressed : "+ String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
+            if (view.getId()==R.id.relativeItemLays) {
+                tvServicesContent.setText( dynamicRvModelsDataArrayLst.get(getAdapterPosition()).getServices_Contents().toString());
             }
         }
     }
