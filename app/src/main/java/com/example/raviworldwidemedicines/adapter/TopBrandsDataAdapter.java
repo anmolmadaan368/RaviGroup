@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
@@ -15,14 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
-import com.example.raviworldwidemedicines.fragment.WishListFragment;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.fragment.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;
 
-public class topBrandsRecyclerviewDataListAdapters extends RecyclerView.Adapter<topBrandsRecyclerviewDataListAdapters.topBrandsDataViewHolder> {
+public class TopBrandsDataAdapter extends RecyclerView.Adapter<TopBrandsDataAdapter.topBrandsDataViewHolder> {
     ArrayList<TopBrandsItemDetails> topBrandsItemsList ;
     private FragmentManager fragmentManager;
     private String fragment_to_be_called;
@@ -35,7 +33,7 @@ public class topBrandsRecyclerviewDataListAdapters extends RecyclerView.Adapter<
         return new topBrandsDataViewHolder(view);
     }
 
-    public topBrandsRecyclerviewDataListAdapters(Context context ,ArrayList<TopBrandsItemDetails> topBrandsItemsList,String fragment_to_be_called,FragmentManager fragmentManager) {
+    public TopBrandsDataAdapter(Context context , ArrayList<TopBrandsItemDetails> topBrandsItemsList, String fragment_to_be_called, FragmentManager fragmentManager) {
         this.topBrandsItemsList = topBrandsItemsList;
         this.fragment_to_be_called=fragment_to_be_called;
         this.fragmentManager=fragmentManager;
@@ -46,11 +44,15 @@ public class topBrandsRecyclerviewDataListAdapters extends RecyclerView.Adapter<
     public void onBindViewHolder(topBrandsDataViewHolder holder, int position) {
 
         TopBrandsItemDetails brandItem= topBrandsItemsList.get(position);
-        holder.medicines_image.setImageResource(brandItem.getMedicine_image());
+        if( brandItem.getMedicine_image()!=-1 ) {
+            holder.medicines_image.setImageResource(brandItem.getMedicine_image());
+        }
         holder.original_price.setText(brandItem.getOriginal_price());
+        if(brandItem.getDiscount_rate()!=-1){
         float discounted_prices_iss= Integer.parseInt(brandItem.getOriginal_price())* ((100-brandItem.getDiscount_rate())/100);
         holder.txt_discount_rate.setText(brandItem.getDiscount_rate()+"");
         holder.txt_discounted_price.setText(discounted_prices_iss+"");
+           }
 //        holder.expiary_date.setText(brandItem.getExpairy_date());
         holder.medicine_name.setText(brandItem.getMedicines_name());
         holder.manufacturer_name.setText(brandItem.getManufacturer_name());

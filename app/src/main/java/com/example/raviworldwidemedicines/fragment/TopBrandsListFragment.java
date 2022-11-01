@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.adapter.topBrandsRecyclerviewDataListAdapters;
+import com.example.raviworldwidemedicines.adapter.TopBrandsDataAdapter;
 import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class TopBrandsListFragment extends Fragment {
         mydatalists.add(new TopBrandsItemDetails("Alendronate","06 sep,2026","2227","SII ",R.drawable.medicine_image_2,9));
 
 
-        topBrandsRecyclerviewDataListAdapters myAdapters= new topBrandsRecyclerviewDataListAdapters(this.getContext(), mydatalists, "singleProductdetails",getParentFragmentManager());
+        TopBrandsDataAdapter myAdapters= new TopBrandsDataAdapter(this.getContext(), mydatalists, "singleProductdetails",getParentFragmentManager());
 
         recyclerView.setAdapter(myAdapters);
         return view;

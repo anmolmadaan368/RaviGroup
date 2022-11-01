@@ -20,14 +20,14 @@ import com.example.raviworldwidemedicines.model.CategoryDetailsModel.CategoryRes
 import java.lang.ref.WeakReference;
 import java.util.List;
 
-public class dataAdapter extends RecyclerView.Adapter<dataAdapter.DataAdapter> {
+public class dataAdapterCategory extends RecyclerView.Adapter<dataAdapterCategory.DataAdapter> {
 
     private int list_item_view_to_be_placed;
     private ClickListener listener;
     private List<CategoryResponseModelItem> medList;
     private ShowAllProductsFragment showAllProductsFragment;
 
-    public dataAdapter(List<CategoryResponseModelItem> medList, int list_item_view_to_be_place, ClickListener clickListener) {
+    public dataAdapterCategory(List<CategoryResponseModelItem> medList, int list_item_view_to_be_place, ClickListener clickListener) {
         this.medList = medList;
         this.listener = clickListener;
         this.list_item_view_to_be_placed = list_item_view_to_be_place;

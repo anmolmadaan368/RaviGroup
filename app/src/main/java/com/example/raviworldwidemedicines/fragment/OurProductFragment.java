@@ -14,8 +14,8 @@ import androidx.fragment.app.Fragment;
 import com.example.raviworldwidemedicines.Controller.myController;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.DataAdapterOurProduct;
-import com.example.raviworldwidemedicines.model.products.ProductsModel;
-import com.example.raviworldwidemedicines.model.products.ProductsModelItem;
+import com.example.raviworldwidemedicines.model.products.ProductResponse;
+import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
 
 
 import java.util.Collections;
@@ -29,7 +29,7 @@ import retrofit2.Response;
 public class OurProductFragment extends Fragment {
 
     private ShowAllProductsFragment showAllProductsFragment;
-    private List<ProductsModelItem> dataLists;
+    private List<ProductResponseItem> dataLists;
     public OurProductFragment() {
         // Required empty public constructor
     }
@@ -59,17 +59,16 @@ public class OurProductFragment extends Fragment {
 
     private void gettingAllProducts() {
 
-        Call<ProductsModel> call = myController.getInstance().getCategoryDetails_Api().getProducts();
-        call.enqueue(new Callback<ProductsModel>() {
+        Call<List<ProductResponseItem>> call = myController.getInstance().getCategoryDetails_Api().getProducts();
+        call.enqueue(new Callback<List<ProductResponseItem>>() {
             @Override
-            public void onResponse(Call<ProductsModel> call, Response<ProductsModel> response) {
-                ProductsModel productsModel= response.body();
-                dataLists= productsModel.getProductsModel();
+            public void onResponse(Call<List<ProductResponseItem>> call, Response<List<ProductResponseItem>> response) {
+                dataLists= response.body();
 
                 //   Sort by  product name
-                Collections.sort(dataLists, new Comparator<ProductsModelItem>() {
+                Collections.sort(dataLists, new Comparator<ProductResponseItem>() {
                     @Override
-                    public int compare(ProductsModelItem dataModel01, ProductsModelItem dataModel2) {
+                    public int compare(ProductResponseItem dataModel01, ProductResponseItem dataModel2) {
                         return dataModel01.getName().compareTo(dataModel2.getName());
                     }
                 });
@@ -82,9 +81,10 @@ public class OurProductFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<ProductsModel> call, Throwable t) {
-                Toast.makeText(getActivity(), " Some Error Ocuured "+t.getMessage(), Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<List<ProductResponseItem>> call, Throwable t) {
+
             }
+
         });
     }
 

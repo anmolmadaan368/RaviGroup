@@ -33,7 +33,7 @@ import com.example.raviworldwidemedicines.databinding.FragmentHomeBinding;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.adapter.dataAdapter;
+import com.example.raviworldwidemedicines.adapter.dataAdapterCategory;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 import com.example.raviworldwidemedicines.model.AvailableBrandsDataModel;
 import com.example.raviworldwidemedicines.model.CategoryDetailsModel.CategoryResponseModelItem;
@@ -132,7 +132,7 @@ public class HomeFragment extends Fragment {
                 if (response.isSuccessful() && response != null) {
                      List<CategoryResponseModelItem> myResponseLists= response.body();
 
-                    dataAdapter adapter = new dataAdapter(myResponseLists , R.layout.list_item_view, new ClickListener() {
+                    dataAdapterCategory adapter = new dataAdapterCategory(myResponseLists , R.layout.list_item_view, new ClickListener() {
                         @Override
                         public void onPositionClicked(int Position) {
                             showAllProductsFragment = new ShowAllProductsFragment(myResponseLists.get(Position).getId());
@@ -172,7 +172,7 @@ public class HomeFragment extends Fragment {
         int[] myimgs2 = {R.drawable.medicine_image_3, R.drawable.medicine_image_2, R.drawable.medicine_image_4, R.drawable.medicine_image_5, R.drawable.medicine_image_6};
         CartMultipleDataBinder item_singleDatas = new CartMultipleDataBinder(myimgs2[1], "sj", "sij", "sjs", "sjd");
         String[] list_name3s = {"0 min ago", "2 min ago", "3 min ago", "4 min ago", "1 hr ago "};
-//        dataAdapter adapter1 = new dataAdapter(this.getContext(), myimgs2, list_name3s, R.layout.recently_viewed_list_item_views, new ClickListener() {
+//        dataAdapterCategory adapter1 = new dataAdapterCategory(this.getContext(), myimgs2, list_name3s, R.layout.recently_viewed_list_item_views, new ClickListener() {
 //            @Override
 //            public void onPositionClicked(int Position) {
 //                showAllProductsFragment = new ShowAllProductsFragment();
@@ -196,7 +196,7 @@ public class HomeFragment extends Fragment {
 //        recyclerView_recently_viewed.setAdapter(adapter1);
 
         ArrayList<TopBrandsItemDetails> topBrandsItemDetailslists = new ArrayList<>();
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir / lamivudine (Epzicom®)", "02 feb,2024", "1000", "SII", R.drawable.medicine_image_3, 24));
+        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir / lamivudine (Epzicom®)", "02 feb,2024 ", "1000", "SII", R.drawable.medicine_image_3, 24));
         topBrandsItemDetailslists.add(new TopBrandsItemDetails("Acyclovir", "04 mar,2025", "2000", "Cipla", R.drawable.medicine_image_4, 24));
         topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir", "07 may,2024", "1187", "Dolo", R.drawable.medicine_image_5, 23));
         topBrandsItemDetailslists.add(new TopBrandsItemDetails("Alendronate", "06 sep,2026", "2227", "Dettol", R.drawable.medicine_image_2, 7));
