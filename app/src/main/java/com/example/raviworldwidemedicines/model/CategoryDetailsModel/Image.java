@@ -6,7 +6,6 @@ public class Image{
 
 	@SerializedName("src")
 	private String src;
-
 	public String getSrc(){
 		return src;
 	}

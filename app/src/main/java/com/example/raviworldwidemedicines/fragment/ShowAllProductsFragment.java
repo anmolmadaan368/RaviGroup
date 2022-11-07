@@ -35,7 +35,7 @@ public class ShowAllProductsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater,ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View viw=inflater.inflate(R.layout.fragment_show_all_products, container, false);
@@ -79,7 +79,6 @@ public class ShowAllProductsFragment extends Fragment {
                 return false;
             }
         });
-
 
 
 
