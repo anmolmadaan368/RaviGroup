@@ -15,19 +15,18 @@
     <SearchView
         android:id="@+id/searchviews"
         android:layout_width="match_parent"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/bg_search_view"
+        android:backgroundTint="#9EFFFFFF"
         android:clickable="true"
         android:goIcon="@mipmap/ic_search"
-        android:background="@drawable/bg_search_view"
         android:iconifiedByDefault="false"
-        android:backgroundTint="#9EFFFFFF"
         android:layoutDirection="rtl"
         android:queryHint="@string/search_hint"
-        android:showDividers="middle"
-        android:layout_marginBottom="7dp"
-        />
+        android:showDividers="middle" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -169,6 +168,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
+                android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:id="@+id/recently_viewed_outer_lays"
                 android:layout_below="@id/sliders_outer_lays"
@@ -210,12 +210,13 @@
                 android:id="@+id/card_view_1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-
+                android:layout_marginTop="10dp"
                 app:cardCornerRadius="10dp"
                 android:layout_below="@id/recently_viewed_outer_lays">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
+
                     android:layout_height="match_parent">
 
                     <ImageView

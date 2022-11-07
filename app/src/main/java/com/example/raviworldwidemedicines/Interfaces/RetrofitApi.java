@@ -1,7 +1,8 @@
 package com.example.raviworldwidemedicines.Interfaces;
 
 import com.example.raviworldwidemedicines.model.CategoryDetailsModel.CategoryResponseModelItem;
-import com.example.raviworldwidemedicines.model.products.ProductsModel;
+import com.example.raviworldwidemedicines.model.products.ProductResponse;
+import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
 
 import java.util.List;
 
@@ -14,6 +15,6 @@ public interface RetrofitApi {
         //on below line we are creating a method to post our data.
      Call<List<CategoryResponseModelItem>> getData();
 
-    @GET("custom_api")
-    Call<ProductsModel> getProducts();
+    @GET("custom_api/get_all_product.php")
+    Call<List<ProductResponseItem>> getProducts();
 }

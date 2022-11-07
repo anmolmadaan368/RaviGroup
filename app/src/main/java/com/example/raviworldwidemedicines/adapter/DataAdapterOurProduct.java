@@ -2,7 +2,6 @@ package com.example.raviworldwidemedicines.adapter;
 
 import android.content.Context;
 import android.net.Uri;
-import android.telephony.ims.ImsReasonInfo;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,18 +13,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
-import com.example.raviworldwidemedicines.model.DataModelOurProduct;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.model.products.ProductsModel;
-import com.example.raviworldwidemedicines.model.products.ProductsModelItem;
+import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class DataAdapterOurProduct extends ArrayAdapter<ProductsModelItem> {
+public class DataAdapterOurProduct extends ArrayAdapter<ProductResponseItem> {
 
 
-    public DataAdapterOurProduct(@NonNull Context context, List<ProductsModelItem> dataModelOurProducts) {
+    public DataAdapterOurProduct(@NonNull Context context, List<ProductResponseItem> dataModelOurProducts) {
         super(context, 0,dataModelOurProducts);
     
     }
@@ -37,12 +33,16 @@ public class DataAdapterOurProduct extends ArrayAdapter<ProductsModelItem> {
         if(listItemview==null){
             listItemview= LayoutInflater.from(getContext()).inflate(R.layout.list_item_g_view_our_products,parent,false);
         }
-        ProductsModelItem ourProduct =getItem(position);
+        ProductResponseItem ourProduct =getItem(position);
         TextView item_name=(TextView) listItemview.findViewById(R.id.idTViewI_Desc);
         ImageView item_img= (ImageView) listItemview.findViewById(R.id.gv_images);
         item_name.setText(ourProduct.getName());
-
-        Glide.with(item_img.getContext()).load(Uri.parse(ourProduct.getImage().getSrc())).error(R.drawable.ic_error).into(item_img);
+         if(ourProduct.getImage().toString() == null) {
+             item_img.setImageResource(R.drawable.ic_error);
+         }
+         else {
+             Glide.with(item_img.getContext()).load(Uri.parse(String.valueOf(ourProduct.getImage()))).error(R.drawable.ic_error).into(item_img);
+         }
         return listItemview;
     }
 }

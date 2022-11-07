@@ -240,10 +240,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         bottomNavigationView.getMenu().findItem(R.id.bottom_nav_home).setChecked(true);
                         replaceCurrentFragment(getSupportFragmentManager(), homeFragment);
                         break;
-                    case R.id.nav_drawer_blog:
-                        blogFragment = new BlogFragment();
-                        replaceCurrentFragment(getSupportFragmentManager(), blogFragment);
-                        break;
+//                    case R.id.nav_drawer_blog:
+//                        blogFragment = new BlogFragment();
+//                        replaceCurrentFragment(getSupportFragmentManager(), blogFragment);
+//                        break;
                     case R.id.nav_drawer_contact:
                         contactFragment = new ContactFragment();
                         replaceCurrentFragment(getSupportFragmentManager(), contactFragment);
