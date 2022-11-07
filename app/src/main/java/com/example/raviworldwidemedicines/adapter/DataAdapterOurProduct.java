@@ -37,8 +37,12 @@ public class DataAdapterOurProduct extends ArrayAdapter<ProductResponseItem> {
         TextView item_name=(TextView) listItemview.findViewById(R.id.idTViewI_Desc);
         ImageView item_img= (ImageView) listItemview.findViewById(R.id.gv_images);
         item_name.setText(ourProduct.getName());
-
-//        Glide.with(item_img.getContext()).load(Uri.parse(new String(ourProduct.getImage().get(position)))).error(R.drawable.ic_error).into(item_img);
+         if(ourProduct.getImage().toString() == null) {
+             item_img.setImageResource(R.drawable.ic_error);
+         }
+         else {
+             Glide.with(item_img.getContext()).load(Uri.parse(String.valueOf(ourProduct.getImage()))).error(R.drawable.ic_error).into(item_img);
+         }
         return listItemview;
     }
 }
