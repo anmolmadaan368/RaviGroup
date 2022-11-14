@@ -256,10 +256,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         aboutFragment = new AboutFragment();
                         replaceCurrentFragment(getSupportFragmentManager(), aboutFragment);
                         break;
-//                    case R.id.nav_drawer_wishlist:
-//                        wishListFragment = new WishListFragment();
-//                        replaceCurrentFragment(getSupportFragmentManager(), wishListFragment);
-//                        break;
+                    case R.id.nav_drawer_wishlist :
+                        wishListFragment = new WishListFragment();
+                        replaceCurrentFragment(getSupportFragmentManager(), wishListFragment);
+                        break;
                     case R.id.nav_drawer_termandconditions:
                         termsAndConditions = new TermsAndConditions();
                         replaceCurrentFragment(getSupportFragmentManager(), termsAndConditions);

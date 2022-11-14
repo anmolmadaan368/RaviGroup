@@ -110,7 +110,7 @@ public class CartFragment extends Fragment  {
     private void filterList(String s) {
         ArrayList<CartMultipleDataBinder> filteredList= new ArrayList<>();
         for(CartMultipleDataBinder matchedElemnts :mydatalists){
-            if( matchedElemnts.getManufacturer_name().toLowerCase().contains(s.toLowerCase())){
+            if( matchedElemnts.getProduct_name().toLowerCase().contains(s.toLowerCase())){
                 filteredList.add( matchedElemnts);
             }
         }

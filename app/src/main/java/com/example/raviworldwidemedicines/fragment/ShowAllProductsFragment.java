@@ -19,8 +19,8 @@ import android.widget.Toast;
 import com.example.raviworldwidemedicines.Controller.myController;
 import com.example.raviworldwidemedicines.adapter.TopBrandsDataAdapter;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
-import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
+import com.example.raviworldwidemedicines.model.AllProductsByCategory.GetAllProductOfCategories;
+import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,79 +36,71 @@ public class ShowAllProductsFragment extends Fragment {
     private SearchView searchView;
     private TextView txt_no_data_found;
     private int category_id;
-    private ArrayList<TopBrandsItemDetails> my_all_product_lists;
+    private ArrayList<SingleProductDetailsModel> my_all_product_lists = new ArrayList<>();
     private TopBrandsDataAdapter mydatas_adapters_list;
-    private int []  item_imag_lists={R.drawable.imgf_5,R.drawable.imgf_3,R.drawable.imgf_2,R.drawable.imgf_1,R.drawable.imgf_4,R.drawable.buy,R.drawable.cart_icc,R.drawable.imgf_3,R.drawable.cart_icc,R.drawable.home_icon,R.drawable.ic_launcher_background,R.drawable.imgf_6,R.drawable.ic_launcher_background,R.drawable.imgf_7,R.drawable.imgf_8, com.denzcoskun.imageslider.R.drawable.loading,R.drawable.menu_icon,R.drawable.remove,R.drawable.user,R.drawable.search_icon,R.drawable.whatsapp };
+    private int[] item_imag_lists = {R.drawable.imgf_5, R.drawable.imgf_3, R.drawable.imgf_2, R.drawable.imgf_1, R.drawable.imgf_4, R.drawable.buy, R.drawable.cart_icc, R.drawable.imgf_3, R.drawable.cart_icc, R.drawable.home_icon, R.drawable.ic_launcher_background, R.drawable.imgf_6, R.drawable.ic_launcher_background, R.drawable.imgf_7, R.drawable.imgf_8, com.denzcoskun.imageslider.R.drawable.loading, R.drawable.menu_icon, R.drawable.remove, R.drawable.user, R.drawable.search_icon, R.drawable.whatsapp};
 
-    public ShowAllProductsFragment (int category_id) {
+    public ShowAllProductsFragment(int category_id) {
         // Required empty public constructor
-        this.category_id=category_id;
+        this.category_id = category_id;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater,ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View viw=inflater.inflate(R.layout.fragment_show_all_products, container, false);
-        txt_no_data_found= viw.findViewById(R.id.txt_no_data_exist);
+        View viw = inflater.inflate(R.layout.fragment_show_all_products, container, false);
+        txt_no_data_found = viw.findViewById(R.id.txt_no_data_exist);
 
-        recycler_views_data_lists= (RecyclerView) viw.findViewById(R.id.recycler_view_item_lists);
-        searchView= viw.findViewById(R.id.searchviews);
+        recycler_views_data_lists = (RecyclerView) viw.findViewById(R.id.recycler_view_item_lists);
+        searchView = viw.findViewById(R.id.searchviews);
         searchView.setBackgroundResource(R.drawable.backgnd_while_rounded);
-        LinearLayoutManager  linearLayoutManager=new LinearLayoutManager(this.getContext());
-        recycler_views_data_lists.setLayoutManager(linearLayoutManager);
-        TopBrandsItemDetails topBrandsItemDetails;
 
-        if(category_id  == -1) {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getContext());
+        recycler_views_data_lists.setLayoutManager(linearLayoutManager);
+        SingleProductDetailsModel singleProductDetailsModel;
+
+        if (category_id == -1) {
 
             my_all_product_lists = new ArrayList<>();
             for (int i = 0; i < item_imag_lists.length; i++) {
-                topBrandsItemDetails = new TopBrandsItemDetails("Dettots", "02 mar, 2014", "270", "SII", item_imag_lists[i], 14);
-                my_all_product_lists.add(topBrandsItemDetails);
+                singleProductDetailsModel = new SingleProductDetailsModel("Dettots", "SII",item_imag_lists[i%20]);
+                my_all_product_lists.add(singleProductDetailsModel);
             }
 
-            mydatas_adapters_list= new TopBrandsDataAdapter(getContext(),my_all_product_lists,"singleProductdetails",getParentFragmentManager());
-            recycler_views_data_lists.setAdapter(mydatas_adapters_list);
+        } else {
 
-
-        }
-        else {
-
-            Call<List<ProductResponseItem>> call= myController.getInstance().getCategoryDetails_Api().getProducts();
-            call.enqueue(new Callback<List<ProductResponseItem>>() {
+            Call<List<GetAllProductOfCategories>> call = myController.getInstance().getCategoryDetails_Api().getAllProductsOfCategory(category_id);
+            call.enqueue(new Callback<List<GetAllProductOfCategories>>() {
                 @Override
-                public void onResponse(Call<List<ProductResponseItem>> call, Response<List<ProductResponseItem>> response) {
-                    if(response.isSuccessful() && response!=null ){
-                        List<ProductResponseItem>   responseItem= response.body();
-                        for (int i=0; i<responseItem.size();i++ ) {
-                            int specificProductCategoryId= responseItem.get(1).getId();
-                            if(category_id== specificProductCategoryId){
-
-                                my_all_product_lists.add(new TopBrandsItemDetails( responseItem.get(1).getName(), responseItem.get(2).getId()+"","","",-1,-1));
-                            }
+                public void onResponse(Call<List<GetAllProductOfCategories>> call, Response<List<GetAllProductOfCategories>> response) {
+                    if (response.isSuccessful() && response != null) {
+                        my_all_product_lists = new ArrayList<>();
+                        List<GetAllProductOfCategories> responseItem = response.body();
+                        for (int i = 0; i < responseItem.size(); i++) {
+                            my_all_product_lists.add(new SingleProductDetailsModel(responseItem.get(i).getName(), responseItem.get(i).getShortDescription() + "", item_imag_lists[i%20]));
                         }
-                    }
-                    else {
-                        Toast.makeText(getActivity(), " Category Details Product Product's  response is NULL "+ response, Toast.LENGTH_SHORT).show();
-                        Log.d(TAG, "onResponse:  Category Details Product Product's  response is "+ response+ ".");
-                        my_all_product_lists= new ArrayList<>();
+                    } else {
+                        Toast.makeText(getActivity(), " Category Details Product Product's  response is NULL " + response, Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "onResponse:  Category Details Product Product's  response is " + response + ".");
+                        my_all_product_lists = new ArrayList<>();
                     }
 
-                    if(my_all_product_lists.size()==0){
+                    if (my_all_product_lists.size() == 0) {
                         for (int i = 0; i < item_imag_lists.length; i++) {
-                            TopBrandsItemDetails topBrandsItemDetails = new TopBrandsItemDetails("Dettots", "02 mar, 2014", "270", "SII", item_imag_lists[i], 14);
-                            my_all_product_lists.add(topBrandsItemDetails);
+                            SingleProductDetailsModel singleProductDetailsModel = new SingleProductDetailsModel("Dettots", "SII", item_imag_lists[i%20]);
+                            my_all_product_lists.add(singleProductDetailsModel);
                         }
                     }
-                    mydatas_adapters_list= new TopBrandsDataAdapter(getContext(),my_all_product_lists,"singleProductdetails",getParentFragmentManager());
+                    mydatas_adapters_list = new TopBrandsDataAdapter(getContext(), my_all_product_lists, "categoryProducts_lists", getParentFragmentManager());
                     recycler_views_data_lists.setAdapter(mydatas_adapters_list);
 
                 }
 
                 @Override
-                public void onFailure(Call<List<ProductResponseItem>> call, Throwable t) {
-                    Toast.makeText(getActivity(), " onFailure: "+t.getMessage(), Toast.LENGTH_SHORT).show();
-                    Log.d(TAG, "onFailure: "+ t.getMessage());
+                public void onFailure(Call<List<GetAllProductOfCategories>> call, Throwable t) {
+                    Toast.makeText(getActivity(), " onFailure :" + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "onFailure:  " + t.getMessage());
                 }
             });
 
@@ -128,27 +120,23 @@ public class ShowAllProductsFragment extends Fragment {
         });
 
 
-
-
-
         return viw;
 
     }
 
     private void filterList(String s) {
-        ArrayList<TopBrandsItemDetails> filteredList=new ArrayList<>();
-        for ( TopBrandsItemDetails topBrandsItemDetails:my_all_product_lists ){
-            if (topBrandsItemDetails.getMedicines_name().toLowerCase().contains(s.toLowerCase())|| topBrandsItemDetails.getMedicines_name().toLowerCase().contains(s.toLowerCase())){
-                filteredList.add(topBrandsItemDetails);
+        ArrayList<SingleProductDetailsModel> filteredList = new ArrayList<>();
+        for (SingleProductDetailsModel singleProductDetailsModel : my_all_product_lists) {
+            if (singleProductDetailsModel.getName().toLowerCase().contains(s.toLowerCase()) ) {
+                filteredList.add(singleProductDetailsModel);
             }
 
         }
-        if (filteredList.isEmpty()){
+        if (filteredList.isEmpty()) {
             txt_no_data_found.setText(" no Data found ! ");
-        }
-        else {
+        } else {
             txt_no_data_found.setText("");
         }
-//       mydatas_adapters_list.setFilteredListToRecyclerViews(filteredList);
+//        mydatas_adapters_list.setFilteredListToRecyclerViews(filteredList);
     }
 }

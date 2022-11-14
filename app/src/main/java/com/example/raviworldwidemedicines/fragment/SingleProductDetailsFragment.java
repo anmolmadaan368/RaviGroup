@@ -11,26 +11,24 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
-import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
+import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 
 
 public class SingleProductDetailsFragment extends Fragment {
 
     private CartMultipleDataBinder cartMultipleDataBinder;
-    private TopBrandsItemDetails topBrandsItemDetails;
-    private String layout_name_in_which_forwarded;
+    private SingleProductDetailsModel singleProductDetailsModel;
+    private String layout_name_in_which_forwarded= "";
     public SingleProductDetailsFragment( CartMultipleDataBinder cartMultipleDataBinder, String lay_name_used){
         this.cartMultipleDataBinder=cartMultipleDataBinder;
         // Required empty public constructor
         this.layout_name_in_which_forwarded=lay_name_used;
     }
 
-    public SingleProductDetailsFragment(TopBrandsItemDetails topBrandsItemDetails, String layout_which_is_used){
-        this.topBrandsItemDetails=topBrandsItemDetails;
-        this.layout_name_in_which_forwarded=layout_which_is_used;
+    public SingleProductDetailsFragment(SingleProductDetailsModel singleProductDetailsModel){
+        this.singleProductDetailsModel = singleProductDetailsModel;
 
     }
     @Override
@@ -46,24 +44,24 @@ public class SingleProductDetailsFragment extends Fragment {
         TextView expeiry_date= (TextView) view.findViewById(R.id.tv_expeiry_date);
         LinearLayout expiery_date_outer_lays= (LinearLayout) view.findViewById(R.id.expiery_date_outer_lays);
         TextView save_for_later_btnd = (TextView) view.findViewById(R.id.btn_saveforlater_product_details);
-
+        TextView product_description= (TextView) view.findViewById(R.id.txt_salt_compostion);
 
 
         if(layout_name_in_which_forwarded.equals("recentlyviewedlayout")) {
             product_imgs.setImageResource(cartMultipleDataBinder.getProduct_image());
             product_name.setText(cartMultipleDataBinder.getProduct_name());
             product_chemical_name.setText(cartMultipleDataBinder.getChemical_amount());
-            manufacturer_names.setText(cartMultipleDataBinder.getManufacturer_name());
+            product_description.setText(cartMultipleDataBinder.getShort_description());
 
             expiery_date_outer_lays.setVisibility(View.GONE);
         }
-        else if(layout_name_in_which_forwarded.equals("popularmedicines")){
-                product_imgs.setImageResource(topBrandsItemDetails.getMedicine_image());
-                product_name.setText(topBrandsItemDetails.getMedicines_name());
-                manufacturer_names.setText(topBrandsItemDetails.getManufacturer_name());
-                expeiry_date.setText(topBrandsItemDetails.getExpairy_date());
-                expiery_date_outer_lays.setVisibility(View.VISIBLE);
+        else {
+                product_imgs.setImageResource(singleProductDetailsModel.getStatic_medicine_images());
+                product_name.setText(singleProductDetailsModel.getName());
+                product_description.setText(singleProductDetailsModel.getShort_description());
+//                expeiry_date.setText(singleProductDetailsModel.getExpairy_date());
         }
+
         buy_btn_show_products.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -12,6 +12,8 @@ public class ProductResponseItem{
 	@SerializedName("name")
 	private String name;
 
+	@SerializedName("short_description")
+	private String short_description;
 	@SerializedName("id")
 	private int id;
 
@@ -27,6 +29,10 @@ public class ProductResponseItem{
 
 	public String getName(){
 		return name;
+	}
+
+	public String getShort_description() {
+		return short_description;
 	}
 
 	public int getId(){

@@ -48,8 +48,8 @@ public class RecentlyViewAdapter extends RecyclerView.Adapter<RecentlyViewAdapte
         CartMultipleDataBinder cartMultipleDataBinder = myRecently_viewed_lists.get(position);
         holder.product_img.setImageResource(cartMultipleDataBinder.getProduct_image());
         holder.chemical_name.setText(cartMultipleDataBinder.getChemical_amount());
-        holder.salt_comp.setText(cartMultipleDataBinder.getSalt_name());
-        holder.manufacturer_name.setText(cartMultipleDataBinder.getManufacturer_name());
+//        holder.salt_comp.setText(cartMultipleDataBinder.getSalt_name());
+        holder.manufacturer_name.setText(cartMultipleDataBinder.getShort_description());
 
 
     }

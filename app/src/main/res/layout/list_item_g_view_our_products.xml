@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="9dp"
     android:layout_marginLeft="9dp"
@@ -15,9 +15,10 @@
         >
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="127dp"
             android:id="@+id/gv_images"
             android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
             android:fitsSystemWindows="true"
             android:background="@drawable/bg_search_view"
             android:src="@drawable/raviwwmwdicinesogo"
@@ -30,9 +31,13 @@
             android:layout_marginBottom="23dp"
             android:textStyle="bold|normal"
             android:textColor="#000"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="13sp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/gv_images"
             android:text="Item description "
+            android:ems="1"
             android:textAlignment="center"
             />
 
