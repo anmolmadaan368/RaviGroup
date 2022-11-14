@@ -92,7 +92,7 @@ public class WishListFragment extends Fragment {
     private void filterList(String s) {
         ArrayList<CartMultipleDataBinder>  filteredList= new ArrayList<>();
         for(CartMultipleDataBinder matcheditems: mydataLists){
-            if ( matcheditems.getProduct_name().toLowerCase().contains(s.toLowerCase())|| matcheditems.getManufacturer_name().toLowerCase().contains(s.toLowerCase())|| matcheditems.getSalt_name().toLowerCase().contains(s.toLowerCase())){
+            if ( matcheditems.getProduct_name().toLowerCase().contains(s.toLowerCase())){
                 filteredList.add(matcheditems);
             }
         }

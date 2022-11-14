@@ -1,6 +1,7 @@
 package com.example.raviworldwidemedicines.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.example.raviworldwidemedicines.Controller.myController;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.DataAdapterOurProduct;
+import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 import com.example.raviworldwidemedicines.model.products.ProductResponse;
 import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
 
@@ -50,7 +52,8 @@ public class OurProductFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getContext(), "Item Clicked id : "+ adapterView.getItemIdAtPosition(i) +" . ", Toast.LENGTH_SHORT).show();
-                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, showAllProductsFragment).commit();
+                ProductResponseItem responseItem= dataLists.get(i);
+                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), responseItem.getImage()))).commit();
             }
         });
 
@@ -59,7 +62,7 @@ public class OurProductFragment extends Fragment {
 
     private void gettingAllProducts() {
 
-        Call<List<ProductResponseItem>> call = myController.getInstance().getCategoryDetails_Api().getProducts();
+        Call<List<ProductResponseItem>> call = myController.getInstance().getCategoryDetails_Api().getProduct(1);
         call.enqueue(new Callback<List<ProductResponseItem>>() {
             @Override
             public void onResponse(Call<List<ProductResponseItem>> call, Response<List<ProductResponseItem>> response) {

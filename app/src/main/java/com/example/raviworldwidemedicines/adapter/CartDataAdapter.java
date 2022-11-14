@@ -63,10 +63,10 @@ public class CartDataAdapter extends RecyclerView.Adapter<CartDataAdapter.CartDa
     public void onBindViewHolder(@NonNull CartDataViewHolder holder, int position) {
 
         CartMultipleDataBinder cartMultipleDataBinder = cartlist.get(position);
-        holder.salt_compostion.setText(cartMultipleDataBinder.getSalt_name());
+//        holder.salt_compostion.setText(cartMultipleDataBinder.getSalt_name());
         holder.product_img.setImageResource(cartMultipleDataBinder.getProduct_image());
-        holder.chemical_amount.setText(cartMultipleDataBinder.getChemical_amount());
-        holder.manuacturer_name.setText(cartMultipleDataBinder.getManufacturer_name());
+//        holder.chemical_amount.setText(cartMultipleDataBinder.getChemical_amount());
+        holder.manuacturer_name.setText(cartMultipleDataBinder.getShort_description());
         holder.product_name.setText(cartMultipleDataBinder.getProduct_name());
     }
 

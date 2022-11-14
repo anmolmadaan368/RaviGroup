@@ -37,7 +37,7 @@ import com.example.raviworldwidemedicines.adapter.dataAdapterCategory;
 import com.example.raviworldwidemedicines.adapter.product_slider_fixed_viewAdapter;
 import com.example.raviworldwidemedicines.model.AvailableBrandsDataModel;
 import com.example.raviworldwidemedicines.model.CategoryDetailsModel.CategoryResponseModelItem;
-import com.example.raviworldwidemedicines.model.TopBrandsItemDetails;
+import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -151,7 +151,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onFailure(Call<List<CategoryResponseModelItem>> call, Throwable t) {
                 Toast.makeText(getActivity(), " Not getting response. "+t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "onFailure: "+ t.getMessage());
+                Log.d(TAG, "onFaiure: "+ t.getMessage());
             }
         });
 
@@ -195,13 +195,13 @@ public class HomeFragment extends Fragment {
 
 //        recyclerView_recently_viewed.setAdapter(adapter1);
 
-        ArrayList<TopBrandsItemDetails> topBrandsItemDetailslists = new ArrayList<>();
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir / lamivudine (Epzicom®)", "02 feb,2024 ", "1000", "SII", R.drawable.medicine_image_3, 24));
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Acyclovir", "04 mar,2025", "2000", "Cipla", R.drawable.medicine_image_4, 24));
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Abacavir", "07 may,2024", "1187", "Dolo", R.drawable.medicine_image_5, 23));
-        topBrandsItemDetailslists.add(new TopBrandsItemDetails("Alendronate", "06 sep,2026", "2227", "Dettol", R.drawable.medicine_image_2, 7));
+        ArrayList<SingleProductDetailsModel> singleProductDetailslistModels = new ArrayList<>();
+        singleProductDetailslistModels.add(new SingleProductDetailsModel("Abacavir / lamivudine (Epzicom®)", "SII", R.drawable.medicine_image_3));
+        singleProductDetailslistModels.add(new SingleProductDetailsModel("Acyclovir", "Cipla", R.drawable.medicine_image_4));
+        singleProductDetailslistModels.add(new SingleProductDetailsModel("Abacavir", "Dolo", R.drawable.medicine_image_5));
+        singleProductDetailslistModels.add(new SingleProductDetailsModel("Alendronate", "Dettol", R.drawable.medicine_image_2));
 
-        TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters = new TopBrandsItemDataAdapter(this.getContext(), getParentFragmentManager(), topBrandsItemDetailslists);
+        TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters = new TopBrandsItemDataAdapter(this.getContext(), getParentFragmentManager(), singleProductDetailslistModels);
 
         grid_view_top_brands.setAdapter(mainPanelTopBrandsItemsAdapters);
 
@@ -223,7 +223,7 @@ public class HomeFragment extends Fragment {
         txt_btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new TopBrandsListFragment());
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new TopBrandsFragment());
             }
         });
 
@@ -266,5 +266,5 @@ public class HomeFragment extends Fragment {
         });
         return view;
 
-    }
+}
 }
