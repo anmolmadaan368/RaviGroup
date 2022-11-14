@@ -209,14 +209,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                TextView btn_add_popular_medicines = (TextView) view.findViewById(R.id.btn_Add);
-                btn_add_popular_medicines.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        MainActivity.replaceCurrentFragment(getParentFragmentManager(), new CartFragment());
-                    }
-                });
-
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new CartFragment());
             }
         });
 

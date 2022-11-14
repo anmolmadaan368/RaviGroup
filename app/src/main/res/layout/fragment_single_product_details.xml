@@ -97,6 +97,7 @@
                         <TextView
                             android:id="@+id/txt_salt_compostion"
                             android:layout_width="match_parent"
+                            android:textSize="23sp"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:text="salt Details dgsgsgesgdddddddddsfdsfdsfdsfdddddddddddddddddddddddddddddddddddddffffffffffffffffffffffffffffffffffff"
