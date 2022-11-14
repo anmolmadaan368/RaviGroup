@@ -3,7 +3,7 @@ package com.example.raviworldwidemedicines.model;
 public class SingleProductDetailsModel {
     private String name,short_description;
     private Object medicine_image;
-    private int Static_medicine_images;
+    private String Static_medicine_images;
 
     public SingleProductDetailsModel(String name, String short_description, Object imgs) {
         this.name = name;
@@ -11,10 +11,10 @@ public class SingleProductDetailsModel {
         medicine_image = imgs;
     }
 
-    public SingleProductDetailsModel(String name, String short_description,  int static_medicine_images) {
+    public SingleProductDetailsModel(String name, String short_description,  String static_medicine_images) {
         this.name = name;
         this.short_description = short_description;
-        medicine_image = static_medicine_images;
+        this.Static_medicine_images = static_medicine_images;
     }
 
     public String getName() {
@@ -25,7 +25,7 @@ public class SingleProductDetailsModel {
         return short_description;
     }
 
-    public int getStatic_medicine_images() {
+    public String getStatic_medicine_images() {
         return Static_medicine_images;
     }
 

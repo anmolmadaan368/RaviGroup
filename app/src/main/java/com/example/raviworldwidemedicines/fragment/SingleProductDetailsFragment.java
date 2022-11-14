@@ -1,5 +1,6 @@
 package com.example.raviworldwidemedicines.fragment;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,7 +12,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.model.AllProductsByCategory.ImageItem;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 
@@ -56,7 +59,14 @@ public class SingleProductDetailsFragment extends Fragment {
             expiery_date_outer_lays.setVisibility(View.GONE);
         }
         else {
-                product_imgs.setImageResource(singleProductDetailsModel.getStatic_medicine_images());
+            if(singleProductDetailsModel.getStatic_medicine_images()!=null){
+                Glide.with(product_imgs.getContext()).load(Uri.parse(singleProductDetailsModel.getStatic_medicine_images())).error(R.drawable.ic_error).into(product_imgs);
+            }
+            else {
+                Glide.with(product_imgs.getContext()).load(Uri.parse(((ImageItem)singleProductDetailsModel.getMedicine_image()).getSrc())).error(R.drawable.ic_error).into(product_imgs);
+
+            }
+//            product_imgs.setImageResource(singleProductDetailsModel.getStatic_medicine_images());
                 product_name.setText(singleProductDetailsModel.getName());
                 product_description.setText(singleProductDetailsModel.getShort_description());
 //                expeiry_date.setText(singleProductDetailsModel.getExpairy_date());
