@@ -1,6 +1,7 @@
 package com.example.raviworldwidemedicines.adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 
+import com.bumptech.glide.Glide;
 import com.example.raviworldwidemedicines.R;
+import com.example.raviworldwidemedicines.fragment.ShowAllProductsFragment;
 import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 
 import java.util.ArrayList;
@@ -50,7 +53,8 @@ public class TopBrandsItemDataAdapter extends ArrayAdapter<SingleProductDetailsM
 //        float discounted_priceafterDiscountIsCalculated=( Float.parseFloat(brandsItem.getOriginal_price())*((100- brandsItem.getDiscount_rate())/100));
 //        discounted_price.setText((discounted_priceafterDiscountIsCalculated+""));
         medicine_name.setText(brandsItem.getName());
-        product_images.setImageResource(brandsItem.getStatic_medicine_images());
+        Glide.with(product_images.getContext()).load(Uri.parse(brandsItem.getStatic_medicine_images())).error(R.drawable.ic_error).into(product_images);
+//        product_images.setImageResource(brandsItem.getStatic_medicine_images());
 
     return itemViewss;
     }
