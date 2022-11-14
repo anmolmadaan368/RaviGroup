@@ -149,6 +149,6 @@ public class ShowAllProductsFragment extends Fragment {
         else {
             txt_no_data_found.setText("");
         }
-        mydatas_adapters_list.setFilteredListToRecyclerViews(filteredList);
+//       mydatas_adapters_list.setFilteredListToRecyclerViews(filteredList);
     }
 }
