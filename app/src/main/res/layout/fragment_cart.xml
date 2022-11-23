@@ -51,16 +51,41 @@
             android:layout_below="@id/cart_list_page"
             android:layout_marginTop="10dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textAlignment="center"
-        android:textColor="#E91E2F"
-        android:id="@+id/txt_no_data_exist"
-        android:layout_below="@id/purchased_items_lists"
-        android:textStyle="normal|bold"
-        />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/error_outer_lays"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:textColor="#E91E2F"
+                android:text="Sign In to Your Account First "
+                android:id="@+id/txt_no_data_exist"
+                android:textStyle="normal|bold"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_no_data_exist"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Login "
+                android:textStyle="bold"
+                android:id="@+id/btn_login"
+                android:textAllCaps="false"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>
 

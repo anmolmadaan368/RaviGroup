@@ -13,8 +13,10 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.example.raviworldwidemedicines.Controller.myController;
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.DataAdapterOurProduct;
+import com.example.raviworldwidemedicines.model.CategoryDetailsModel.Image;
 import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 import com.example.raviworldwidemedicines.model.products.ProductResponse;
 import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
@@ -30,7 +32,7 @@ import retrofit2.Response;
 
 public class OurProductFragment extends Fragment {
 
-    private ShowAllProductsFragment showAllProductsFragment;
+//    private ShowAllProductsFragment showAllProductsFragment;
     private List<ProductResponseItem> dataLists;
     public OurProductFragment() {
         // Required empty public constructor
@@ -46,17 +48,21 @@ public class OurProductFragment extends Fragment {
         gridView= view.findViewById( R.id.idGViews);
 
         gettingAllProducts();
-        showAllProductsFragment= new ShowAllProductsFragment(-1);
+//        showAllProductsFragment= new ShowAllProductsFragment(-1);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getContext(), "Item Clicked id : "+ adapterView.getItemIdAtPosition(i) +" . ", Toast.LENGTH_SHORT).show();
                 ProductResponseItem responseItem= dataLists.get(i);
-                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), responseItem.getImage()))).commit();
+                if(responseItem.getImage().size()>0)
+
+                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), (new Image((String) responseItem.getImage().get(5)))), i%21)).commit();
+                else
+                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), MainActivity.my_all_static_product_lists.get(i).getMedicine_image()), i%21)).commit();
+
             }
         });
-
         return view;
     }
 

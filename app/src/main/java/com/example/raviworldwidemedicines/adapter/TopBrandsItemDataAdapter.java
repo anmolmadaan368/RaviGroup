@@ -37,25 +37,27 @@ public class TopBrandsItemDataAdapter extends ArrayAdapter<SingleProductDetailsM
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
 
-
-        View itemViewss= convertView;
-        if (itemViewss==null){
-            itemViewss= LayoutInflater.from(context).inflate(R.layout.top_brands_main_panel_items,parent,false);
+        View itemViewss = convertView;
+        if (itemViewss == null) {
+            itemViewss = LayoutInflater.from(context).inflate(R.layout.top_brands_main_panel_items, parent, false);
         }
-        SingleProductDetailsModel brandsItem=  getItem(position);
-        ImageView product_images= (ImageView) itemViewss.findViewById(R.id.medicine_imgs);
-        TextView original_prices= itemViewss.findViewById(R.id.txt_original_price);
-        TextView discounted_price= itemViewss.findViewById(R.id.txt_selling_prices);
-        TextView txt_v_btn_add= (TextView)  itemViewss.findViewById(R.id.btn_Add);
-        TextView medicine_name= itemViewss.findViewById(R.id.medicine_name);
+
+
+        if(position<6) {
+            SingleProductDetailsModel brandsItem = getItem(position);
+            ImageView product_images = (ImageView) itemViewss.findViewById(R.id.medicine_imgs);
+            TextView original_prices = itemViewss.findViewById(R.id.txt_original_price);
+            TextView discounted_price = itemViewss.findViewById(R.id.txt_selling_prices);
+            TextView txt_v_btn_add = (TextView) itemViewss.findViewById(R.id.btn_Add);
+            TextView medicine_name = itemViewss.findViewById(R.id.medicine_name);
 
 //        original_prices.setText( brandsItem.getOriginal_price());
 //        float discounted_priceafterDiscountIsCalculated=( Float.parseFloat(brandsItem.getOriginal_price())*((100- brandsItem.getDiscount_rate())/100));
 //        discounted_price.setText((discounted_priceafterDiscountIsCalculated+""));
-        medicine_name.setText(brandsItem.getName());
-        Glide.with(product_images.getContext()).load(Uri.parse(brandsItem.getStatic_medicine_images())).error(R.drawable.ic_error).into(product_images);
+            medicine_name.setText(brandsItem.getName());
+//            Glide.with(product_images.getContext()).load(Uri.parse(brandsItem.getStatic_medicine_images())).error(R.drawable.ic_error).into(product_images);
 //        product_images.setImageResource(brandsItem.getStatic_medicine_images());
-
+        }
     return itemViewss;
     }
 }

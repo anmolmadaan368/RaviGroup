@@ -1,20 +1,19 @@
 package com.example.raviworldwidemedicines.model;
 
+import com.example.raviworldwidemedicines.model.CategoryDetailsModel.Image;
+
 public class SingleProductDetailsModel {
     private String name,short_description;
-    private Object medicine_image;
-    private String Static_medicine_images;
+    private Image medicine_image;
 
-    public SingleProductDetailsModel(String name, String short_description, Object imgs) {
+    public SingleProductDetailsModel(String name, String short_description,  Image imgs) {
         this.name = name;
         this.short_description = short_description;
         medicine_image = imgs;
     }
-
-    public SingleProductDetailsModel(String name, String short_description,  String static_medicine_images) {
+    public SingleProductDetailsModel(String name, String short_description) {
         this.name = name;
         this.short_description = short_description;
-        this.Static_medicine_images = static_medicine_images;
     }
 
     public String getName() {
@@ -25,11 +24,7 @@ public class SingleProductDetailsModel {
         return short_description;
     }
 
-    public String getStatic_medicine_images() {
-        return Static_medicine_images;
-    }
-
-    public Object getMedicine_image() {
+    public Image getMedicine_image() {
         return medicine_image;
     }
 }

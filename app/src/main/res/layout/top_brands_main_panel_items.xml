@@ -18,7 +18,7 @@
         android:layout_marginTop="3dp"
         android:layout_marginBottom="11dp"
         android:scaleType="fitXY"
-        android:src="@drawable/user"
+        android:src="@drawable/error"
         app:layout_constraintBottom_toTopOf="@id/medicine_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout

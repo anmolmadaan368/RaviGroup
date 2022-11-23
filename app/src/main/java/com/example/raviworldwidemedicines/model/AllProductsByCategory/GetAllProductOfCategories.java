@@ -1,6 +1,8 @@
 package com.example.raviworldwidemedicines.model.AllProductsByCategory;
 
 import java.util.List;
+
+import com.example.raviworldwidemedicines.model.CategoryDetailsModel.Image;
 import com.google.gson.annotations.SerializedName;
 
 public class GetAllProductOfCategories {
@@ -9,7 +11,7 @@ public class GetAllProductOfCategories {
 	private String shortDescription;
 
 	@SerializedName("image")
-	private List<ImageItem> image;
+	private List<Object> image;
 
 	@SerializedName("name")
 	private String name;
@@ -24,7 +26,7 @@ public class GetAllProductOfCategories {
 		return shortDescription;
 	}
 
-	public List<ImageItem> getImage(){
+	public List<Object> getImage(){
 		return image;
 	}
 
@@ -39,4 +41,5 @@ public class GetAllProductOfCategories {
 	public int getId(){
 		return id;
 	}
+
 }

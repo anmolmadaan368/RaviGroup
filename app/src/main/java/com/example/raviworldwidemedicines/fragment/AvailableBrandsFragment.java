@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.AvailableBrandsDataAdapter;
 import com.example.raviworldwidemedicines.model.AvailableBrandsDataModel;
@@ -35,7 +36,7 @@ public class AvailableBrandsFragment extends Fragment {
         gridView_available_brands_list= (GridView) view.findViewById(R.id.grid_view_availble_brands);
         AvailableBrandsDataModel dataModel;
         for (int j=0;j<17;j++){
-            dataModel= new AvailableBrandsDataModel(R.drawable.medicine_image_7);
+            dataModel= new AvailableBrandsDataModel(MainActivity.my_all_static_product_lists.get(j).getMedicine_image().getSrc());
             availbleBrandslist.add(dataModel);
         }
         AvailableBrandsDataAdapter availableBrandsDataAdapter= new AvailableBrandsDataAdapter( this.getContext(), availbleBrandslist);

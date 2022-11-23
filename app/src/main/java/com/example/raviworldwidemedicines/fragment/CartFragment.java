@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,8 +27,11 @@ public class CartFragment extends Fragment  {
 
     public RecyclerView cartList;
     public SearchView sviews;
+    public Button btn_login_On_no_data;
     private CartDataAdapter cartDataAdapter;
     private ArrayList<CartMultipleDataBinder> mydatalists;
+    private RelativeLayout my_data_list_lays;
+    private ConstraintLayout error_ms_outer_lays;
     private TextView txt_no_data_found;
 
     public CartFragment() {
@@ -40,7 +46,10 @@ public class CartFragment extends Fragment  {
         txt_no_data_found= view.findViewById(R.id.txt_no_data_exist);
         sviews = (SearchView) view.findViewById(R.id.searchviews);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
-
+        my_data_list_lays= (RelativeLayout) view.findViewById(R.id.after_search_views_lays);
+        cartList= (RecyclerView) view.findViewById(R.id.cart_list_page);
+        btn_login_On_no_data= (Button) view.findViewById(R.id.btn_login);
+        error_ms_outer_lays= (ConstraintLayout) view.findViewById(R.id.error_outer_lays);
 
 //        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
 //            @Override
@@ -72,12 +81,12 @@ public class CartFragment extends Fragment  {
         mydatalists = new ArrayList<>();
 
 
-        CartMultipleDataBinder cartMultipleDataBinder;
-        for (int i = 0; i < manufacturer_list.length; i++) {
-            cartMultipleDataBinder = new CartMultipleDataBinder(medicines_images[i], product_name[i], salt_comp_name_list[i], manufacturer_list[i], comp_amount[i]);
-            mydatalists.add(cartMultipleDataBinder);
-        }
-
+//        CartMultipleDataBinder cartMultipleDataBinder;
+//        for (int i = 0; i < manufacturer_list.length; i++) {
+//            cartMultipleDataBinder = new CartMultipleDataBinder(medicines_images[i], product_name[i], salt_comp_name_list[i], manufacturer_list[i], comp_amount[i]);
+//            mydatalists.add(cartMultipleDataBinder);
+//        }
+//
         cartDataAdapter = new CartDataAdapter(mydatalists, "Cart", R.layout.cat_list_item_layout, getParentFragmentManager(), new ClickListener() {
 
             @Override
@@ -87,6 +96,10 @@ public class CartFragment extends Fragment  {
         });
 
         cartList.setAdapter(cartDataAdapter);
+
+        my_data_list_lays.setVisibility(View.GONE);
+        error_ms_outer_lays.setVisibility(View.VISIBLE);
+
 
         sviews.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

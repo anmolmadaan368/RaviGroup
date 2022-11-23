@@ -2,14 +2,14 @@ package com.example.raviworldwidemedicines.model;
 
 public class AvailableBrandsDataModel {
 
-    int brand_images;
+    String brand_images;
 
-    public AvailableBrandsDataModel(int brand_images) {
+    public AvailableBrandsDataModel(String brand_images) {
         this.brand_images = brand_images;
     }
 
 
-    public int getBrand_images() {
+    public String getBrand_images() {
         return brand_images;
     }
 }

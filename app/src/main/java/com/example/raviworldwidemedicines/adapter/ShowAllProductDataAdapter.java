@@ -14,14 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.fragment.CartFragment;
-import com.example.raviworldwidemedicines.model.AllProductsByCategory.ImageItem;
-import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.fragment.SingleProductDetailsFragment;
 import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 
 import java.util.ArrayList;
 
-public class TopBrandsDataAdapter extends RecyclerView.Adapter<TopBrandsDataAdapter.topBrandsDataViewHolder> {
+public class ShowAllProductDataAdapter extends RecyclerView.Adapter<ShowAllProductDataAdapter.topBrandsDataViewHolder> {
     ArrayList<SingleProductDetailsModel> topBrandsItemsList;
     private FragmentManager fragmentManager;
     private String fragment_to_be_called;
@@ -35,7 +33,7 @@ public class TopBrandsDataAdapter extends RecyclerView.Adapter<TopBrandsDataAdap
         return new topBrandsDataViewHolder(view);
     }
 
-    public TopBrandsDataAdapter(Context context, ArrayList<SingleProductDetailsModel> topBrandsItemsList, String fragment_to_be_called, FragmentManager fragmentManager) {
+    public ShowAllProductDataAdapter(Context context, ArrayList<SingleProductDetailsModel> topBrandsItemsList, String fragment_to_be_called, FragmentManager fragmentManager) {
         this.topBrandsItemsList = topBrandsItemsList;
         this.fragment_to_be_called = fragment_to_be_called;
         this.fragmentManager = fragmentManager;
@@ -45,10 +43,12 @@ public class TopBrandsDataAdapter extends RecyclerView.Adapter<TopBrandsDataAdap
     @Override
     public void onBindViewHolder(topBrandsDataViewHolder holder, int position) {
         SingleProductDetailsModel brandItem = topBrandsItemsList.get(position);
-//        if (brandItem.getMedicine_image() != -1) {
-//            holder.medicines_image.setImageResource(brandItem.getMedicine_image());
+//        if (brandItem.getMedicine_image() != null ) {
+//            Glide.with(context).load(Uri.parse(brandItem.getMedicine_image().getSrc())).into(holder.medicines_image);
 //        }
-
+//            else {
+//
+//        }
 //        holder.original_price.setText(brandItem.getOriginal_price());
 //        if (brandItem.getDiscount_rate() != -1) {
 //            float discounted_prices_iss = Integer.parseInt(brandItem.getOriginal_price()) * ((100 - brandItem.getDiscount_rate()) / 100);
@@ -57,11 +57,13 @@ public class TopBrandsDataAdapter extends RecyclerView.Adapter<TopBrandsDataAdap
 //        }
 //        holder.expiary_date.setText(brandItem.getExpairy_date());
         holder.medicine_name.setText(brandItem.getName());
+//            Glide.with(context).load(Uri.parse(brandItem.getStatic_medicine_images())).into(holder.medicines_image);
+
         holder.item_lays.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                if(fragment_to_be_called.equals("singleProductdetails") {
-                fragmentManager.beginTransaction().replace(R.id.main_lays, new SingleProductDetailsFragment(brandItem)).commit();
+                fragmentManager.beginTransaction().replace(R.id.main_lays, new SingleProductDetailsFragment(brandItem,( holder.getAdapterPosition()%20))).commit();
             }
         });
 

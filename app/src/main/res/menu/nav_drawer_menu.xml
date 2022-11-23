@@ -10,10 +10,10 @@
             android:id="@+id/nav_drawer_services"
             android:icon="@drawable/services"
             android:title="SERVICES" />
-        <item
-            android:id="@+id/nav_drawer_blog"
-            android:icon="@drawable/blog"
-            android:title="BLOG" />
+<!--        <item-->
+<!--            android:id="@+id/nav_drawer_blog"-->
+<!--            android:icon="@drawable/blog"-->
+<!--            android:title="BLOG" />-->
         <item android:id="@+id/nav_drawer_wishlist"
             android:icon="@drawable/ic_wishlist"
             android:title="WishList"

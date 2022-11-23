@@ -195,13 +195,8 @@ public class HomeFragment extends Fragment {
 
 //        recyclerView_recently_viewed.setAdapter(adapter1);
 
-        ArrayList<SingleProductDetailsModel> singleProductDetailslistModels = new ArrayList<>();
-        singleProductDetailslistModels.add(new SingleProductDetailsModel("Abacavir / lamivudine (Epzicom®)", "SII", R.drawable.medicine_image_3));
-        singleProductDetailslistModels.add(new SingleProductDetailsModel("Acyclovir", "Cipla", R.drawable.medicine_image_4));
-        singleProductDetailslistModels.add(new SingleProductDetailsModel("Abacavir", "Dolo", R.drawable.medicine_image_5));
-        singleProductDetailslistModels.add(new SingleProductDetailsModel("Alendronate", "Dettol", R.drawable.medicine_image_2));
 
-        TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters = new TopBrandsItemDataAdapter(this.getContext(), getParentFragmentManager(), singleProductDetailslistModels);
+        TopBrandsItemDataAdapter mainPanelTopBrandsItemsAdapters = new TopBrandsItemDataAdapter(this.getContext(), getParentFragmentManager(), MainActivity.my_all_static_product_lists);
 
         grid_view_top_brands.setAdapter(mainPanelTopBrandsItemsAdapters);
 
@@ -243,9 +238,8 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        String[] available_brands = {"Cipla", "DayHawk", "SII", "Dettol", "Medihuman", "Mankind"};
         for (int i = 0; i < 6; i++) {
-            AvailableBrandsDataModel brandsDataModel = new AvailableBrandsDataModel(R.drawable.medicine_image_3);
+            AvailableBrandsDataModel brandsDataModel = new AvailableBrandsDataModel( MainActivity.my_all_static_product_lists.get(i).getMedicine_image().getSrc());
             myAvailable_brands_list.add(brandsDataModel);
         }
         AvailableBrandsDataAdapter availableBrandsDataAdapter = new AvailableBrandsDataAdapter(this.getActivity().getApplicationContext(), myAvailable_brands_list);

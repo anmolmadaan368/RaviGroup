@@ -10,8 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
-import com.example.raviworldwidemedicines.adapter.TopBrandsDataAdapter;
+import com.example.raviworldwidemedicines.adapter.ShowAllProductDataAdapter;
 import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 
 import java.util.ArrayList;
@@ -28,16 +29,19 @@ public class TopBrandsFragment extends Fragment {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         ArrayList<SingleProductDetailsModel> mydatalists=new ArrayList<>();
-        mydatalists.add(new SingleProductDetailsModel("Abacavir / lamivudine (Epzicom®)","1000",R.drawable.medicine_image_3));
-        mydatalists.add(new SingleProductDetailsModel("Acyclovir","SII",R.drawable.medicine_image_4));
-        mydatalists.add(new SingleProductDetailsModel("Abacavir","Jhonson",R.drawable.medicine_image_5));
-        mydatalists.add(new SingleProductDetailsModel("Alendronate","Saturea",R.drawable.medicine_image_2));
-        mydatalists.add(new SingleProductDetailsModel("Acyclovir","Dolo",R.drawable.medicine_image_4));
-        mydatalists.add(new SingleProductDetailsModel("Abacavir","SII",R.drawable.medicine_image_5));
-        mydatalists.add(new SingleProductDetailsModel("Alendronate","SII ",R.drawable.medicine_image_2));
+//        mydatalists.add(new SingleProductDetailsModel("Abacavir / lamivudine (Epzicom®)","1000", R.drawable.medicine_image_3));
+//        mydatalists.add(new SingleProductDetailsModel("Acyclovir","SII",R.drawable.medicine_image_4));
+//        mydatalists.add(new SingleProductDetailsModel("Abacavir","Jhonson",R.drawable.medicine_image_5));
+//        mydatalists.add(new SingleProductDetailsModel("Alendronate","Saturea",R.drawable.medicine_image_2));
+//        mydatalists.add(new SingleProductDetailsModel("Acyclovir","Dolo",R.drawable.medicine_image_4));
+//        mydatalists.add(new SingleProductDetailsModel("Abacavir","SII",R.drawable.medicine_image_5));
+//        mydatalists.add(new SingleProductDetailsModel("Alendronate","SII ",R.drawable.medicine_image_2));
 
+        for(int i=0;i<18;i++  ) {
+            mydatalists.add(MainActivity.my_all_static_product_lists.get(i));
+        }
 
-        TopBrandsDataAdapter myAdapters= new TopBrandsDataAdapter(this.getContext(), mydatalists, "singleProductdetails",getParentFragmentManager());
+        ShowAllProductDataAdapter myAdapters= new ShowAllProductDataAdapter(this.getContext(), mydatalists, "singleProductdetails",getParentFragmentManager());
 
         recyclerView.setAdapter(myAdapters);
         return view;
