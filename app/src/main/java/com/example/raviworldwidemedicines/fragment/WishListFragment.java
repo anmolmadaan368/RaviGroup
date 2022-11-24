@@ -9,13 +9,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.adapter.CartDataAdapter;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
@@ -23,6 +26,7 @@ public class WishListFragment extends Fragment {
 
     public SearchView  sviews;
     private TextView txts_no_data_founded;
+    private Button btn_wish_login;
     private ArrayList<CartMultipleDataBinder> mydataLists;
     private CartDataAdapter dataAdapter;
     public WishListFragment() {
@@ -41,6 +45,7 @@ public class WishListFragment extends Fragment {
         sviews = (SearchView) view.findViewById(R.id.searchviews);
         sviews.setBackgroundResource(R.drawable.backgnd_while_rounded);
 
+        btn_wish_login= (MaterialButton) view.findViewById(R.id.btn_login_wishlist);
 
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
@@ -62,6 +67,13 @@ public class WishListFragment extends Fragment {
         recyclerView_wishList.setAdapter(dataAdapter);
 
         ;
+
+        btn_wish_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new LoginRegisterFragment());
+            }
+        });
 
         sviews.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

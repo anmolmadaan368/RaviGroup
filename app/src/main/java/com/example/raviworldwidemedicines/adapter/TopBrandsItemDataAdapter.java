@@ -55,7 +55,7 @@ public class TopBrandsItemDataAdapter extends ArrayAdapter<SingleProductDetailsM
 //        float discounted_priceafterDiscountIsCalculated=( Float.parseFloat(brandsItem.getOriginal_price())*((100- brandsItem.getDiscount_rate())/100));
 //        discounted_price.setText((discounted_priceafterDiscountIsCalculated+""));
             medicine_name.setText(brandsItem.getName());
-//            Glide.with(product_images.getContext()).load(Uri.parse(brandsItem.getStatic_medicine_images())).error(R.drawable.ic_error).into(product_images);
+            Glide.with(product_images.getContext()).load(Uri.parse(brandsItem.getMedicine_image().getSrc())).error(R.drawable.ic_error).into(product_images);
 //        product_images.setImageResource(brandsItem.getStatic_medicine_images());
         }
     return itemViewss;

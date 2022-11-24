@@ -134,6 +134,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_marginBottom="7dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/btns_outer_lays"
             android:layout_height="37dp">

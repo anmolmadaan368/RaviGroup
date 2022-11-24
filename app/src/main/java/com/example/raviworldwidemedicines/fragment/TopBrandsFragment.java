@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.R;
@@ -28,6 +29,7 @@ public class TopBrandsFragment extends Fragment {
         RecyclerView recyclerView= view.findViewById(R.id.recycler_view_top_brands);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
+//        LayoutInflater inflater1= LayoutInflater.from(getContext()).inflate(R.layout.list_item_top_brands_recycler_views_layout, false, null);
         ArrayList<SingleProductDetailsModel> mydatalists=new ArrayList<>();
 //        mydatalists.add(new SingleProductDetailsModel("Abacavir / lamivudine (Epzicom®)","1000", R.drawable.medicine_image_3));
 //        mydatalists.add(new SingleProductDetailsModel("Acyclovir","SII",R.drawable.medicine_image_4));

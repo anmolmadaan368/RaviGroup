@@ -20,6 +20,7 @@ import com.example.raviworldwidemedicines.model.CategoryDetailsModel.Image;
 import com.example.raviworldwidemedicines.model.SingleProductDetailsModel;
 import com.example.raviworldwidemedicines.model.products.ProductResponse;
 import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
+import com.google.gson.internal.LinkedTreeMap;
 
 
 import java.util.Collections;
@@ -57,9 +58,9 @@ public class OurProductFragment extends Fragment {
                 ProductResponseItem responseItem= dataLists.get(i);
                 if(responseItem.getImage().size()>0)
 
-                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), (new Image((String) responseItem.getImage().get(5)))), i%21)).commit();
+                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), (new Image((String) ((LinkedTreeMap) responseItem.getImage().get(0)).get("src")))) )).commit();
                 else
-                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), MainActivity.my_all_static_product_lists.get(i).getMedicine_image()), i%21)).commit();
+                 getParentFragmentManager().beginTransaction().replace (R.id.main_lays, new SingleProductDetailsFragment(new SingleProductDetailsModel(responseItem.getName(),responseItem.getShort_description(), MainActivity.my_all_static_product_lists.get(i).getMedicine_image()))).commit();
 
             }
         });
@@ -68,7 +69,7 @@ public class OurProductFragment extends Fragment {
 
     private void gettingAllProducts() {
 
-        Call<List<ProductResponseItem>> call = myController.getInstance().getCategoryDetails_Api().getProduct(1);
+        Call<List<ProductResponseItem>> call = myController.getInstance().getCategoryDetails_Api().getProduct(48);
         call.enqueue(new Callback<List<ProductResponseItem>>() {
             @Override
             public void onResponse(Call<List<ProductResponseItem>> call, Response<List<ProductResponseItem>> response) {

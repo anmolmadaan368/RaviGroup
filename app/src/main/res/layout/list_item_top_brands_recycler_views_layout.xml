@@ -206,6 +206,7 @@
                     android:id="@+id/btn_Add_Item"
                     android:backgroundTintMode="src_atop"
                     android:gravity="center"
+                    android:visibility="gone"
                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:text="Add"

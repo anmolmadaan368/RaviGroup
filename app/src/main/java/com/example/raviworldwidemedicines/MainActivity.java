@@ -341,56 +341,56 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 "\\nSTORAGE : Store below 30\\u00b0C<\\/p>\\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//Ointment-5g-10002166.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("fusidic-acid-cream-500×500", "COMPOSITION : Lactitol 10gm\n" +
-                "\\nMANUFACTURER : Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/58c983dc-d32b-11eb-ac66-2d8af994f7f5-fusidic-acid-cream-500x500-1.png"));
+                "\\nMANUFACTURER : Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//58c983dc-d32b-11eb-ac66-2d8af994f7f5-fusidic-acid-cream-500x500-1.png"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("alt", "COMPOSITION : Lactitol (66.67% w\\/v)\n" +
-                "\\nMANUFACTURER : Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/9-8-216x300-3.jpg"));
+                "\\nMANUFACTURER : Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//9-8-216x300-3.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("lactihep_syrup_200ml", "COMPOSITION : Luliconazole (1% w\\/v)\n" +
-                "\\nMANUFACTURER : Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/lactihep_syrup_200ml_0.jpg"));
+                "\\nMANUFACTURER : Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//lactihep_syrup_200ml_0.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Antifungal Powder Spray", "Composition:\\u00a0Fluticasone (125mcg)\n" +
-                "\\nManufactured By:\\u00a0Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/83-1.jpg"));
+                "\\nManufactured By:\\u00a0Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//83-1.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("", "Composition:\\u00a0Gentamicin (80mg)\n" +
-                "\\nManufactured By:\\u00a0Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/3-2.jpg"));
-        singleProductDetailsModel = new SingleProductDetailsModel("Pantoprazole Sodium", "Pantoprazole Sodium<\\/p>\\n", new Image("https:\\/\\/raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/download-4-7.jpg"));
+                "\\nManufactured By:\\u00a0Sun Pharmaceutical Industries Ltd", new Image("https://raviworldwidemedicines.com\\/wp-content//uploads//2022//10//3-2.jpg"));
+        singleProductDetailsModel = new SingleProductDetailsModel("Pantoprazole Sodium", "Pantoprazole Sodium<\\/p>\\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//download-4-7.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Hydrochlorothiazide", " Hydrochlorothiazide (Hydrochlorothiazide)<\\/strong><\\/p>\\n\n" +
                 "\n" +
-                "Manufacturer: PD-Rx Pharmaceuticals, Inc.<\\/p>\\n", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/cp3.jpg"));
+                "Manufacturer: PD-Rx Pharmaceuticals, Inc.<\\/p>\\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//cp3.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Dapsone", "Dapsone (Dapsone)\n" +
                 "\\nManufacturer: Aphena Pharma Solutions – Tennessee, LLC\n" +
-                "\\nPresentation: TABLET", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/download-2-4.png"));
+                "\\nPresentation: TABLET", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//download-2-4.png"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("MEDAPINE AC GEL", "Citalopram (Citalopram)\n" +
-                "\\nManufacturer: Aphena Pharma Solutions – Tennessee, LLC", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/09\\/F_0.png"));
+                "\\nManufacturer: Aphena Pharma Solutions – Tennessee, LLC", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//09//F_0.png"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Metoprolol Succinate", "Metoprolol Succinate (Metoprolol Succinate)<\\/strong><\\/p>\\n\n" +
                 "\n" +
-                "Manufacturer: PD-Rx Pharmaceuticals, Inc.<\\/p>\\n", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/10\\/setid2d167219-e6d1-653c-e054-00144ff88e88name43063663.jpg"));
+                "Manufacturer: PD-Rx Pharmaceuticals, Inc.<\\/p>\\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//10//setid2d167219-e6d1-653c-e054-00144ff88e88name43063663.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Hydrogen Peroxide", "Hydrogen Peroxide – 3 Percent\\u00a0<\\/u><\\/strong><\\/p>\\n\n" +
                 "\n" +
                 "Manufacturer: Hy-Vee<\\/u><\\/p>\\n\n" +
-                "\n", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/09\\/download-9-2.jpg"));
+                "\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//09//download-9-2.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Penicillin V Potassium", "Penicillin V Potassium (Penicillin V Potassium)\n" +
                 "\\nManufacturer: PD-Rx Pharmaceuticals, Inc.\n" +
-                "\\nPresentation: TABLET, FILM COATED", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/09\\/TABLETS-4.jpeg"));
+                "\\nPresentation: TABLET, FILM COATED", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//09//TABLETS-4.jpeg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Broad Spectrum SPF 30 Up The Anti", "TITANIUM DIOXIDE, ZINC OXIDE\\u00a0<\\/u><\\/strong><\\/p>\\n\n" +
                 "\n" +
-                "Manufacturer: Biopelle, Inc.<\\/u><\\/p>\\n", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/09\\/cream-e1663826610352.jpg"));
+                "Manufacturer: Biopelle, Inc.<\\/u><\\/p>\\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//09//cream-e1663826610352.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Impact Fix Prism Two Way Cake", "Octinoxate, Titanium Dioxide, Zinc Oxide – Broad Spectrum SPF 24<\\/p>\\n\n" +
                 "\n" +
-                "Manufacturer: Dong Sung Bio Pharm. Co., Ltd.<\\/p>\\n", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/09\\/2484_SugarLipTreatmentSunscreenSPF15_Coral_campaign.webp"));
+                "Manufacturer: Dong Sung Bio Pharm. Co., Ltd.<\\/p>\\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//09//2484_SugarLipTreatmentSunscreenSPF15_Coral_campaign.webp"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Metformin Hydrochloride", "Nitrofurantoin monohydrate\\/macrocrystals – (monohydrate\\/macrocrystals) (Nitrofurantoin)<\\/u><\\/strong><\\/p>\\n\n" +
                 "\n" +
-                "Manufacturer: AvKARE, Inc.<\\/u><\\/p>\\n", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/09\\/OIP-4.jpg"));
+                "Manufacturer: AvKARE, Inc.<\\/u><\\/p>\\n", new Image("https://raviworldwidemedicines.com//wp-content//uploads//2022//09//OIP-4.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);
         singleProductDetailsModel = new SingleProductDetailsModel("Desloratadine Tablet", "Compositions : Desloratadine (5 mg\\/1)<\\/p>\\n", new Image("https://raviworldwidemedicines.com\\/wp-content\\/uploads\\/2022\\/09\\/OIP.jpg"));
         my_all_static_product_lists.add(singleProductDetailsModel);

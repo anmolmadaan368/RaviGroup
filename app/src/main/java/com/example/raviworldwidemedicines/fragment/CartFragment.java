@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.raviworldwidemedicines.MainActivity;
 import com.example.raviworldwidemedicines.model.CartMultipleDataBinder;
 import com.example.raviworldwidemedicines.Interfaces.ClickListener;
 import com.example.raviworldwidemedicines.R;
@@ -95,6 +96,13 @@ public class CartFragment extends Fragment  {
             }
         });
 
+
+        btn_login_On_no_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.replaceCurrentFragment(getParentFragmentManager(), new LoginRegisterFragment());
+            }
+        });
         cartList.setAdapter(cartDataAdapter);
 
         my_data_list_lays.setVisibility(View.GONE);

@@ -25,7 +25,6 @@ public class SingleProductDetailsFragment extends Fragment {
 
     private CartMultipleDataBinder cartMultipleDataBinder;
     private SingleProductDetailsModel singleProductDetailsModel;
-    private int alternate_img_position;
     private String layout_name_in_which_forwarded= "";
     public SingleProductDetailsFragment( CartMultipleDataBinder cartMultipleDataBinder, String lay_name_used){
         this.cartMultipleDataBinder=cartMultipleDataBinder;
@@ -33,9 +32,8 @@ public class SingleProductDetailsFragment extends Fragment {
         this.layout_name_in_which_forwarded=lay_name_used;
     }
 
-    public SingleProductDetailsFragment(SingleProductDetailsModel singleProductDetailsModel,int alternate_image_position) {
+    public SingleProductDetailsFragment(SingleProductDetailsModel singleProductDetailsModel) {
         this.singleProductDetailsModel = singleProductDetailsModel;
-        alternate_img_position=alternate_image_position;
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,7 +66,7 @@ public class SingleProductDetailsFragment extends Fragment {
 
             }
             else {
-                Glide.with(product_imgs.getContext()).load(Uri.parse(MainActivity.my_all_static_product_lists.get(alternate_img_position%20).getMedicine_image().getSrc())).error(R.drawable.ic_error).into(product_imgs);
+                Glide.with(product_imgs.getContext()).load(Uri.parse( singleProductDetailsModel.getMedicine_image().getSrc())).error(R.drawable.ic_error).into(product_imgs);
                 product_name.setText(singleProductDetailsModel.getName());
 //                product_description.setText(singleProductDetailsModel.getShort_description());
             }

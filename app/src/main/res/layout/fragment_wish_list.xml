@@ -9,38 +9,84 @@
     android:paddingRight="7dp"
     tools:context=".fragment.WishListFragment">
 
-    <SearchView
-        android:id="@+id/searchviews"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:layout_marginTop="3dp"
-        android:background="@drawable/bg_search_view"
-        android:clickable="true"
-        android:goIcon="@mipmap/ic_search"
-        android:iconifiedByDefault="false"
-        android:backgroundTint="#9EFFFFFF"
-        android:layoutDirection="rtl"
-        android:queryHint="@string/search_hint"
-        android:showDividers="middle"
-        android:layout_alignParentTop="true"
-        />
+        android:layout_height="match_parent"
+        android:id="@+id/on_available_wishlist_lays"
+        android:visibility="gone"
+        >
+        <SearchView
+            android:id="@+id/searchviews"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/bg_search_view"
+            android:clickable="true"
+            android:goIcon="@mipmap/ic_search"
+            android:iconifiedByDefault="false"
+            android:backgroundTint="#9EFFFFFF"
+            android:layoutDirection="rtl"
+            android:queryHint="@string/search_hint"
+            app:layout_constraintTop_toTopOf="parent"
+            android:showDividers="middle"
+            android:layout_alignParentTop="true"
+            />
 
-    <androidx.recyclerview.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/recycler_views_wishlist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="59dp"
-        android:layout_below="@id/searchviews"
-        />
+        <androidx.recyclerview.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/recycler_views_wishlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/searchviews"
+            android:layout_marginBottom="59dp"
+            android:layout_below="@id/searchviews"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/recycler_views_wishlist"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="italic|bold"
         android:textColor="#E91E25"
         android:id="@+id/txt_no_data_exists"
         />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/error_outer_lays"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="#E91E2F"
+            android:text="Sign In to Your Account First "
+            android:id="@+id/txt_no_data_exist"
+            android:textStyle="normal|bold"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_no_data_exist"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Login "
+            android:textStyle="bold"
+            android:id="@+id/btn_login_wishlist"
+            android:textAllCaps="false"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </RelativeLayout>

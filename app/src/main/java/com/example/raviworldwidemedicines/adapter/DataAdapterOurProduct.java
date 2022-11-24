@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import com.bumptech.glide.Glide;
 import com.example.raviworldwidemedicines.R;
 import com.example.raviworldwidemedicines.model.products.ProductResponseItem;
+import com.google.gson.internal.LinkedTreeMap;
 
 import java.util.List;
 
@@ -37,11 +38,11 @@ public class DataAdapterOurProduct extends ArrayAdapter<ProductResponseItem> {
         TextView item_name=(TextView) listItemview.findViewById(R.id.idTViewI_Desc);
         ImageView item_img= (ImageView) listItemview.findViewById(R.id.gv_images);
         item_name.setText(ourProduct.getName());
-         if(ourProduct.getImage().toString() == null) {
+         if(ourProduct.getImage() == null) {
              item_img.setImageResource(R.drawable.ic_error);
          }
          else {
-             Glide.with(item_img.getContext()).load(Uri.parse(String.valueOf(ourProduct.getImage()))).error(R.drawable.ic_error).into(item_img);
+             Glide.with(item_img.getContext()).load(Uri.parse((String) ((LinkedTreeMap) ourProduct.getImage().get(0)).get("src"))).error(R.drawable.ic_error).into(item_img);
          }
         return listItemview;
     }
